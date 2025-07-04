@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Remove rounded corners from main header and navigation - AGGRESSIVE */
+.MuiAppBar-root,
+.MuiAppBar-root *,
+.MuiAppBar-positionFixed,
+.MuiAppBar-colorPrimary {
+  border-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.MuiDrawer-root .MuiPaper-root {
+  border-radius: 0 !important;
+}
+
+.MuiToolbar-root {
+  border-radius: 0 !important;
+}
+
+/* Ensure main navigation elements have square corners */
+header,
+header *,
+nav,
+nav * {
+  border-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Target any potential Material-UI Paper components in header */
+.MuiPaper-root.MuiAppBar-root {
+  border-radius: 0 !important;
+}
+
+/* Force all header-related elements to have square corners */
+[class*="MuiAppBar"] {
+  border-radius: 0 !important;
+}
+
+[class*="MuiToolbar"] {
+  border-radius: 0 !important;
+}

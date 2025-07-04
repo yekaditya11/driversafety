@@ -1,0 +1,12 @@
+# Database and KPI Server Requirements
+psycopg2-binary==2.9.7
+fastapi==0.104.1
+uvicorn==0.24.0
+python-dotenv==1.0.0
+pandas==2.1.0
+numpy==1.24.3
+sqlalchemy==2.0.20
+pydantic==2.5.0
+
+# Azure OpenAI for KPI Chatbot
+openai>=1.12.0

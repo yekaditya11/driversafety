@@ -1,0 +1,554 @@
+/* Global Styles for Driver Safety Dashboard */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+/* Smooth transitions for all interactive elements */
+.MuiCard-root {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ensure proper spacing and layout */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  padding: 0 !important;
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .MuiCard-root {
+    margin-bottom: 12px;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.6rem !important;
+  }
+
+  .MuiTypography-h5 {
+    font-size: 1.3rem !important;
+  }
+
+  /* Fix header on mobile */
+  .MuiAppBar-root {
+    height: 60px !important;
+  }
+
+  .MuiToolbar-root {
+    min-height: 60px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+/* Remove container centering and max-width constraints */
+.MuiContainer-root {
+  margin: 0 !important;
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Prevent logo overflow */
+.MuiAppBar-root img,
+.MuiDrawer-paper img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+/* Better grid spacing on small screens */
+@media (max-width: 600px) {
+  .MuiGrid-container {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .MuiGrid-item {
+    padding: 8px !important;
+  }
+}
+
+/* Fix chart visibility and prevent cutting */
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.recharts-surface {
+  overflow: hidden !important;
+}
+
+/* Ensure cards have proper height and containment - but exclude AI dashboard cards */
+.MuiCard-root:not(.ai-dashboard-card) {
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.MuiCardContent-root:not(.ai-dashboard-card-content) {
+  overflow: hidden !important;
+  padding-bottom: 16px !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Fix responsive container issues */
+.recharts-responsive-container {
+  min-height: 250px !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* ECharts specific containment */
+.echarts-for-react {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* AI Dashboard specific improvements */
+.ai-dashboard-chart-container {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ai-dashboard-chart-container canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure chart containers in AI dashboard are properly sized and use full width */
+.ai-dashboard-chart-container > div {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Make charts use more width in AI dashboard */
+.ai-dashboard-chart-container .echarts-for-react {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure chart content fills the container */
+.ai-dashboard-chart-container .echarts-for-react > div {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force charts to use maximum width in AI dashboard - remove ALL spacing */
+.ai-dashboard-chart-container * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure no margins or padding reduce chart width */
+.ai-dashboard-chart-container .MuiPaper-root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* AI Dashboard Card styling for full width charts */
+.ai-dashboard-card {
+  width: 100% !important;
+  overflow: visible !important;
+  display: block !important;
+  flex-direction: unset !important;
+}
+
+.ai-dashboard-card-content {
+  width: 100% !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  overflow: visible !important;
+  flex: none !important;
+  display: block !important;
+  flex-direction: unset !important;
+  height: auto !important;
+}
+
+/* Ensure charts take full available width */
+.ai-dashboard-chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Drag and drop visual feedback */
+.ai-dashboard-card[draggable="true"]:hover {
+  cursor: grab;
+}
+
+.ai-dashboard-card[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Remove any internal spacing that might compress charts */
+.ai-dashboard-chart-container .MuiBox-root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Force ECharts to use absolute full width */
+.ai-dashboard-chart-container svg {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override any ECharts internal margins */
+.ai-dashboard-chart-container [data-zr-dom-id] {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure AI dashboard charts get proper dimensions for 2-column layout */
+.ai-dashboard-card .ai-dashboard-chart-container {
+  width: 100% !important;
+  height: 400px !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  display: block !important;
+  position: relative !important;
+}
+
+/* Force chart renderers in AI dashboard to use full space */
+.ai-dashboard-card .ai-dashboard-chart-container > div {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}
+
+/* Specific overrides for ChartRenderer component in AI dashboard */
+.ai-dashboard-chart-container .chart-renderer-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px !important;
+  max-height: 400px !important;
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* Ensure ECharts canvas takes full container size in AI dashboard */
+.ai-dashboard-chart-container canvas,
+.ai-dashboard-chart-container svg {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Slide in animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* Typing animation for chatbot */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+.chart-fade-in {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Responsive text sizes */
+@media (max-width: 600px) {
+  .MuiTypography-h4 {
+    font-size: 1.8rem !important;
+  }
+
+  .MuiTypography-h5 {
+    font-size: 1.4rem !important;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .MuiCard-root {
+    margin-bottom: 16px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .MuiAvatar-root {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Ensure grid items in AI dashboard use full width */
+.ai-dashboard-grid-item {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure grid container in AI dashboard uses full width */
+.ai-dashboard-grid-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Responsive chart sizing for AI dashboard - 2-column layout */
+@media (max-width: 1200px) {
+  .ai-dashboard-chart-container {
+    height: 380px !important;
+    min-height: 380px !important;
+    max-height: 380px !important;
+  }
+  
+  .ai-dashboard-card .ai-dashboard-chart-container {
+    height: 380px !important;
+    min-height: 380px !important;
+    max-height: 380px !important;
+  }
+  
+  .ai-dashboard-chart-container .chart-renderer-container {
+    min-height: 380px !important;
+    max-height: 380px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-dashboard-chart-container {
+    height: 350px !important;
+    min-height: 350px !important;
+    max-height: 350px !important;
+  }
+  
+  .ai-dashboard-card .ai-dashboard-chart-container {
+    height: 350px !important;
+    min-height: 350px !important;
+    max-height: 350px !important;
+  }
+  
+  .ai-dashboard-chart-container .chart-renderer-container {
+    min-height: 350px !important;
+    max-height: 350px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-dashboard-chart-container {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+  
+  .ai-dashboard-card .ai-dashboard-chart-container {
+    height: 300px !important;
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+  
+  .ai-dashboard-chart-container .chart-renderer-container {
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+/* Remove sidebar right border and shadow */
+.MuiDrawer-paper {
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure proper layout alignment */
+.MuiDrawer-root {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100vh !important;
+}
+
+/* Ensure main content is properly positioned */
+main {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix any potential spacing issues */
+.MuiBox-root {
+  box-sizing: border-box !important;
+}
+
+/* Custom Dashboard specific improvements */
+.custom-dashboard-grid {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.custom-dashboard-grid .MuiGrid-item {
+  /* width: 100% !important; */
+  /* max-width: 100% !important; */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure charts in custom dashboard take full width */
+.custom-dashboard-chart {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Responsive chart sizing for custom dashboard - 2-column layout */
+@media (min-width: 600px) {
+  .custom-dashboard-chart {
+    height: 360px !important;
+    min-height: 360px !important;
+    max-height: 360px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .custom-dashboard-chart {
+    height: 380px !important;
+    min-height: 380px !important;
+    max-height: 380px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-dashboard-chart {
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
+  }
+}

@@ -1,0 +1,4131 @@
+{
+  "extraction_timestamp": "2025-07-01T18:53:50.581707",
+  "date_range": {
+    "start": "2024-07-01",
+    "end": "2025-07-01"
+  },
+  "turnaround_time": {
+    "overall_avg_tat_hours": 12.763191900691899,
+    "by_location_type": {
+      "Distribution Center": {
+        "avg_tat_hours": 13.23,
+        "trip_count": 48
+      },
+      "Factory": {
+        "avg_tat_hours": 12.92,
+        "trip_count": 47
+      },
+      "Port": {
+        "avg_tat_hours": 13.14,
+        "trip_count": 53
+      },
+      "Store": {
+        "avg_tat_hours": 11.94,
+        "trip_count": 31
+      },
+      "Warehouse": {
+        "avg_tat_hours": 12.35,
+        "trip_count": 42
+      }
+    },
+    "top_bottleneck_locations": [
+      {
+        "location_name": "West Melodyview Distribution Center",
+        "location_type": "Factory",
+        "avg_tat_hours": 23.816666666666666,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Hernandezshire Factory",
+        "location_type": "Port",
+        "avg_tat_hours": 23.616666666666667,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Jameston Factory",
+        "location_type": "Factory",
+        "avg_tat_hours": 22.666666666666668,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Lake Ruben Distribution Center",
+        "location_type": "Factory",
+        "avg_tat_hours": 22.0,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Victorshire Distribution Center",
+        "location_type": "Warehouse",
+        "avg_tat_hours": 20.766666666666666,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Smithfort Warehouse",
+        "location_type": "Factory",
+        "avg_tat_hours": 20.158333333333335,
+        "trip_count": 2
+      },
+      {
+        "location_name": "North Mary Port",
+        "location_type": "Port",
+        "avg_tat_hours": 19.416666666666668,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Johnsonberg Factory",
+        "location_type": "Distribution Center",
+        "avg_tat_hours": 18.433333333333334,
+        "trip_count": 1
+      },
+      {
+        "location_name": "Benjaminbury Store",
+        "location_type": "Factory",
+        "avg_tat_hours": 18.333333333333332,
+        "trip_count": 2
+      },
+      {
+        "location_name": "North Kirstenberg Distribution Center",
+        "location_type": "Port",
+        "avg_tat_hours": 18.183333333333334,
+        "trip_count": 3
+      }
+    ]
+  },
+  "trip_count_per_vehicle": {
+    "avg_trips_per_vehicle_per_day": 1.0,
+    "max_trips_per_vehicle_per_day": 1,
+    "vehicle_performance": [
+      {
+        "plate_number": "02-17781",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "024-XKR",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "0281",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "02I 7514",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "034 XWW",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "034-QNN",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "0OZ X45",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "0TT G38",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "104 INP",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "16A 5515",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "1BC56",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "216W",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "243-ZWN",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "245JH",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "26-BP47",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "2AE 106",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "2M B0235",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "2UM9146",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "3054 ZM",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "380M5",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "383-EHL",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "383KWR",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "42EC357",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "477NT",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "478 SKE",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "4U957",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "4Z 22902",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "5225 VY",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "539BUX",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "540-DLP",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "55M 9432",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "565 EFI",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "567-ENRI",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "58C 5257",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "6-91038",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "610-FUIY",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "623 IGB",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "62M\u2022848",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "656 ZWW",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "65K-FVAQ",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "675-YOU",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "67T 778",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "688-HIV",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "6MVS803",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "7-7710L",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "704-SIV",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "784-BRP",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 6
+      },
+      {
+        "plate_number": "78D 2236",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "7AT1415",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "828-YEX",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "874-ZRS",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "881-BEQT",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "894 YEL",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "8H I2736",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "8RIO 94",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "94-4312R",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "9W 09686",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "B01-FFY",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "BD6 8475",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "BRG8763",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "CAU-0479",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "CXU-2753",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "DHW-1453",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "EWJ5256",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "GYF-375",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "HUR 184",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "I20-AGN",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "I51 0IW",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "JWU 177",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 6
+      },
+      {
+        "plate_number": "K07 9IU",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "KIO 939",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 6
+      },
+      {
+        "plate_number": "KLE 833",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "LQK-1717",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "M80 9DP",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "MNZ-908",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "MQN 585",
+        "vehicle_type": "Trailer",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "MYB 815",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "NNX D19",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "NRP-923",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "PRX-768",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "Q 311242",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "TLW 349",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 4
+      },
+      {
+        "plate_number": "TPU-4040",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 3
+      },
+      {
+        "plate_number": "TPX A05",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "U92 2VZ",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "UV4 F9R",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 5
+      },
+      {
+        "plate_number": "VGR-010",
+        "vehicle_type": "Pickup",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 1
+      },
+      {
+        "plate_number": "VI-4413",
+        "vehicle_type": "Truck",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      },
+      {
+        "plate_number": "WDF-9158",
+        "vehicle_type": "Van",
+        "avg_daily_trips": 1.0,
+        "max_daily_trips": 1,
+        "total_trips": 2
+      }
+    ],
+    "by_vehicle_type": {
+      "Pickup": 1.0,
+      "Semi-truck": 1.0,
+      "Trailer": 1.0,
+      "Truck": 1.0,
+      "Van": 1.0
+    }
+  },
+  "distance_variance": {
+    "avg_distance_variance_pct": 56.5677318718544,
+    "avg_distance_variance_km": 22.40621621621622,
+    "trips_over_planned": 59,
+    "trips_under_planned": 52,
+    "worst_variance_trips": [
+      {
+        "plate_number": "CXU-2753",
+        "transporter_name": "Miller-Griffin",
+        "planned_distance_km": 53.19,
+        "actual_distance_km": 427.79,
+        "distance_variance_pct": 704.267719496146
+      },
+      {
+        "plate_number": "58C 5257",
+        "transporter_name": "Moore-Solis",
+        "planned_distance_km": 56.9,
+        "actual_distance_km": 400.42,
+        "distance_variance_pct": 603.7258347978911
+      },
+      {
+        "plate_number": "784-BRP",
+        "transporter_name": "Bailey LLC",
+        "planned_distance_km": 71.15,
+        "actual_distance_km": 440.85,
+        "distance_variance_pct": 519.6064652143359
+      },
+      {
+        "plate_number": "656 ZWW",
+        "transporter_name": "Acosta, Johnson and Ford",
+        "planned_distance_km": 64.6,
+        "actual_distance_km": 385.44,
+        "distance_variance_pct": 496.6563467492261
+      },
+      {
+        "plate_number": "JWU 177",
+        "transporter_name": "Monroe PLC",
+        "planned_distance_km": 59.24,
+        "actual_distance_km": 319.1,
+        "distance_variance_pct": 438.6563133018231
+      },
+      {
+        "plate_number": "0TT G38",
+        "transporter_name": "Hansen, Stephens and Campbell",
+        "planned_distance_km": 78.51,
+        "actual_distance_km": 416.97,
+        "distance_variance_pct": 431.1043179212839
+      },
+      {
+        "plate_number": "1BC56",
+        "transporter_name": "Romero, Nicholson and Russell",
+        "planned_distance_km": 66.16,
+        "actual_distance_km": 350.96,
+        "distance_variance_pct": 430.471584038694
+      },
+      {
+        "plate_number": "16A 5515",
+        "transporter_name": "Hansen, Stephens and Campbell",
+        "planned_distance_km": 82.26,
+        "actual_distance_km": 402.14,
+        "distance_variance_pct": 388.86457573547284
+      },
+      {
+        "plate_number": "K07 9IU",
+        "transporter_name": "Atkinson Group",
+        "planned_distance_km": 93.95,
+        "actual_distance_km": 401.31,
+        "distance_variance_pct": 327.1527408195849
+      },
+      {
+        "plate_number": "02I 7514",
+        "transporter_name": "Flores and Sons",
+        "planned_distance_km": 110.0,
+        "actual_distance_km": 398.24,
+        "distance_variance_pct": 262.0363636363636
+      }
+    ],
+    "by_transporter": {
+      "Acosta, Johnson and Ford": 236.2,
+      "Atkinson Group": 96.48,
+      "Bailey LLC": 81.52,
+      "Campbell-Erickson": 43.99,
+      "Coleman-Roberts": 34.9,
+      "Collins, Hall and Butler": 6.03,
+      "Cook PLC": 103.66,
+      "Delgado and Sons": 126.51,
+      "Dillon-Munoz": -18.33,
+      "Drake, Banks and Ray": -37.8,
+      "Fernandez and Sons": -41.98,
+      "Flores and Sons": 59.64,
+      "Garcia, Burke and Delgado": 34.36,
+      "Gonzalez, Jenkins and Braun": -0.96,
+      "Hamilton PLC": 18.48,
+      "Hansen, Stephens and Campbell": 131.42,
+      "Harris, Brown and Dunn": 33.06,
+      "Howell, Wilcox and Smith": -13.9,
+      "Jenkins-Smith": -78.01,
+      "Jones, Rodriguez and Patterson": -1.24,
+      "King PLC": 2.76,
+      "Lamb-Hart": -6.64,
+      "Marquez-Wood": -9.73,
+      "Martin and Sons": 5.16,
+      "Mason Ltd": 69.62,
+      "Mccarthy-Taylor": 95.83,
+      "Mcintosh-Smith": 56.25,
+      "Meyer, Smith and Fisher": 79.84,
+      "Miller-Griffin": 704.27,
+      "Miller-Smith": -22.01,
+      "Monroe PLC": 210.38,
+      "Moore-Solis": 386.36,
+      "Powell Inc": -40.45,
+      "Rios-Thompson": 56.29,
+      "Rivera Inc": 36.69,
+      "Rivers-Castro": -46.87,
+      "Romero, Nicholson and Russell": 209.76,
+      "Salazar, Reynolds and Brooks": -46.09,
+      "Thompson, Rodriguez and Foster": 56.59,
+      "Walker-Baker": -6.45,
+      "Wallace Group": 51.42,
+      "Williams LLC": -36.95,
+      "Williams Ltd": -71.8,
+      "Williams-Martin": -16.4
+    }
+  },
+  "vehicle_utilization": {
+    "avg_utilization_pct": 54.15360199214366,
+    "max_utilization_pct": 109.30555555555556,
+    "vehicle_utilization": [
+      {
+        "plate_number": "478 SKE",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 25.88,
+        "avg_utilization_pct": 107.85,
+        "max_utilization_pct": 107.85,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "26-BP47",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 23.82,
+        "avg_utilization_pct": 99.24,
+        "max_utilization_pct": 99.24,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "62M\u2022848",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 23.72,
+        "avg_utilization_pct": 98.82,
+        "max_utilization_pct": 98.82,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "874-ZRS",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 23.62,
+        "avg_utilization_pct": 98.4,
+        "max_utilization_pct": 98.4,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "B01-FFY",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 22.67,
+        "avg_utilization_pct": 94.44,
+        "max_utilization_pct": 94.44,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "78D 2236",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 22.46,
+        "avg_utilization_pct": 93.58,
+        "max_utilization_pct": 98.68,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "2UM9146",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 21.15,
+        "avg_utilization_pct": 88.12,
+        "max_utilization_pct": 88.12,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "383KWR",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 21.05,
+        "avg_utilization_pct": 87.71,
+        "max_utilization_pct": 87.71,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "BD6 8475",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 20.98,
+        "avg_utilization_pct": 87.43,
+        "max_utilization_pct": 90.56,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "94-4312R",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 20.78,
+        "avg_utilization_pct": 86.6,
+        "max_utilization_pct": 86.6,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "675-YOU",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 20.4,
+        "avg_utilization_pct": 85.0,
+        "max_utilization_pct": 85.0,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "5225 VY",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 20.32,
+        "avg_utilization_pct": 84.69,
+        "max_utilization_pct": 85.97,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "JWU 177",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 18.03,
+        "avg_utilization_pct": 75.14,
+        "max_utilization_pct": 103.82,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "104 INP",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 18.01,
+        "avg_utilization_pct": 75.03,
+        "max_utilization_pct": 77.29,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "NNX D19",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 17.6,
+        "avg_utilization_pct": 73.33,
+        "max_utilization_pct": 80.9,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "16A 5515",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 17.54,
+        "avg_utilization_pct": 73.08,
+        "max_utilization_pct": 93.96,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "67T 778",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 17.42,
+        "avg_utilization_pct": 72.57,
+        "max_utilization_pct": 72.57,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "567-ENRI",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 17.2,
+        "avg_utilization_pct": 71.67,
+        "max_utilization_pct": 71.67,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "2M B0235",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 17.12,
+        "avg_utilization_pct": 71.32,
+        "max_utilization_pct": 79.17,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "565 EFI",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 17.1,
+        "avg_utilization_pct": 71.25,
+        "max_utilization_pct": 91.67,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "NRP-923",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 16.24,
+        "avg_utilization_pct": 67.69,
+        "max_utilization_pct": 88.19,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "8RIO 94",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 16.16,
+        "avg_utilization_pct": 67.31,
+        "max_utilization_pct": 77.15,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "02I 7514",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 15.96,
+        "avg_utilization_pct": 66.5,
+        "max_utilization_pct": 95.97,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "3054 ZM",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 15.82,
+        "avg_utilization_pct": 65.9,
+        "max_utilization_pct": 109.31,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "245JH",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 15.4,
+        "avg_utilization_pct": 64.17,
+        "max_utilization_pct": 64.17,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "0OZ X45",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 15.14,
+        "avg_utilization_pct": 63.08,
+        "max_utilization_pct": 74.44,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "8H I2736",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 14.05,
+        "avg_utilization_pct": 58.54,
+        "max_utilization_pct": 58.54,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "0TT G38",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 13.72,
+        "avg_utilization_pct": 57.15,
+        "max_utilization_pct": 92.36,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "243-ZWN",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 13.01,
+        "avg_utilization_pct": 54.2,
+        "max_utilization_pct": 71.11,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "034 XWW",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 12.69,
+        "avg_utilization_pct": 52.88,
+        "max_utilization_pct": 70.14,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "477NT",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 12.53,
+        "avg_utilization_pct": 52.22,
+        "max_utilization_pct": 72.29,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "TLW 349",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 12.51,
+        "avg_utilization_pct": 52.11,
+        "max_utilization_pct": 75.9,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "GYF-375",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 12.38,
+        "avg_utilization_pct": 51.56,
+        "max_utilization_pct": 78.47,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "6MVS803",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 12.32,
+        "avg_utilization_pct": 51.32,
+        "max_utilization_pct": 51.32,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "KLE 833",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 12.23,
+        "avg_utilization_pct": 50.97,
+        "max_utilization_pct": 85.42,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "VI-4413",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 12.23,
+        "avg_utilization_pct": 50.97,
+        "max_utilization_pct": 50.97,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "2AE 106",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 12.17,
+        "avg_utilization_pct": 50.69,
+        "max_utilization_pct": 50.69,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "623 IGB",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 12.14,
+        "avg_utilization_pct": 50.59,
+        "max_utilization_pct": 86.53,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "540-DLP",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 12.07,
+        "avg_utilization_pct": 50.28,
+        "max_utilization_pct": 50.28,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "7-7710L",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 11.93,
+        "avg_utilization_pct": 49.72,
+        "max_utilization_pct": 49.72,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "02-17781",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 11.37,
+        "avg_utilization_pct": 47.36,
+        "max_utilization_pct": 47.36,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "4Z 22902",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 11.08,
+        "avg_utilization_pct": 46.18,
+        "max_utilization_pct": 72.5,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "784-BRP",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 10.61,
+        "avg_utilization_pct": 44.22,
+        "max_utilization_pct": 88.54,
+        "avg_daily_trips": 1.0,
+        "active_days": 4
+      },
+      {
+        "plate_number": "I51 0IW",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 10.6,
+        "avg_utilization_pct": 44.17,
+        "max_utilization_pct": 44.17,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "9W 09686",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 10.58,
+        "avg_utilization_pct": 44.06,
+        "max_utilization_pct": 67.71,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "TPX A05",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 10.37,
+        "avg_utilization_pct": 43.19,
+        "max_utilization_pct": 43.19,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "828-YEX",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 10.07,
+        "avg_utilization_pct": 41.94,
+        "max_utilization_pct": 41.94,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "I20-AGN",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 9.93,
+        "avg_utilization_pct": 41.35,
+        "max_utilization_pct": 71.53,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "CXU-2753",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 9.82,
+        "avg_utilization_pct": 40.9,
+        "max_utilization_pct": 53.12,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "656 ZWW",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 9.7,
+        "avg_utilization_pct": 40.42,
+        "max_utilization_pct": 40.42,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "M80 9DP",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 9.4,
+        "avg_utilization_pct": 39.17,
+        "max_utilization_pct": 39.17,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "881-BEQT",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 8.41,
+        "avg_utilization_pct": 35.03,
+        "max_utilization_pct": 46.04,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "EWJ5256",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 7.92,
+        "avg_utilization_pct": 32.99,
+        "max_utilization_pct": 43.68,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "7AT1415",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 7.76,
+        "avg_utilization_pct": 32.33,
+        "max_utilization_pct": 47.64,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "MQN 585",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 7.75,
+        "avg_utilization_pct": 32.29,
+        "max_utilization_pct": 36.6,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "K07 9IU",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 7.39,
+        "avg_utilization_pct": 30.81,
+        "max_utilization_pct": 49.72,
+        "avg_daily_trips": 1.0,
+        "active_days": 3
+      },
+      {
+        "plate_number": "DHW-1453",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 6.13,
+        "avg_utilization_pct": 25.56,
+        "max_utilization_pct": 25.56,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "1BC56",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 4.41,
+        "avg_utilization_pct": 18.37,
+        "max_utilization_pct": 33.26,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "704-SIV",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 3.32,
+        "avg_utilization_pct": 13.82,
+        "max_utilization_pct": 13.82,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "BRG8763",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 3.07,
+        "avg_utilization_pct": 12.78,
+        "max_utilization_pct": 12.78,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "539BUX",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 2.62,
+        "avg_utilization_pct": 10.94,
+        "max_utilization_pct": 15.76,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "58C 5257",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 2.45,
+        "avg_utilization_pct": 10.21,
+        "max_utilization_pct": 10.21,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "U92 2VZ",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 1.9,
+        "avg_utilization_pct": 7.92,
+        "max_utilization_pct": 7.92,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "65K-FVAQ",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 1.78,
+        "avg_utilization_pct": 7.43,
+        "max_utilization_pct": 7.43,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "MNZ-908",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 0.92,
+        "avg_utilization_pct": 3.82,
+        "max_utilization_pct": 3.82,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "TPU-4040",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 0.9,
+        "avg_utilization_pct": 3.75,
+        "max_utilization_pct": 3.75,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      }
+    ],
+    "by_vehicle_type": {
+      "Pickup": 51.94,
+      "Semi-truck": 55.46,
+      "Trailer": 57.44,
+      "Truck": 40.21,
+      "Van": 62.23
+    },
+    "underutilized_vehicles": [
+      {
+        "plate_number": "DHW-1453",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 6.133333333333333,
+        "avg_utilization_pct": 25.555555555555557,
+        "max_utilization_pct": 25.555555555555557,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "1BC56",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 4.408333333333333,
+        "avg_utilization_pct": 18.368055555555557,
+        "max_utilization_pct": 33.263888888888886,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "704-SIV",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 3.316666666666667,
+        "avg_utilization_pct": 13.819444444444445,
+        "max_utilization_pct": 13.819444444444445,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "BRG8763",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 3.066666666666667,
+        "avg_utilization_pct": 12.777777777777779,
+        "max_utilization_pct": 12.777777777777779,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "539BUX",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 2.625,
+        "avg_utilization_pct": 10.9375,
+        "max_utilization_pct": 15.76388888888889,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "58C 5257",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 2.45,
+        "avg_utilization_pct": 10.208333333333334,
+        "max_utilization_pct": 10.208333333333334,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "U92 2VZ",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 1.9,
+        "avg_utilization_pct": 7.916666666666667,
+        "max_utilization_pct": 7.916666666666667,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "65K-FVAQ",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 1.7833333333333332,
+        "avg_utilization_pct": 7.430555555555555,
+        "max_utilization_pct": 7.430555555555555,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "MNZ-908",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 0.9166666666666666,
+        "avg_utilization_pct": 3.8194444444444446,
+        "max_utilization_pct": 3.8194444444444446,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "TPU-4040",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 0.9,
+        "avg_utilization_pct": 3.75,
+        "max_utilization_pct": 3.75,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      }
+    ],
+    "highly_utilized_vehicles": [
+      {
+        "plate_number": "478 SKE",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 25.883333333333333,
+        "avg_utilization_pct": 107.84722222222221,
+        "max_utilization_pct": 107.84722222222221,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "26-BP47",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 23.816666666666666,
+        "avg_utilization_pct": 99.23611111111111,
+        "max_utilization_pct": 99.23611111111111,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "62M\u2022848",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 23.716666666666665,
+        "avg_utilization_pct": 98.81944444444444,
+        "max_utilization_pct": 98.81944444444444,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "874-ZRS",
+        "vehicle_type": "Semi-truck",
+        "avg_daily_active_hours": 23.616666666666667,
+        "avg_utilization_pct": 98.40277777777777,
+        "max_utilization_pct": 98.40277777777777,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "B01-FFY",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 22.666666666666668,
+        "avg_utilization_pct": 94.44444444444444,
+        "max_utilization_pct": 94.44444444444444,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "78D 2236",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 22.458333333333332,
+        "avg_utilization_pct": 93.57638888888889,
+        "max_utilization_pct": 98.68055555555556,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "2UM9146",
+        "vehicle_type": "Trailer",
+        "avg_daily_active_hours": 21.15,
+        "avg_utilization_pct": 88.125,
+        "max_utilization_pct": 88.125,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "383KWR",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 21.05,
+        "avg_utilization_pct": 87.70833333333333,
+        "max_utilization_pct": 87.70833333333333,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "BD6 8475",
+        "vehicle_type": "Truck",
+        "avg_daily_active_hours": 20.983333333333334,
+        "avg_utilization_pct": 87.43055555555556,
+        "max_utilization_pct": 90.55555555555556,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      },
+      {
+        "plate_number": "94-4312R",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 20.783333333333335,
+        "avg_utilization_pct": 86.59722222222223,
+        "max_utilization_pct": 86.59722222222223,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "675-YOU",
+        "vehicle_type": "Van",
+        "avg_daily_active_hours": 20.4,
+        "avg_utilization_pct": 85.0,
+        "max_utilization_pct": 85.0,
+        "avg_daily_trips": 1.0,
+        "active_days": 1
+      },
+      {
+        "plate_number": "5225 VY",
+        "vehicle_type": "Pickup",
+        "avg_daily_active_hours": 20.325,
+        "avg_utilization_pct": 84.6875,
+        "max_utilization_pct": 85.97222222222223,
+        "avg_daily_trips": 1.0,
+        "active_days": 2
+      }
+    ]
+  },
+  "on_time_arrival": {
+    "on_time_rate_pct": 31.53153153153153,
+    "total_trips": 111,
+    "on_time_trips": 35,
+    "delayed_trips": 76,
+    "by_transporter": [
+      {
+        "transporter_name": "Acosta, Johnson and Ford",
+        "trip_count_total": 2,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Atkinson Group",
+        "trip_count_total": 3,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Bailey LLC",
+        "trip_count_total": 6,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Campbell-Erickson",
+        "trip_count_total": 3,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Coleman-Roberts",
+        "trip_count_total": 3,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Collins, Hall and Butler",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Cook PLC",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Delgado and Sons",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Dillon-Munoz",
+        "trip_count_total": 3,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Drake, Banks and Ray",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Fernandez and Sons",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Flores and Sons",
+        "trip_count_total": 7,
+        "trip_count_on_time": 4.0,
+        "on_time_rate_pct": 57.14
+      },
+      {
+        "transporter_name": "Garcia, Burke and Delgado",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Gonzalez, Jenkins and Braun",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Hamilton PLC",
+        "trip_count_total": 5,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 40.0
+      },
+      {
+        "transporter_name": "Hansen, Stephens and Campbell",
+        "trip_count_total": 7,
+        "trip_count_on_time": 4.0,
+        "on_time_rate_pct": 57.14
+      },
+      {
+        "transporter_name": "Harris, Brown and Dunn",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Howell, Wilcox and Smith",
+        "trip_count_total": 2,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Jenkins-Smith",
+        "trip_count_total": 1,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Jones, Rodriguez and Patterson",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "King PLC",
+        "trip_count_total": 3,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Lamb-Hart",
+        "trip_count_total": 4,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Marquez-Wood",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Martin and Sons",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Mason Ltd",
+        "trip_count_total": 1,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Mccarthy-Taylor",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Mcintosh-Smith",
+        "trip_count_total": 3,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 66.67
+      },
+      {
+        "transporter_name": "Meyer, Smith and Fisher",
+        "trip_count_total": 1,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Miller-Griffin",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Miller-Smith",
+        "trip_count_total": 2,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Monroe PLC",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Moore-Solis",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Powell Inc",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Rios-Thompson",
+        "trip_count_total": 3,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Rivera Inc",
+        "trip_count_total": 3,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Rivers-Castro",
+        "trip_count_total": 2,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Romero, Nicholson and Russell",
+        "trip_count_total": 3,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 66.67
+      },
+      {
+        "transporter_name": "Salazar, Reynolds and Brooks",
+        "trip_count_total": 3,
+        "trip_count_on_time": 1.0,
+        "on_time_rate_pct": 33.33
+      },
+      {
+        "transporter_name": "Thompson, Rodriguez and Foster",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Walker-Baker",
+        "trip_count_total": 4,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Wallace Group",
+        "trip_count_total": 4,
+        "trip_count_on_time": 2.0,
+        "on_time_rate_pct": 50.0
+      },
+      {
+        "transporter_name": "Williams LLC",
+        "trip_count_total": 2,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Williams Ltd",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Williams-Martin",
+        "trip_count_total": 1,
+        "trip_count_on_time": 0.0,
+        "on_time_rate_pct": 0.0
+      }
+    ],
+    "by_vehicle_type": {
+      "Pickup": {
+        "trip_count": 23
+      },
+      "Semi-truck": {
+        "trip_count": 27
+      },
+      "Trailer": {
+        "trip_count": 18
+      },
+      "Truck": {
+        "trip_count": 19
+      },
+      "Van": {
+        "trip_count": 24
+      }
+    }
+  },
+  "trip_delays": {
+    "departure_delay_pct": 63.96,
+    "arrival_delay_pct": 68.47,
+    "avg_departure_delay_min": 31.535211267605632,
+    "avg_arrival_delay_min": 57.71052631578947,
+    "max_departure_delay_min": 60.0,
+    "max_arrival_delay_min": 119.0,
+    "worst_delayed_trips": [
+      {
+        "plate_number": "2AE 106",
+        "transporter_name": "Thompson, Rodriguez and Foster",
+        "departure_delay_min": 49.0,
+        "arrival_delay_min": 119.0
+      },
+      {
+        "plate_number": "4Z 22902",
+        "transporter_name": "Rivers-Castro",
+        "departure_delay_min": -25.0,
+        "arrival_delay_min": 119.0
+      },
+      {
+        "plate_number": "623 IGB",
+        "transporter_name": "Flores and Sons",
+        "departure_delay_min": 27.0,
+        "arrival_delay_min": 118.0
+      },
+      {
+        "plate_number": "0TT G38",
+        "transporter_name": "Hamilton PLC",
+        "departure_delay_min": 26.0,
+        "arrival_delay_min": 116.0
+      },
+      {
+        "plate_number": "784-BRP",
+        "transporter_name": "Bailey LLC",
+        "departure_delay_min": -12.0,
+        "arrival_delay_min": 114.0
+      },
+      {
+        "plate_number": "478 SKE",
+        "transporter_name": "Salazar, Reynolds and Brooks",
+        "departure_delay_min": -1.0,
+        "arrival_delay_min": 112.0
+      },
+      {
+        "plate_number": "I20-AGN",
+        "transporter_name": "Delgado and Sons",
+        "departure_delay_min": -19.0,
+        "arrival_delay_min": 111.0
+      },
+      {
+        "plate_number": "TPX A05",
+        "transporter_name": "Fernandez and Sons",
+        "departure_delay_min": 29.0,
+        "arrival_delay_min": 111.0
+      },
+      {
+        "plate_number": "26-BP47",
+        "transporter_name": "Hamilton PLC",
+        "departure_delay_min": -1.0,
+        "arrival_delay_min": 108.0
+      },
+      {
+        "plate_number": "2M B0235",
+        "transporter_name": "Romero, Nicholson and Russell",
+        "departure_delay_min": -13.0,
+        "arrival_delay_min": 107.0
+      }
+    ],
+    "by_transporter": {
+      "Acosta, Johnson and Ford": {
+        "departure_delay_min": 16.0,
+        "arrival_delay_min": 3.5
+      },
+      "Atkinson Group": {
+        "departure_delay_min": 7.67,
+        "arrival_delay_min": 35.0
+      },
+      "Bailey LLC": {
+        "departure_delay_min": 13.17,
+        "arrival_delay_min": 30.33
+      },
+      "Campbell-Erickson": {
+        "departure_delay_min": 13.67,
+        "arrival_delay_min": 23.33
+      },
+      "Coleman-Roberts": {
+        "departure_delay_min": 2.67,
+        "arrival_delay_min": 50.0
+      },
+      "Collins, Hall and Butler": {
+        "departure_delay_min": -2.0,
+        "arrival_delay_min": 63.5
+      },
+      "Cook PLC": {
+        "departure_delay_min": 32.0,
+        "arrival_delay_min": 44.5
+      },
+      "Delgado and Sons": {
+        "departure_delay_min": 20.5,
+        "arrival_delay_min": 106.0
+      },
+      "Dillon-Munoz": {
+        "departure_delay_min": 17.0,
+        "arrival_delay_min": 34.67
+      },
+      "Drake, Banks and Ray": {
+        "departure_delay_min": -9.0,
+        "arrival_delay_min": 5.0
+      },
+      "Fernandez and Sons": {
+        "departure_delay_min": 40.5,
+        "arrival_delay_min": 95.5
+      },
+      "Flores and Sons": {
+        "departure_delay_min": 28.43,
+        "arrival_delay_min": 8.71
+      },
+      "Garcia, Burke and Delgado": {
+        "departure_delay_min": 10.5,
+        "arrival_delay_min": 41.0
+      },
+      "Gonzalez, Jenkins and Braun": {
+        "departure_delay_min": 18.0,
+        "arrival_delay_min": 66.5
+      },
+      "Hamilton PLC": {
+        "departure_delay_min": 14.8,
+        "arrival_delay_min": 38.6
+      },
+      "Hansen, Stephens and Campbell": {
+        "departure_delay_min": 2.43,
+        "arrival_delay_min": -12.0
+      },
+      "Harris, Brown and Dunn": {
+        "departure_delay_min": 2.0,
+        "arrival_delay_min": 51.0
+      },
+      "Howell, Wilcox and Smith": {
+        "departure_delay_min": 37.0,
+        "arrival_delay_min": 27.0
+      },
+      "Jenkins-Smith": {
+        "departure_delay_min": -21.0,
+        "arrival_delay_min": -25.0
+      },
+      "Jones, Rodriguez and Patterson": {
+        "departure_delay_min": 32.0,
+        "arrival_delay_min": 45.0
+      },
+      "King PLC": {
+        "departure_delay_min": 20.67,
+        "arrival_delay_min": 49.0
+      },
+      "Lamb-Hart": {
+        "departure_delay_min": 28.25,
+        "arrival_delay_min": 32.75
+      },
+      "Marquez-Wood": {
+        "departure_delay_min": -6.0,
+        "arrival_delay_min": 23.5
+      },
+      "Martin and Sons": {
+        "departure_delay_min": 16.0,
+        "arrival_delay_min": 10.0
+      },
+      "Mason Ltd": {
+        "departure_delay_min": 21.0,
+        "arrival_delay_min": -47.0
+      },
+      "Mccarthy-Taylor": {
+        "departure_delay_min": -23.5,
+        "arrival_delay_min": 56.5
+      },
+      "Mcintosh-Smith": {
+        "departure_delay_min": 14.33,
+        "arrival_delay_min": 32.0
+      },
+      "Meyer, Smith and Fisher": {
+        "departure_delay_min": 50.0,
+        "arrival_delay_min": -7.0
+      },
+      "Miller-Griffin": {
+        "departure_delay_min": -16.0,
+        "arrival_delay_min": 29.0
+      },
+      "Miller-Smith": {
+        "departure_delay_min": -14.5,
+        "arrival_delay_min": -48.5
+      },
+      "Monroe PLC": {
+        "departure_delay_min": 29.0,
+        "arrival_delay_min": 90.5
+      },
+      "Moore-Solis": {
+        "departure_delay_min": -1.0,
+        "arrival_delay_min": 39.0
+      },
+      "Powell Inc": {
+        "departure_delay_min": 60.0,
+        "arrival_delay_min": 65.0
+      },
+      "Rios-Thompson": {
+        "departure_delay_min": 24.67,
+        "arrival_delay_min": 12.67
+      },
+      "Rivera Inc": {
+        "departure_delay_min": 36.33,
+        "arrival_delay_min": 33.0
+      },
+      "Rivers-Castro": {
+        "departure_delay_min": -27.0,
+        "arrival_delay_min": 52.5
+      },
+      "Romero, Nicholson and Russell": {
+        "departure_delay_min": 11.67,
+        "arrival_delay_min": 29.67
+      },
+      "Salazar, Reynolds and Brooks": {
+        "departure_delay_min": 25.0,
+        "arrival_delay_min": 39.67
+      },
+      "Thompson, Rodriguez and Foster": {
+        "departure_delay_min": 49.0,
+        "arrival_delay_min": 119.0
+      },
+      "Walker-Baker": {
+        "departure_delay_min": 17.75,
+        "arrival_delay_min": 32.5
+      },
+      "Wallace Group": {
+        "departure_delay_min": -10.75,
+        "arrival_delay_min": 22.5
+      },
+      "Williams LLC": {
+        "departure_delay_min": 46.0,
+        "arrival_delay_min": 59.5
+      },
+      "Williams Ltd": {
+        "departure_delay_min": -3.0,
+        "arrival_delay_min": 22.0
+      },
+      "Williams-Martin": {
+        "departure_delay_min": 39.0,
+        "arrival_delay_min": 12.0
+      }
+    }
+  },
+  "transporter_performance": {
+    "avg_performance_score": 86.50795454545455,
+    "transporter_performance": [
+      {
+        "transporter_name": "Collins, Hall and Butler",
+        "composite_score": 82.14,
+        "calculated_performance_score": 207.79,
+        "total_trips": 2,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 459.29,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 17.09
+      },
+      {
+        "transporter_name": "Williams LLC",
+        "composite_score": 95.07,
+        "calculated_performance_score": 162.67,
+        "total_trips": 2,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 308.9,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 14.72
+      },
+      {
+        "transporter_name": "Powell Inc",
+        "composite_score": 50.08,
+        "calculated_performance_score": 156.77,
+        "total_trips": 1,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 289.23,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 4.08
+      },
+      {
+        "transporter_name": "Mason Ltd",
+        "composite_score": 61.8,
+        "calculated_performance_score": 119.43,
+        "total_trips": 1,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 187.99,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 17.87
+      },
+      {
+        "transporter_name": "Coleman-Roberts",
+        "composite_score": 98.63,
+        "calculated_performance_score": 116.2,
+        "total_trips": 3,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 165.63,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 13.12
+      },
+      {
+        "transporter_name": "Bailey LLC",
+        "composite_score": 53.47,
+        "calculated_performance_score": 108.26,
+        "total_trips": 6,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 154.71,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 13.45
+      },
+      {
+        "transporter_name": "Meyer, Smith and Fisher",
+        "composite_score": 61.75,
+        "calculated_performance_score": 96.31,
+        "total_trips": 1,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 114.3,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 21.05
+      },
+      {
+        "transporter_name": "Jones, Rodriguez and Patterson",
+        "composite_score": 60.86,
+        "calculated_performance_score": 89.34,
+        "total_trips": 2,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 64.46,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 2.72
+      },
+      {
+        "transporter_name": "Williams Ltd",
+        "composite_score": 73.8,
+        "calculated_performance_score": 86.31,
+        "total_trips": 1,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 54.36,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 17.42
+      },
+      {
+        "transporter_name": "Gonzalez, Jenkins and Braun",
+        "composite_score": 87.09,
+        "calculated_performance_score": 85.52,
+        "total_trips": 2,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 51.73,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 4.31
+      },
+      {
+        "transporter_name": "Miller-Griffin",
+        "composite_score": 75.31,
+        "calculated_performance_score": 74.74,
+        "total_trips": 1,
+        "on_time_rate_pct": 100.0,
+        "volume_fulfillment_pct": 49.12,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 12.75
+      },
+      {
+        "transporter_name": "Hamilton PLC",
+        "composite_score": 50.51,
+        "calculated_performance_score": 89.41,
+        "total_trips": 5,
+        "on_time_rate_pct": 80.0,
+        "volume_fulfillment_pct": 110.86,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 14.4
+      },
+      {
+        "transporter_name": "Wallace Group",
+        "composite_score": 79.68,
+        "calculated_performance_score": 82.12,
+        "total_trips": 4,
+        "on_time_rate_pct": 75.0,
+        "volume_fulfillment_pct": 107.54,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 8.3
+      },
+      {
+        "transporter_name": "Romero, Nicholson and Russell",
+        "composite_score": 81.88,
+        "calculated_performance_score": 98.28,
+        "total_trips": 3,
+        "on_time_rate_pct": 66.67,
+        "volume_fulfillment_pct": 172.06,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 10.97
+      },
+      {
+        "transporter_name": "Rivera Inc",
+        "composite_score": 95.3,
+        "calculated_performance_score": 90.64,
+        "total_trips": 3,
+        "on_time_rate_pct": 66.67,
+        "volume_fulfillment_pct": 125.48,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 18.28
+      },
+      {
+        "transporter_name": "Campbell-Erickson",
+        "composite_score": 83.59,
+        "calculated_performance_score": 79.31,
+        "total_trips": 3,
+        "on_time_rate_pct": 66.67,
+        "volume_fulfillment_pct": 90.16,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 17.83
+      },
+      {
+        "transporter_name": "Mcintosh-Smith",
+        "composite_score": 71.76,
+        "calculated_performance_score": 69.74,
+        "total_trips": 3,
+        "on_time_rate_pct": 66.67,
+        "volume_fulfillment_pct": 62.33,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 7.96
+      },
+      {
+        "transporter_name": "Rios-Thompson",
+        "composite_score": 82.11,
+        "calculated_performance_score": 67.2,
+        "total_trips": 3,
+        "on_time_rate_pct": 66.67,
+        "volume_fulfillment_pct": 53.88,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 16.47
+      },
+      {
+        "transporter_name": "Hansen, Stephens and Campbell",
+        "composite_score": 94.18,
+        "calculated_performance_score": 99.05,
+        "total_trips": 7,
+        "on_time_rate_pct": 57.14,
+        "volume_fulfillment_pct": 187.29,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 15.33
+      },
+      {
+        "transporter_name": "Acosta, Johnson and Ford",
+        "composite_score": 87.14,
+        "calculated_performance_score": 112.93,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 243.11,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 13.79
+      },
+      {
+        "transporter_name": "Howell, Wilcox and Smith",
+        "composite_score": 66.63,
+        "calculated_performance_score": 118.51,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 228.37,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 7.83
+      },
+      {
+        "transporter_name": "Fernandez and Sons",
+        "composite_score": 89.32,
+        "calculated_performance_score": 105.83,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 186.11,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 13.92
+      },
+      {
+        "transporter_name": "Mccarthy-Taylor",
+        "composite_score": 53.53,
+        "calculated_performance_score": 94.43,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 180.03,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 18.83
+      },
+      {
+        "transporter_name": "Walker-Baker",
+        "composite_score": 84.31,
+        "calculated_performance_score": 89.17,
+        "total_trips": 4,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 147.24,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 16.25
+      },
+      {
+        "transporter_name": "Marquez-Wood",
+        "composite_score": 73.45,
+        "calculated_performance_score": 90.7,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 135.66,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 4.49
+      },
+      {
+        "transporter_name": "Cook PLC",
+        "composite_score": 52.13,
+        "calculated_performance_score": 69.6,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 98.67,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 12.71
+      },
+      {
+        "transporter_name": "Miller-Smith",
+        "composite_score": 94.3,
+        "calculated_performance_score": 74.83,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 82.77,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 17.43
+      },
+      {
+        "transporter_name": "Rivers-Castro",
+        "composite_score": 86.83,
+        "calculated_performance_score": 71.22,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 70.75,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 16.82
+      },
+      {
+        "transporter_name": "Garcia, Burke and Delgado",
+        "composite_score": 80.09,
+        "calculated_performance_score": 67.22,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 68.84,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 14.01
+      },
+      {
+        "transporter_name": "Harris, Brown and Dunn",
+        "composite_score": 86.5,
+        "calculated_performance_score": 45.76,
+        "total_trips": 2,
+        "on_time_rate_pct": 50.0,
+        "volume_fulfillment_pct": 30.22,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 12.32
+      },
+      {
+        "transporter_name": "Flores and Sons",
+        "composite_score": 58.35,
+        "calculated_performance_score": 87.49,
+        "total_trips": 7,
+        "on_time_rate_pct": 42.86,
+        "volume_fulfillment_pct": 154.36,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 14.81
+      },
+      {
+        "transporter_name": "Salazar, Reynolds and Brooks",
+        "composite_score": 66.96,
+        "calculated_performance_score": 90.24,
+        "total_trips": 3,
+        "on_time_rate_pct": 33.33,
+        "volume_fulfillment_pct": 156.34,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 20.58
+      },
+      {
+        "transporter_name": "Dillon-Munoz",
+        "composite_score": 75.94,
+        "calculated_performance_score": 82.84,
+        "total_trips": 3,
+        "on_time_rate_pct": 33.33,
+        "volume_fulfillment_pct": 153.92,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 11.29
+      },
+      {
+        "transporter_name": "Atkinson Group",
+        "composite_score": 98.32,
+        "calculated_performance_score": 68.78,
+        "total_trips": 3,
+        "on_time_rate_pct": 33.33,
+        "volume_fulfillment_pct": 116.97,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 15.46
+      },
+      {
+        "transporter_name": "King PLC",
+        "composite_score": 77.24,
+        "calculated_performance_score": 73.57,
+        "total_trips": 3,
+        "on_time_rate_pct": 33.33,
+        "volume_fulfillment_pct": 100.77,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 10.14
+      },
+      {
+        "transporter_name": "Lamb-Hart",
+        "composite_score": 95.8,
+        "calculated_performance_score": 80.53,
+        "total_trips": 4,
+        "on_time_rate_pct": 25.0,
+        "volume_fulfillment_pct": 135.09,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 7.32
+      },
+      {
+        "transporter_name": "Moore-Solis",
+        "composite_score": 66.63,
+        "calculated_performance_score": 66.69,
+        "total_trips": 2,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 155.64,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 2.17
+      },
+      {
+        "transporter_name": "Williams-Martin",
+        "composite_score": 52.3,
+        "calculated_performance_score": 75.81,
+        "total_trips": 1,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 152.7,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 18.55
+      },
+      {
+        "transporter_name": "Thompson, Rodriguez and Foster",
+        "composite_score": 51.45,
+        "calculated_performance_score": 66.6,
+        "total_trips": 1,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 140.86,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 12.17
+      },
+      {
+        "transporter_name": "Monroe PLC",
+        "composite_score": 67.86,
+        "calculated_performance_score": 35.01,
+        "total_trips": 2,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 83.37,
+        "missed_deliveries_count": 1,
+        "avg_trip_duration_hours": 15.52
+      },
+      {
+        "transporter_name": "Delgado and Sons",
+        "composite_score": 83.03,
+        "calculated_performance_score": 37.3,
+        "total_trips": 2,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 57.68,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 9.93
+      },
+      {
+        "transporter_name": "Martin and Sons",
+        "composite_score": 97.5,
+        "calculated_performance_score": 45.36,
+        "total_trips": 1,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 51.2,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 4.9
+      },
+      {
+        "transporter_name": "Jenkins-Smith",
+        "composite_score": 50.84,
+        "calculated_performance_score": 40.32,
+        "total_trips": 1,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 34.4,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 14.93
+      },
+      {
+        "transporter_name": "Drake, Banks and Ray",
+        "composite_score": 91.19,
+        "calculated_performance_score": 36.52,
+        "total_trips": 1,
+        "on_time_rate_pct": 0.0,
+        "volume_fulfillment_pct": 21.73,
+        "missed_deliveries_count": 0,
+        "avg_trip_duration_hours": 21.23
+      }
+    ],
+    "top_performers": [
+      {
+        "transporter_name": "Collins, Hall and Butler",
+        "calculated_performance_score": 207.79,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Williams LLC",
+        "calculated_performance_score": 162.67,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Powell Inc",
+        "calculated_performance_score": 156.77,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Mason Ltd",
+        "calculated_performance_score": 119.43,
+        "on_time_rate_pct": 100.0
+      },
+      {
+        "transporter_name": "Howell, Wilcox and Smith",
+        "calculated_performance_score": 118.51,
+        "on_time_rate_pct": 50.0
+      }
+    ],
+    "bottom_performers": [
+      {
+        "transporter_name": "Monroe PLC",
+        "calculated_performance_score": 35.01,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Drake, Banks and Ray",
+        "calculated_performance_score": 36.52,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Delgado and Sons",
+        "calculated_performance_score": 37.3,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Jenkins-Smith",
+        "calculated_performance_score": 40.32,
+        "on_time_rate_pct": 0.0
+      },
+      {
+        "transporter_name": "Martin and Sons",
+        "calculated_performance_score": 45.36,
+        "on_time_rate_pct": 0.0
+      }
+    ]
+  },
+  "missed_deliveries": {
+    "missed_delivery_rate_pct": 1.2,
+    "total_missed_deliveries": 6,
+    "total_trips": 499,
+    "missed_deliveries": [
+      {
+        "reason": "Wrong address",
+        "timestamp": "2025-06-12 23:41:18",
+        "plate_number": "26-BP47",
+        "transporter_name": "Hamilton PLC",
+        "driver_name": "Dr. Nathan Scott"
+      },
+      {
+        "reason": "Wrong address",
+        "timestamp": "2025-05-16 16:11:08",
+        "plate_number": "JWU 177",
+        "transporter_name": "Monroe PLC",
+        "driver_name": "Jacqueline Whitaker"
+      },
+      {
+        "reason": "Access restrictions",
+        "timestamp": "2025-01-08 14:53:54",
+        "plate_number": "02I 7514",
+        "transporter_name": "Wallace Group",
+        "driver_name": "Joshua Ramirez"
+      },
+      {
+        "reason": "Vehicle breakdown",
+        "timestamp": "2024-11-27 21:34:19",
+        "plate_number": "M80 9DP",
+        "transporter_name": "Harris, Brown and Dunn",
+        "driver_name": "Kari Gibson"
+      },
+      {
+        "reason": "Vehicle breakdown",
+        "timestamp": "2024-10-25 16:04:06",
+        "plate_number": "784-BRP",
+        "transporter_name": "Walker-Baker",
+        "driver_name": "Devin Williams"
+      },
+      {
+        "reason": "Access restrictions",
+        "timestamp": "2024-08-04 09:39:20",
+        "plate_number": "6MVS803",
+        "transporter_name": "Dillon-Munoz",
+        "driver_name": "Benjamin Jackson"
+      }
+    ],
+    "by_reason": {
+      "Wrong address": 2,
+      "Access restrictions": 2,
+      "Vehicle breakdown": 2
+    },
+    "by_transporter": {
+      "Hamilton PLC": 1,
+      "Monroe PLC": 1,
+      "Wallace Group": 1,
+      "Harris, Brown and Dunn": 1,
+      "Walker-Baker": 1,
+      "Dillon-Munoz": 1
+    }
+  },
+  "geo_deviation_events": {
+    "geo_deviation_events": 0,
+    "events": []
+  },
+  "loading_unloading_time": {
+    "avg_loading_time_min": 69.64261261261261,
+    "avg_unloading_time_min": 50.589009009009,
+    "avg_total_stop_time_min": 120.23162162162163,
+    "max_loading_time_min": 119.96,
+    "max_unloading_time_min": 89.84,
+    "by_location_type": {
+      "start_locations": {
+        "Distribution Center": 66.7,
+        "Factory": 64.58,
+        "Port": 72.76,
+        "Store": 72.21,
+        "Warehouse": 73.5
+      },
+      "end_locations": {
+        "Distribution Center": 54.25,
+        "Factory": 52.28,
+        "Port": 48.51,
+        "Store": 45.85,
+        "Warehouse": 50.8
+      }
+    },
+    "bottleneck_locations": {
+      "loading": [
+        {
+          "start_location_name": "Matthewberg Store",
+          "start_location_type": "Store",
+          "loading_time_min": 119.96,
+          "plate_number": "02-17781"
+        },
+        {
+          "start_location_name": "Leeland Store",
+          "start_location_type": "Store",
+          "loading_time_min": 119.79,
+          "plate_number": "567-ENRI"
+        },
+        {
+          "start_location_name": "Donovanland Warehouse",
+          "start_location_type": "Distribution Center",
+          "loading_time_min": 118.66,
+          "plate_number": "NRP-923"
+        },
+        {
+          "start_location_name": "Longbury Factory",
+          "start_location_type": "Warehouse",
+          "loading_time_min": 118.2,
+          "plate_number": "0OZ X45"
+        },
+        {
+          "start_location_name": "Keithtown Warehouse",
+          "start_location_type": "Distribution Center",
+          "loading_time_min": 118.08,
+          "plate_number": "477NT"
+        },
+        {
+          "start_location_name": "New Jimmy Factory",
+          "start_location_type": "Warehouse",
+          "loading_time_min": 117.97,
+          "plate_number": "I20-AGN"
+        },
+        {
+          "start_location_name": "South Elizabeth Factory",
+          "start_location_type": "Port",
+          "loading_time_min": 117.03,
+          "plate_number": "784-BRP"
+        },
+        {
+          "start_location_name": "East Codyshire Warehouse",
+          "start_location_type": "Factory",
+          "loading_time_min": 116.27,
+          "plate_number": "58C 5257"
+        },
+        {
+          "start_location_name": "Marybury Port",
+          "start_location_type": "Warehouse",
+          "loading_time_min": 115.95,
+          "plate_number": "540-DLP"
+        },
+        {
+          "start_location_name": "East Tylermouth Store",
+          "start_location_type": "Factory",
+          "loading_time_min": 115.5,
+          "plate_number": "034 XWW"
+        }
+      ],
+      "unloading": [
+        {
+          "end_location_name": "Port Rebeccatown Distribution Center",
+          "end_location_type": "Port",
+          "unloading_time_min": 89.84,
+          "plate_number": "U92 2VZ"
+        },
+        {
+          "end_location_name": "Mccallmouth Port",
+          "end_location_type": "Factory",
+          "unloading_time_min": 89.67,
+          "plate_number": "K07 9IU"
+        },
+        {
+          "end_location_name": "North Christopher Port",
+          "end_location_type": "Warehouse",
+          "unloading_time_min": 89.15,
+          "plate_number": "567-ENRI"
+        },
+        {
+          "end_location_name": "Lake Justinburgh Port",
+          "end_location_type": "Store",
+          "unloading_time_min": 88.85,
+          "plate_number": "477NT"
+        },
+        {
+          "end_location_name": "Keithtown Warehouse",
+          "end_location_type": "Distribution Center",
+          "unloading_time_min": 88.49,
+          "plate_number": "CXU-2753"
+        },
+        {
+          "end_location_name": "Robinmouth Store",
+          "end_location_type": "Distribution Center",
+          "unloading_time_min": 87.47,
+          "plate_number": "NNX D19"
+        },
+        {
+          "end_location_name": "Lake Ruben Distribution Center",
+          "end_location_type": "Factory",
+          "unloading_time_min": 87.09,
+          "plate_number": "565 EFI"
+        },
+        {
+          "end_location_name": "Lake Elizabethchester Distribution Center",
+          "end_location_type": "Store",
+          "unloading_time_min": 87.06,
+          "plate_number": "243-ZWN"
+        },
+        {
+          "end_location_name": "Stephaniefort Factory",
+          "end_location_type": "Factory",
+          "unloading_time_min": 86.34,
+          "plate_number": "0OZ X45"
+        },
+        {
+          "end_location_name": "New Steven Store",
+          "end_location_type": "Distribution Center",
+          "unloading_time_min": 86.07,
+          "plate_number": "2UM9146"
+        }
+      ]
+    },
+    "by_transporter": {
+      "Acosta, Johnson and Ford": {
+        "loading_time_min": 52.14,
+        "unloading_time_min": 40.68,
+        "total_stop_time_min": 92.82
+      },
+      "Atkinson Group": {
+        "loading_time_min": 78.81,
+        "unloading_time_min": 35.96,
+        "total_stop_time_min": 114.76
+      },
+      "Bailey LLC": {
+        "loading_time_min": 61.35,
+        "unloading_time_min": 60.02,
+        "total_stop_time_min": 121.37
+      },
+      "Campbell-Erickson": {
+        "loading_time_min": 45.17,
+        "unloading_time_min": 82.87,
+        "total_stop_time_min": 128.04
+      },
+      "Coleman-Roberts": {
+        "loading_time_min": 69.03,
+        "unloading_time_min": 69.92,
+        "total_stop_time_min": 138.95
+      },
+      "Collins, Hall and Butler": {
+        "loading_time_min": 116.79,
+        "unloading_time_min": 50.6,
+        "total_stop_time_min": 167.39
+      },
+      "Cook PLC": {
+        "loading_time_min": 57.14,
+        "unloading_time_min": 33.15,
+        "total_stop_time_min": 90.29
+      },
+      "Delgado and Sons": {
+        "loading_time_min": 113.9,
+        "unloading_time_min": 29.73,
+        "total_stop_time_min": 143.62
+      },
+      "Dillon-Munoz": {
+        "loading_time_min": 54.61,
+        "unloading_time_min": 59.9,
+        "total_stop_time_min": 114.5
+      },
+      "Drake, Banks and Ray": {
+        "loading_time_min": 37.01,
+        "unloading_time_min": 46.65,
+        "total_stop_time_min": 83.66
+      },
+      "Fernandez and Sons": {
+        "loading_time_min": 71.18,
+        "unloading_time_min": 22.08,
+        "total_stop_time_min": 93.26
+      },
+      "Flores and Sons": {
+        "loading_time_min": 75.01,
+        "unloading_time_min": 58.72,
+        "total_stop_time_min": 133.73
+      },
+      "Garcia, Burke and Delgado": {
+        "loading_time_min": 83.98,
+        "unloading_time_min": 48.84,
+        "total_stop_time_min": 132.81
+      },
+      "Gonzalez, Jenkins and Braun": {
+        "loading_time_min": 34.64,
+        "unloading_time_min": 59.63,
+        "total_stop_time_min": 94.27
+      },
+      "Hamilton PLC": {
+        "loading_time_min": 70.29,
+        "unloading_time_min": 40.88,
+        "total_stop_time_min": 111.17
+      },
+      "Hansen, Stephens and Campbell": {
+        "loading_time_min": 62.59,
+        "unloading_time_min": 62.04,
+        "total_stop_time_min": 124.63
+      },
+      "Harris, Brown and Dunn": {
+        "loading_time_min": 58.1,
+        "unloading_time_min": 74.96,
+        "total_stop_time_min": 133.06
+      },
+      "Howell, Wilcox and Smith": {
+        "loading_time_min": 78.94,
+        "unloading_time_min": 58.88,
+        "total_stop_time_min": 137.81
+      },
+      "Jenkins-Smith": {
+        "loading_time_min": 20.02,
+        "unloading_time_min": 77.08,
+        "total_stop_time_min": 97.1
+      },
+      "Jones, Rodriguez and Patterson": {
+        "loading_time_min": 94.94,
+        "unloading_time_min": 35.96,
+        "total_stop_time_min": 130.9
+      },
+      "King PLC": {
+        "loading_time_min": 85.13,
+        "unloading_time_min": 49.11,
+        "total_stop_time_min": 134.24
+      },
+      "Lamb-Hart": {
+        "loading_time_min": 62.26,
+        "unloading_time_min": 44.78,
+        "total_stop_time_min": 107.04
+      },
+      "Marquez-Wood": {
+        "loading_time_min": 88.89,
+        "unloading_time_min": 84.48,
+        "total_stop_time_min": 173.37
+      },
+      "Martin and Sons": {
+        "loading_time_min": 45.65,
+        "unloading_time_min": 51.98,
+        "total_stop_time_min": 97.63
+      },
+      "Mason Ltd": {
+        "loading_time_min": 23.17,
+        "unloading_time_min": 86.34,
+        "total_stop_time_min": 109.51
+      },
+      "Mccarthy-Taylor": {
+        "loading_time_min": 74.72,
+        "unloading_time_min": 36.75,
+        "total_stop_time_min": 111.47
+      },
+      "Mcintosh-Smith": {
+        "loading_time_min": 70.11,
+        "unloading_time_min": 42.05,
+        "total_stop_time_min": 112.16
+      },
+      "Meyer, Smith and Fisher": {
+        "loading_time_min": 111.64,
+        "unloading_time_min": 41.34,
+        "total_stop_time_min": 152.98
+      },
+      "Miller-Griffin": {
+        "loading_time_min": 32.34,
+        "unloading_time_min": 88.49,
+        "total_stop_time_min": 120.83
+      },
+      "Miller-Smith": {
+        "loading_time_min": 92.48,
+        "unloading_time_min": 19.73,
+        "total_stop_time_min": 112.21
+      },
+      "Monroe PLC": {
+        "loading_time_min": 78.67,
+        "unloading_time_min": 41.54,
+        "total_stop_time_min": 120.21
+      },
+      "Moore-Solis": {
+        "loading_time_min": 78.6,
+        "unloading_time_min": 51.45,
+        "total_stop_time_min": 130.05
+      },
+      "Powell Inc": {
+        "loading_time_min": 111.41,
+        "unloading_time_min": 20.79,
+        "total_stop_time_min": 132.2
+      },
+      "Rios-Thompson": {
+        "loading_time_min": 80.7,
+        "unloading_time_min": 46.75,
+        "total_stop_time_min": 127.45
+      },
+      "Rivera Inc": {
+        "loading_time_min": 87.64,
+        "unloading_time_min": 50.14,
+        "total_stop_time_min": 137.78
+      },
+      "Rivers-Castro": {
+        "loading_time_min": 38.32,
+        "unloading_time_min": 28.32,
+        "total_stop_time_min": 66.64
+      },
+      "Romero, Nicholson and Russell": {
+        "loading_time_min": 77.53,
+        "unloading_time_min": 24.72,
+        "total_stop_time_min": 102.25
+      },
+      "Salazar, Reynolds and Brooks": {
+        "loading_time_min": 53.19,
+        "unloading_time_min": 53.91,
+        "total_stop_time_min": 107.1
+      },
+      "Thompson, Rodriguez and Foster": {
+        "loading_time_min": 36.9,
+        "unloading_time_min": 75.85,
+        "total_stop_time_min": 112.75
+      },
+      "Walker-Baker": {
+        "loading_time_min": 58.28,
+        "unloading_time_min": 59.23,
+        "total_stop_time_min": 117.51
+      },
+      "Wallace Group": {
+        "loading_time_min": 59.87,
+        "unloading_time_min": 39.05,
+        "total_stop_time_min": 98.92
+      },
+      "Williams LLC": {
+        "loading_time_min": 98.04,
+        "unloading_time_min": 46.96,
+        "total_stop_time_min": 145.0
+      },
+      "Williams Ltd": {
+        "loading_time_min": 71.72,
+        "unloading_time_min": 23.44,
+        "total_stop_time_min": 95.16
+      },
+      "Williams-Martin": {
+        "loading_time_min": 107.42,
+        "unloading_time_min": 47.92,
+        "total_stop_time_min": 155.34
+      }
+    }
+  },
+  "delivery_volume_variance": {
+    "avg_fulfillment_pct": 136.33674179625282,
+    "avg_volume_variance_pct": 36.3367417962528,
+    "total_planned_volume": 62442.89000000001,
+    "total_actual_volume": 63104.65,
+    "over_delivered_trips": 60,
+    "under_delivered_trips": 51,
+    "perfect_delivery_trips": 0,
+    "worst_underperformers": [
+      {
+        "plate_number": "MQN 585",
+        "transporter_name": "Gonzalez, Jenkins and Braun",
+        "delivery_volume_planned": 884.29,
+        "delivery_volume_actual": 94.01,
+        "fulfillment_pct": 10.631127797442016
+      },
+      {
+        "plate_number": "I20-AGN",
+        "transporter_name": "Delgado and Sons",
+        "delivery_volume_planned": 781.9,
+        "delivery_volume_actual": 103.72,
+        "fulfillment_pct": 13.265123417316794
+      },
+      {
+        "plate_number": "243-ZWN",
+        "transporter_name": "Hamilton PLC",
+        "delivery_volume_planned": 713.9,
+        "delivery_volume_actual": 102.14,
+        "fulfillment_pct": 14.307325956016248
+      },
+      {
+        "plate_number": "539BUX",
+        "transporter_name": "Jones, Rodriguez and Patterson",
+        "delivery_volume_planned": 562.7,
+        "delivery_volume_actual": 91.78,
+        "fulfillment_pct": 16.310645103963033
+      },
+      {
+        "plate_number": "M80 9DP",
+        "transporter_name": "Harris, Brown and Dunn",
+        "delivery_volume_planned": 809.86,
+        "delivery_volume_actual": 147.51,
+        "fulfillment_pct": 18.214259254685995
+      },
+      {
+        "plate_number": "78D 2236",
+        "transporter_name": "Drake, Banks and Ray",
+        "delivery_volume_planned": 492.82,
+        "delivery_volume_actual": 107.1,
+        "fulfillment_pct": 21.73207256199018
+      },
+      {
+        "plate_number": "4Z 22902",
+        "transporter_name": "Mcintosh-Smith",
+        "delivery_volume_planned": 832.73,
+        "delivery_volume_actual": 188.28,
+        "fulfillment_pct": 22.609969618003433
+      },
+      {
+        "plate_number": "1BC56",
+        "transporter_name": "Hansen, Stephens and Campbell",
+        "delivery_volume_planned": 732.42,
+        "delivery_volume_actual": 192.19,
+        "fulfillment_pct": 26.24040850877912
+      },
+      {
+        "plate_number": "2M B0235",
+        "transporter_name": "Romero, Nicholson and Russell",
+        "delivery_volume_planned": 642.66,
+        "delivery_volume_actual": 173.23,
+        "fulfillment_pct": 26.95515513646407
+      },
+      {
+        "plate_number": "7AT1415",
+        "transporter_name": "Mccarthy-Taylor",
+        "delivery_volume_planned": 732.56,
+        "delivery_volume_actual": 218.32,
+        "fulfillment_pct": 29.80233700993775
+      }
+    ],
+    "by_transporter": {
+      "Acosta, Johnson and Ford": {
+        "fulfillment_pct": 243.11,
+        "volume_variance_pct": 143.11
+      },
+      "Atkinson Group": {
+        "fulfillment_pct": 116.97,
+        "volume_variance_pct": 16.97
+      },
+      "Bailey LLC": {
+        "fulfillment_pct": 154.71,
+        "volume_variance_pct": 54.71
+      },
+      "Campbell-Erickson": {
+        "fulfillment_pct": 90.16,
+        "volume_variance_pct": -9.84
+      },
+      "Coleman-Roberts": {
+        "fulfillment_pct": 165.63,
+        "volume_variance_pct": 65.63
+      },
+      "Collins, Hall and Butler": {
+        "fulfillment_pct": 459.29,
+        "volume_variance_pct": 359.29
+      },
+      "Cook PLC": {
+        "fulfillment_pct": 98.67,
+        "volume_variance_pct": -1.33
+      },
+      "Delgado and Sons": {
+        "fulfillment_pct": 57.68,
+        "volume_variance_pct": -42.32
+      },
+      "Dillon-Munoz": {
+        "fulfillment_pct": 153.92,
+        "volume_variance_pct": 53.92
+      },
+      "Drake, Banks and Ray": {
+        "fulfillment_pct": 21.73,
+        "volume_variance_pct": -78.27
+      },
+      "Fernandez and Sons": {
+        "fulfillment_pct": 186.11,
+        "volume_variance_pct": 86.11
+      },
+      "Flores and Sons": {
+        "fulfillment_pct": 154.36,
+        "volume_variance_pct": 54.36
+      },
+      "Garcia, Burke and Delgado": {
+        "fulfillment_pct": 68.84,
+        "volume_variance_pct": -31.16
+      },
+      "Gonzalez, Jenkins and Braun": {
+        "fulfillment_pct": 51.73,
+        "volume_variance_pct": -48.27
+      },
+      "Hamilton PLC": {
+        "fulfillment_pct": 110.86,
+        "volume_variance_pct": 10.86
+      },
+      "Hansen, Stephens and Campbell": {
+        "fulfillment_pct": 187.29,
+        "volume_variance_pct": 87.29
+      },
+      "Harris, Brown and Dunn": {
+        "fulfillment_pct": 30.22,
+        "volume_variance_pct": -69.78
+      },
+      "Howell, Wilcox and Smith": {
+        "fulfillment_pct": 228.37,
+        "volume_variance_pct": 128.37
+      },
+      "Jenkins-Smith": {
+        "fulfillment_pct": 34.4,
+        "volume_variance_pct": -65.6
+      },
+      "Jones, Rodriguez and Patterson": {
+        "fulfillment_pct": 64.46,
+        "volume_variance_pct": -35.54
+      },
+      "King PLC": {
+        "fulfillment_pct": 100.77,
+        "volume_variance_pct": 0.77
+      },
+      "Lamb-Hart": {
+        "fulfillment_pct": 135.09,
+        "volume_variance_pct": 35.09
+      },
+      "Marquez-Wood": {
+        "fulfillment_pct": 135.66,
+        "volume_variance_pct": 35.66
+      },
+      "Martin and Sons": {
+        "fulfillment_pct": 51.2,
+        "volume_variance_pct": -48.8
+      },
+      "Mason Ltd": {
+        "fulfillment_pct": 187.99,
+        "volume_variance_pct": 87.99
+      },
+      "Mccarthy-Taylor": {
+        "fulfillment_pct": 180.03,
+        "volume_variance_pct": 80.03
+      },
+      "Mcintosh-Smith": {
+        "fulfillment_pct": 62.33,
+        "volume_variance_pct": -37.67
+      },
+      "Meyer, Smith and Fisher": {
+        "fulfillment_pct": 114.3,
+        "volume_variance_pct": 14.3
+      },
+      "Miller-Griffin": {
+        "fulfillment_pct": 49.12,
+        "volume_variance_pct": -50.88
+      },
+      "Miller-Smith": {
+        "fulfillment_pct": 82.77,
+        "volume_variance_pct": -17.23
+      },
+      "Monroe PLC": {
+        "fulfillment_pct": 83.37,
+        "volume_variance_pct": -16.63
+      },
+      "Moore-Solis": {
+        "fulfillment_pct": 155.64,
+        "volume_variance_pct": 55.64
+      },
+      "Powell Inc": {
+        "fulfillment_pct": 289.23,
+        "volume_variance_pct": 189.23
+      },
+      "Rios-Thompson": {
+        "fulfillment_pct": 53.88,
+        "volume_variance_pct": -46.12
+      },
+      "Rivera Inc": {
+        "fulfillment_pct": 125.48,
+        "volume_variance_pct": 25.48
+      },
+      "Rivers-Castro": {
+        "fulfillment_pct": 70.75,
+        "volume_variance_pct": -29.25
+      },
+      "Romero, Nicholson and Russell": {
+        "fulfillment_pct": 172.06,
+        "volume_variance_pct": 72.06
+      },
+      "Salazar, Reynolds and Brooks": {
+        "fulfillment_pct": 156.34,
+        "volume_variance_pct": 56.34
+      },
+      "Thompson, Rodriguez and Foster": {
+        "fulfillment_pct": 140.86,
+        "volume_variance_pct": 40.86
+      },
+      "Walker-Baker": {
+        "fulfillment_pct": 147.24,
+        "volume_variance_pct": 47.24
+      },
+      "Wallace Group": {
+        "fulfillment_pct": 107.54,
+        "volume_variance_pct": 7.54
+      },
+      "Williams LLC": {
+        "fulfillment_pct": 308.9,
+        "volume_variance_pct": 208.9
+      },
+      "Williams Ltd": {
+        "fulfillment_pct": 54.36,
+        "volume_variance_pct": -45.64
+      },
+      "Williams-Martin": {
+        "fulfillment_pct": 152.7,
+        "volume_variance_pct": 52.7
+      }
+    },
+    "by_vehicle_type": {
+      "Pickup": {
+        "fulfillment_pct": 165.09,
+        "volume_variance_pct": 65.09
+      },
+      "Semi-truck": {
+        "fulfillment_pct": 129.09,
+        "volume_variance_pct": 29.09
+      },
+      "Trailer": {
+        "fulfillment_pct": 140.16,
+        "volume_variance_pct": 40.16
+      },
+      "Truck": {
+        "fulfillment_pct": 141.05,
+        "volume_variance_pct": 41.05
+      },
+      "Van": {
+        "fulfillment_pct": 110.33,
+        "volume_variance_pct": 10.33
+      }
+    }
+  },
+  "maintenance_downtime": {
+    "avg_maintenance_downtime_hrs_per_month": 24.83,
+    "max_maintenance_downtime_hrs": 47.93,
+    "vehicles_needing_maintenance": 96,
+    "maintenance_details": [
+      {
+        "plate_number": "MNZ-908",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 47.93,
+        "last_maintenance_date": "2024-09-04",
+        "days_since_maintenance": 300.0
+      },
+      {
+        "plate_number": "EZI 420",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 47.89,
+        "last_maintenance_date": "2024-02-27",
+        "days_since_maintenance": 490.0
+      },
+      {
+        "plate_number": "4Z 22902",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 47.23,
+        "last_maintenance_date": "2025-03-30",
+        "days_since_maintenance": 93.0
+      },
+      {
+        "plate_number": "HUR 184",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 46.97,
+        "last_maintenance_date": "2023-09-30",
+        "days_since_maintenance": 640.0
+      },
+      {
+        "plate_number": "477NT",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 44.76,
+        "last_maintenance_date": "2023-10-29",
+        "days_since_maintenance": 611.0
+      },
+      {
+        "plate_number": "3054 ZM",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 43.76,
+        "last_maintenance_date": "2024-09-26",
+        "days_since_maintenance": 278.0
+      },
+      {
+        "plate_number": "034-QNN",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 43.7,
+        "last_maintenance_date": "2024-10-22",
+        "days_since_maintenance": 252.0
+      },
+      {
+        "plate_number": "U92 2VZ",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 42.6,
+        "last_maintenance_date": "2023-10-22",
+        "days_since_maintenance": 618.0
+      },
+      {
+        "plate_number": "547 HUL",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 41.96,
+        "last_maintenance_date": "2025-06-17",
+        "days_since_maintenance": 14.0
+      },
+      {
+        "plate_number": "7-7710L",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 41.85,
+        "last_maintenance_date": "2024-06-17",
+        "days_since_maintenance": 379.0
+      },
+      {
+        "plate_number": "PRX-768",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 41.81,
+        "last_maintenance_date": "2023-10-18",
+        "days_since_maintenance": 622.0
+      },
+      {
+        "plate_number": "656 ZWW",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 41.45,
+        "last_maintenance_date": "2024-05-01",
+        "days_since_maintenance": 426.0
+      },
+      {
+        "plate_number": "245JH",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 40.94,
+        "last_maintenance_date": "2024-09-21",
+        "days_since_maintenance": 283.0
+      },
+      {
+        "plate_number": "2M B0235",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 40.28,
+        "last_maintenance_date": "2024-03-03",
+        "days_since_maintenance": 485.0
+      },
+      {
+        "plate_number": "M80 9DP",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 40.12,
+        "last_maintenance_date": "2024-08-25",
+        "days_since_maintenance": 310.0
+      },
+      {
+        "plate_number": "6MVS803",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 39.85,
+        "last_maintenance_date": "2024-12-25",
+        "days_since_maintenance": 188.0
+      },
+      {
+        "plate_number": "CXU-2753",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 39.61,
+        "last_maintenance_date": "2024-02-06",
+        "days_since_maintenance": 511.0
+      },
+      {
+        "plate_number": "1BC56",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 39.43,
+        "last_maintenance_date": "2025-04-27",
+        "days_since_maintenance": 65.0
+      },
+      {
+        "plate_number": "383KWR",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 39.28,
+        "last_maintenance_date": "2023-09-02",
+        "days_since_maintenance": 668.0
+      },
+      {
+        "plate_number": "KLE 833",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 39.14,
+        "last_maintenance_date": "2024-08-06",
+        "days_since_maintenance": 329.0
+      },
+      {
+        "plate_number": "TLW 349",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 38.52,
+        "last_maintenance_date": "2024-07-16",
+        "days_since_maintenance": 350.0
+      },
+      {
+        "plate_number": "Q 311242",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 38.51,
+        "last_maintenance_date": "2024-05-07",
+        "days_since_maintenance": 420.0
+      },
+      {
+        "plate_number": "034 XWW",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 37.52,
+        "last_maintenance_date": "2024-07-19",
+        "days_since_maintenance": 347.0
+      },
+      {
+        "plate_number": "104 INP",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 37.36,
+        "last_maintenance_date": "2024-11-07",
+        "days_since_maintenance": 236.0
+      },
+      {
+        "plate_number": "GYF-375",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 36.95,
+        "last_maintenance_date": "2024-09-10",
+        "days_since_maintenance": 294.0
+      },
+      {
+        "plate_number": "BD6 8475",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 36.9,
+        "last_maintenance_date": "2023-12-16",
+        "days_since_maintenance": 563.0
+      },
+      {
+        "plate_number": "78D 2236",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 36.83,
+        "last_maintenance_date": "2024-07-27",
+        "days_since_maintenance": 339.0
+      },
+      {
+        "plate_number": "HEU 756",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 36.71,
+        "last_maintenance_date": "2023-07-12",
+        "days_since_maintenance": 720.0
+      },
+      {
+        "plate_number": "MQN 585",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 36.53,
+        "last_maintenance_date": "2024-06-29",
+        "days_since_maintenance": 367.0
+      },
+      {
+        "plate_number": "94-4312R",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 35.47,
+        "last_maintenance_date": "2023-11-17",
+        "days_since_maintenance": 592.0
+      },
+      {
+        "plate_number": "383-EHL",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 35.3,
+        "last_maintenance_date": "2023-11-19",
+        "days_since_maintenance": 590.0
+      },
+      {
+        "plate_number": "7AT1415",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 34.71,
+        "last_maintenance_date": "2024-12-02",
+        "days_since_maintenance": 211.0
+      },
+      {
+        "plate_number": "3KG6850",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 34.58,
+        "last_maintenance_date": "2024-05-26",
+        "days_since_maintenance": 401.0
+      },
+      {
+        "plate_number": "KIO 939",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 34.25,
+        "last_maintenance_date": "2024-07-31",
+        "days_since_maintenance": 335.0
+      },
+      {
+        "plate_number": "CAU-0479",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 34.25,
+        "last_maintenance_date": "2025-05-27",
+        "days_since_maintenance": 35.0
+      },
+      {
+        "plate_number": "2UM9146",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 33.41,
+        "last_maintenance_date": "2024-10-31",
+        "days_since_maintenance": 243.0
+      },
+      {
+        "plate_number": "K07 9IU",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 33.16,
+        "last_maintenance_date": "2025-01-26",
+        "days_since_maintenance": 156.0
+      },
+      {
+        "plate_number": "EWJ5256",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 33.05,
+        "last_maintenance_date": "2024-01-19",
+        "days_since_maintenance": 529.0
+      },
+      {
+        "plate_number": "567-ENRI",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 31.58,
+        "last_maintenance_date": "2023-10-08",
+        "days_since_maintenance": 632.0
+      },
+      {
+        "plate_number": "65K-FVAQ",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 31.31,
+        "last_maintenance_date": "2025-05-08",
+        "days_since_maintenance": 54.0
+      },
+      {
+        "plate_number": "380M5",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 30.44,
+        "last_maintenance_date": "2023-11-24",
+        "days_since_maintenance": 585.0
+      },
+      {
+        "plate_number": "224-787",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 30.21,
+        "last_maintenance_date": "2024-05-28",
+        "days_since_maintenance": 399.0
+      },
+      {
+        "plate_number": "TPU-4040",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 29.93,
+        "last_maintenance_date": "2024-01-24",
+        "days_since_maintenance": 524.0
+      },
+      {
+        "plate_number": "6-91038",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 28.87,
+        "last_maintenance_date": "2023-09-07",
+        "days_since_maintenance": 663.0
+      },
+      {
+        "plate_number": "42EC357",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 28.1,
+        "last_maintenance_date": "2023-11-09",
+        "days_since_maintenance": 600.0
+      },
+      {
+        "plate_number": "8H I2736",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 27.17,
+        "last_maintenance_date": "2024-12-18",
+        "days_since_maintenance": 195.0
+      },
+      {
+        "plate_number": "UV4 F9R",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 25.85,
+        "last_maintenance_date": "2025-01-07",
+        "days_since_maintenance": 175.0
+      },
+      {
+        "plate_number": "874-ZRS",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 25.06,
+        "last_maintenance_date": "2024-02-07",
+        "days_since_maintenance": 510.0
+      },
+      {
+        "plate_number": "JWU 177",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 24.95,
+        "last_maintenance_date": "2025-06-22",
+        "days_since_maintenance": 9.0
+      },
+      {
+        "plate_number": "539BUX",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 24.72,
+        "last_maintenance_date": "2023-11-08",
+        "days_since_maintenance": 601.0
+      },
+      {
+        "plate_number": "VGR-010",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 24.51,
+        "last_maintenance_date": "2023-08-29",
+        "days_since_maintenance": 672.0
+      },
+      {
+        "plate_number": "784-BRP",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 23.99,
+        "last_maintenance_date": "2023-08-12",
+        "days_since_maintenance": 689.0
+      },
+      {
+        "plate_number": "02I 7514",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 23.75,
+        "last_maintenance_date": "2023-07-03",
+        "days_since_maintenance": 729.0
+      },
+      {
+        "plate_number": "636 ZTM",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 23.59,
+        "last_maintenance_date": "2023-07-19",
+        "days_since_maintenance": 713.0
+      },
+      {
+        "plate_number": "VI-4413",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 23.32,
+        "last_maintenance_date": "2023-09-15",
+        "days_since_maintenance": 655.0
+      },
+      {
+        "plate_number": "58C 5257",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 23.15,
+        "last_maintenance_date": "2024-02-20",
+        "days_since_maintenance": 497.0
+      },
+      {
+        "plate_number": "894 YEL",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 21.95,
+        "last_maintenance_date": "2024-08-08",
+        "days_since_maintenance": 327.0
+      },
+      {
+        "plate_number": "478 SKE",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 21.46,
+        "last_maintenance_date": "2024-02-25",
+        "days_since_maintenance": 492.0
+      },
+      {
+        "plate_number": "0TT G38",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 21.39,
+        "last_maintenance_date": "2024-03-04",
+        "days_since_maintenance": 484.0
+      },
+      {
+        "plate_number": "BRG8763",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 19.57,
+        "last_maintenance_date": "2023-10-11",
+        "days_since_maintenance": 629.0
+      },
+      {
+        "plate_number": "B01-FFY",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 19.23,
+        "last_maintenance_date": "2024-09-28",
+        "days_since_maintenance": 276.0
+      },
+      {
+        "plate_number": "9W 09686",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 18.54,
+        "last_maintenance_date": "2024-01-17",
+        "days_since_maintenance": 531.0
+      },
+      {
+        "plate_number": "828-YEX",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 18.52,
+        "last_maintenance_date": "2025-02-01",
+        "days_since_maintenance": 150.0
+      },
+      {
+        "plate_number": "0281",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 18.44,
+        "last_maintenance_date": "2025-01-28",
+        "days_since_maintenance": 154.0
+      },
+      {
+        "plate_number": "97D HB3",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 18.4,
+        "last_maintenance_date": "2023-09-09",
+        "days_since_maintenance": 661.0
+      },
+      {
+        "plate_number": "DHW-1453",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 17.72,
+        "last_maintenance_date": "2024-03-01",
+        "days_since_maintenance": 487.0
+      },
+      {
+        "plate_number": "610-FUIY",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 17.56,
+        "last_maintenance_date": "2024-08-13",
+        "days_since_maintenance": 322.0
+      },
+      {
+        "plate_number": "688-HIV",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 17.1,
+        "last_maintenance_date": "2025-06-18",
+        "days_since_maintenance": 13.0
+      },
+      {
+        "plate_number": "0OZ X45",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 16.88,
+        "last_maintenance_date": "2023-11-27",
+        "days_since_maintenance": 582.0
+      },
+      {
+        "plate_number": "KVE 924",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 16.62,
+        "last_maintenance_date": "2025-06-24",
+        "days_since_maintenance": 7.0
+      },
+      {
+        "plate_number": "8RIO 94",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 15.94,
+        "last_maintenance_date": "2023-10-20",
+        "days_since_maintenance": 620.0
+      },
+      {
+        "plate_number": "62M\u2022848",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 15.87,
+        "last_maintenance_date": "2025-04-18",
+        "days_since_maintenance": 74.0
+      },
+      {
+        "plate_number": "425OHH",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 15.5,
+        "last_maintenance_date": "2024-01-30",
+        "days_since_maintenance": 518.0
+      },
+      {
+        "plate_number": "NNX D19",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 15.49,
+        "last_maintenance_date": "2024-02-13",
+        "days_since_maintenance": 504.0
+      },
+      {
+        "plate_number": "36-XU08",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 14.72,
+        "last_maintenance_date": "2025-05-12",
+        "days_since_maintenance": 50.0
+      },
+      {
+        "plate_number": "704-SIV",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 13.99,
+        "last_maintenance_date": "2024-09-25",
+        "days_since_maintenance": 279.0
+      },
+      {
+        "plate_number": "675-YOU",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 13.62,
+        "last_maintenance_date": "2024-05-09",
+        "days_since_maintenance": 418.0
+      },
+      {
+        "plate_number": "5225 VY",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 13.16,
+        "last_maintenance_date": "2023-08-02",
+        "days_since_maintenance": 699.0
+      },
+      {
+        "plate_number": "623 IGB",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 12.76,
+        "last_maintenance_date": "2023-12-23",
+        "days_since_maintenance": 556.0
+      },
+      {
+        "plate_number": "2AE 106",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 12.65,
+        "last_maintenance_date": "2024-09-22",
+        "days_since_maintenance": 282.0
+      },
+      {
+        "plate_number": "02-17781",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 11.71,
+        "last_maintenance_date": "2024-04-19",
+        "days_since_maintenance": 438.0
+      },
+      {
+        "plate_number": "I51 0IW",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 11.18,
+        "last_maintenance_date": "2023-09-02",
+        "days_since_maintenance": 668.0
+      },
+      {
+        "plate_number": "MYB 815",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 10.98,
+        "last_maintenance_date": "2025-02-01",
+        "days_since_maintenance": 150.0
+      },
+      {
+        "plate_number": "I20-AGN",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 10.82,
+        "last_maintenance_date": "2025-02-24",
+        "days_since_maintenance": 127.0
+      },
+      {
+        "plate_number": "024-XKR",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 9.86,
+        "last_maintenance_date": "2025-03-25",
+        "days_since_maintenance": 98.0
+      },
+      {
+        "plate_number": "67T 778",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 8.62,
+        "last_maintenance_date": "2024-06-06",
+        "days_since_maintenance": 390.0
+      },
+      {
+        "plate_number": "26-BP47",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 8.2,
+        "last_maintenance_date": "2024-01-12",
+        "days_since_maintenance": 536.0
+      },
+      {
+        "plate_number": "TPX A05",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 7.55,
+        "last_maintenance_date": "2023-07-31",
+        "days_since_maintenance": 701.0
+      },
+      {
+        "plate_number": "565 EFI",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 5.91,
+        "last_maintenance_date": "2025-02-09",
+        "days_since_maintenance": 142.0
+      },
+      {
+        "plate_number": "WDF-9158",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 3.73,
+        "last_maintenance_date": "2024-09-13",
+        "days_since_maintenance": 291.0
+      },
+      {
+        "plate_number": "243-ZWN",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 3.72,
+        "last_maintenance_date": "2023-07-11",
+        "days_since_maintenance": 721.0
+      },
+      {
+        "plate_number": "LQK-1717",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 1.95,
+        "last_maintenance_date": "2024-09-21",
+        "days_since_maintenance": 283.0
+      },
+      {
+        "plate_number": "16A 5515",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 1.9,
+        "last_maintenance_date": "2023-10-20",
+        "days_since_maintenance": 620.0
+      },
+      {
+        "plate_number": "NRP-923",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 1.33,
+        "last_maintenance_date": "2024-06-02",
+        "days_since_maintenance": 394.0
+      },
+      {
+        "plate_number": "4U957",
+        "vehicle_type": "Truck",
+        "maintenance_downtime_hrs": 1.09,
+        "last_maintenance_date": "2023-12-15",
+        "days_since_maintenance": 564.0
+      },
+      {
+        "plate_number": "264 EGV",
+        "vehicle_type": "Pickup",
+        "maintenance_downtime_hrs": 1.01,
+        "last_maintenance_date": "2024-06-26",
+        "days_since_maintenance": 370.0
+      },
+      {
+        "plate_number": "55M 9432",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 0.71,
+        "last_maintenance_date": "2023-09-28",
+        "days_since_maintenance": 642.0
+      },
+      {
+        "plate_number": "540-DLP",
+        "vehicle_type": "Van",
+        "maintenance_downtime_hrs": 0.51,
+        "last_maintenance_date": "2025-01-21",
+        "days_since_maintenance": 161.0
+      },
+      {
+        "plate_number": "881-BEQT",
+        "vehicle_type": "Trailer",
+        "maintenance_downtime_hrs": 0.38,
+        "last_maintenance_date": "2025-03-19",
+        "days_since_maintenance": 104.0
+      },
+      {
+        "plate_number": "216W",
+        "vehicle_type": "Semi-truck",
+        "maintenance_downtime_hrs": 0.1,
+        "last_maintenance_date": "2025-03-12",
+        "days_since_maintenance": 111.0
+      }
+    ],
+    "by_vehicle_type": {
+      "Pickup": 21.32,
+      "Semi-truck": 23.04,
+      "Trailer": 23.98,
+      "Truck": 30.07,
+      "Van": 25.81
+    }
+  }
+}

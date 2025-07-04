@@ -13,6 +13,7 @@ import {
 import CustomDashboard from './CustomDashboard';
 import chartManager from '../../services/chartManager';
 import apiService from '../../services/apiService';
+import eventBus, { EVENTS } from '../../utils/eventBus';
 
 const DashboardManager = () => {
   const [savedCharts, setSavedCharts] = useState([]);
@@ -22,23 +23,62 @@ const DashboardManager = () => {
 
   // Load charts from global chart manager
   useEffect(() => {
-    // Get initial charts
-    setSavedCharts(chartManager.getCharts());
+    // Initialize chart manager and load charts
+    const initializeCharts = async () => {
+      try {
+        await chartManager.initialize();
+        setSavedCharts(chartManager.getCharts());
+      } catch (error) {
+        console.error('Error initializing charts:', error);
+      }
+    };
+
+    initializeCharts();
 
     // Listen for chart updates
     const handleChartsUpdate = (charts) => {
-      setSavedCharts(charts);
+      console.log('DashboardManager: Charts updated, refreshing UI', charts.length);
+      setSavedCharts([...charts]); // Force re-render with new array
     };
 
     chartManager.addListener(handleChartsUpdate);
+
+    // Also listen to event bus for more reliable updates
+    const unsubscribeChartAdded = eventBus.on(EVENTS.CHART_ADDED, (data) => {
+      console.log('DashboardManager: Chart added event received', data);
+      // Force immediate refresh
+      const updatedCharts = chartManager.getCharts();
+      setSavedCharts([...updatedCharts]);
+    });
+
+    const unsubscribeChartsUpdated = eventBus.on(EVENTS.CHARTS_UPDATED, (data) => {
+      console.log('DashboardManager: Charts updated event received', data);
+      setSavedCharts([...data.charts]);
+    });
 
     // Override global notification function
     if (typeof window !== 'undefined') {
       window.showNotification = showNotification;
     }
 
+    // Set up periodic refresh to catch any missed updates (reduced frequency)
+    const refreshInterval = setInterval(() => {
+      const currentCharts = chartManager.getCharts();
+      setSavedCharts(prevCharts => {
+        // Only update if charts have actually changed
+        if (JSON.stringify(prevCharts) !== JSON.stringify(currentCharts)) {
+          console.log('DashboardManager: Periodic refresh detected changes');
+          return [...currentCharts];
+        }
+        return prevCharts;
+      });
+    }, 10000); // Check every 10 seconds (reduced from 5)
+
     return () => {
       chartManager.removeListener(handleChartsUpdate);
+      unsubscribeChartAdded();
+      unsubscribeChartsUpdated();
+      clearInterval(refreshInterval);
     };
   }, []);
 
@@ -50,6 +90,28 @@ const DashboardManager = () => {
   // Close notification
   const closeNotification = () => {
     setNotification({ ...notification, open: false });
+  };
+
+  // Manual refresh function
+  const refreshCharts = async () => {
+    try {
+      setLoading(true);
+      console.log('DashboardManager: Manual refresh triggered');
+
+      // Force reload from API
+      await chartManager.loadCharts();
+
+      // Update local state
+      const updatedCharts = chartManager.getCharts();
+      setSavedCharts([...updatedCharts]);
+
+      showNotification('Charts refreshed successfully!', 'success');
+    } catch (error) {
+      console.error('Error refreshing charts:', error);
+      showNotification('Failed to refresh charts', 'error');
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Save dashboard configuration
@@ -131,8 +193,10 @@ const DashboardManager = () => {
         onSaveChart={saveDashboard}
         onDeleteChart={deleteChart}
         onUpdateDashboard={updateDashboard}
+        onRefreshCharts={refreshCharts}
         editMode={editMode}
         onEditModeChange={handleEditModeChange}
+        loading={loading}
       />
 
       {/* Notification Snackbar */}

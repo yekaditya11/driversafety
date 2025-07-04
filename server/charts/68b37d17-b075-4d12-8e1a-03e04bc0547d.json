@@ -1,10 +1,10 @@
 {
-  "id": "d476e09e-0dee-490a-8d27-e92f688c1a6d",
-  "title": "Vehicle Utilization Analysis",
+  "id": "68b37d17-b075-4d12-8e1a-03e04bc0547d",
+  "title": "Driver Safety Analysis",
   "description": null,
   "chart_config": {
     "title": {
-      "text": "Vehicle Utilization Analysis",
+      "text": "Driver Safety Analysis",
       "left": "center",
       "top": "2%",
       "textStyle": {
@@ -47,11 +47,11 @@
     "xAxis": {
       "type": "category",
       "data": [
-        "82% utilization  \n• TPU-4040 (Truck)",
-        "43% utilization  \n• U92 2VZ (Van)",
-        "21% utilization  \n• 539BUX (Pickup)",
-        "78% utilization  \n• 704-SIV (Trailer)",
-        "37% utilization  \n• DHW-1453 (Van)"
+        "93 hrs, last maintenance 2024-09-04  \n• EZI 420 (Truck)",
+        "23 hrs, last maintenance 2025-03-30  \n• HUR 184 (Semi-truck)",
+        "76 hrs, last maintenance 2023-10-29  \n• 3054 ZM (Trailer)",
+        "7 hrs, last maintenance 2024-10-22  \n• U92 2VZ (Van)",
+        "96 hrs, last maintenance 2025-06-17  \n• 7-7710L (Pickup)"
       ],
       "axisLabel": {
         "fontSize": 11,
@@ -86,11 +86,11 @@
         "name": "Value",
         "type": "bar",
         "data": [
-          3.75,
-          7.92,
-          10.94,
-          13.82,
-          25.56
+          47.89,
+          46.97,
+          43.76,
+          42.6,
+          41.85
         ],
         "itemStyle": {
           "borderRadius": [
@@ -109,6 +109,6 @@
       }
     ]
   },
-  "created_at": "2025-07-02T14:15:43.722714",
-  "updated_at": "2025-07-02T14:15:43.722714"
+  "created_at": "2025-07-04T19:15:43.326146",
+  "updated_at": "2025-07-04T19:15:43.326146"
 }

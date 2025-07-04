@@ -26,7 +26,7 @@ const DashboardContent = ({
   endDate
 }) => {
 
-  // Use the KPI data hook with date parameters
+  // Use the KPI data hook with date parameters and parallel execution
   const {
     data: kpiData,
     loading,
@@ -37,11 +37,18 @@ const DashboardContent = ({
     getOnTimeDeliveryRate,
     getIncidentCount,
     getActiveDriverCount,
+    executionStats,
+    isParallelExecution,
+    fetchKPIDataParallel,
+    getServerExecutionTime,
+    getTotalExecutionTime,
   } = useKPIData({
     startDate,
     endDate,
     autoRefresh: true,
     refreshInterval: 300000, // 5 minutes
+    useParallel: true, // Enable parallel execution
+    executionMode: 'auto', // Auto mode with parallel preference
   });
 
   // Handle date range change
@@ -124,6 +131,8 @@ const DashboardContent = ({
                       <RefreshIcon sx={{ fontSize: 20, color: '#092f57' }} />
                     )}
                   </IconButton>
+
+
 
                   {/* AI Insights Button */}
                   <SiriAIInsightsButton
@@ -208,6 +217,8 @@ const DashboardContent = ({
                       <RefreshIcon sx={{ fontSize: 20, color: '#092f57' }} />
                     )}
                   </IconButton>
+
+
 
                   {/* AI Insights Button */}
                   <SiriAIInsightsButton

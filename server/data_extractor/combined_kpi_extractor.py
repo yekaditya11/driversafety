@@ -774,16 +774,48 @@ class CombinedKPIExtractor:
             # Filter columns that actually exist in the DataFrame
             available_columns = [col for col in details_columns if col in df.columns]
 
+            # Safely convert DataFrame to records
+            try:
+                driver_performance_details = df[available_columns].round(2).to_dict('records')
+                driver_performance_details = clean_data_for_json(driver_performance_details)
+            except Exception as detail_error:
+                logger.warning(f"Error converting driver performance details: {detail_error}")
+                driver_performance_details = []
+
+            # Safely get top performers
+            try:
+                top_performers = df.head(10)[['driver_name', 'driver_performance_index', 'performance_category']].round(2).to_dict('records')
+                top_performers = clean_data_for_json(top_performers)
+            except Exception as top_error:
+                logger.warning(f"Error getting top performers: {top_error}")
+                top_performers = []
+
+            # Safely get bottom performers
+            try:
+                bottom_performers = df.tail(10)[['driver_name', 'driver_performance_index', 'performance_category']].round(2).to_dict('records')
+                bottom_performers = clean_data_for_json(bottom_performers)
+            except Exception as bottom_error:
+                logger.warning(f"Error getting bottom performers: {bottom_error}")
+                bottom_performers = []
+
+            # Safely get improvement needed
+            try:
+                improvement_cols = ['driver_name', 'driver_performance_index', 'on_time_rate', 'safety_score', 'incidents']
+                improvement_available_cols = [col for col in improvement_cols if col in df.columns]
+                improvement_needed = df[df['driver_performance_index'] < 60][improvement_available_cols].round(2).to_dict('records')
+                improvement_needed = clean_data_for_json(improvement_needed)
+            except Exception as improvement_error:
+                logger.warning(f"Error getting improvement needed: {improvement_error}")
+                improvement_needed = []
+
             return {
                 'avg_driver_performance_index': safe_float(df['driver_performance_index'].mean()),
                 'total_drivers_analyzed': len(df),
                 'performance_distribution': performance_distribution,
-                'driver_performance_details': clean_data_for_json(df[available_columns].to_dict('records')),
-                'top_performers': clean_data_for_json(df.head(10)[['driver_name', 'driver_performance_index', 'performance_category']].to_dict('records')),
-                'bottom_performers': clean_data_for_json(df.tail(10)[['driver_name', 'driver_performance_index', 'performance_category']].to_dict('records')),
-                'improvement_needed': clean_data_for_json(df[df['driver_performance_index'] < 60][
-                    ['driver_name', 'driver_performance_index', 'on_time_rate', 'safety_score', 'incidents']
-                ].to_dict('records'))
+                'driver_performance_details': driver_performance_details,
+                'top_performers': top_performers,
+                'bottom_performers': bottom_performers,
+                'improvement_needed': improvement_needed
             }
         except Exception as e:
             logger.error(f"Error calculating driver performance index KPI: {e}")

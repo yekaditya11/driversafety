@@ -34,7 +34,8 @@ import {
   DragIndicator as DragIcon,
   Fullscreen as FullscreenIcon,
   MoreVert as MoreIcon,
-  GridView as GridIcon
+  GridView as GridIcon,
+  Refresh as RefreshIcon
 } from '@mui/icons-material';
 // Note: framer-motion and react-beautiful-dnd removed due to React 19 compatibility
 // Using simpler animations and drag functionality
@@ -47,8 +48,10 @@ const CustomDashboard = ({
   onSaveChart,
   onDeleteChart,
   onUpdateDashboard,
+  onRefreshCharts,
   editMode = false,
-  onEditModeChange
+  onEditModeChange,
+  loading = false
 }) => {
   const [charts, setCharts] = useState(savedCharts);
   const [editDialog, setEditDialog] = useState({ open: false, chart: null });
@@ -386,6 +389,21 @@ const CustomDashboard = ({
         </Box>
         
         <Box sx={{ display: 'flex', gap: 1 }}>
+          {/* Refresh Button - Always visible */}
+          <Button
+            variant="outlined"
+            startIcon={<RefreshIcon />}
+            onClick={onRefreshCharts}
+            disabled={loading}
+            color="primary"
+            sx={{
+              minWidth: 'auto',
+              px: 2
+            }}
+          >
+            {loading ? 'Refreshing...' : 'Refresh'}
+          </Button>
+
           {charts.length > 0 && (
             <>
               <Button

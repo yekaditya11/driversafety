@@ -2,12 +2,14 @@ import { useState, useEffect, useCallback } from 'react';
 import apiService from '../services/apiService';
 
 /**
- * Custom hook for managing KPI data
+ * Custom hook for managing KPI data with parallel execution support
  * @param {Object} options - Configuration options
  * @param {string} options.startDate - Start date for KPI data
  * @param {string} options.endDate - End date for KPI data
  * @param {boolean} options.autoRefresh - Whether to auto-refresh data
  * @param {number} options.refreshInterval - Refresh interval in milliseconds
+ * @param {boolean} options.useParallel - Whether to use parallel execution (default: true)
+ * @param {string} options.executionMode - 'auto', 'parallel', or 'sequential' (default: 'auto')
  * @returns {Object} KPI data and management functions
  */
 const useKPIData = (options = {}) => {
@@ -16,6 +18,8 @@ const useKPIData = (options = {}) => {
     endDate = null,
     autoRefresh = false,
     refreshInterval = 300000, // 5 minutes default
+    useParallel = true,
+    executionMode = 'auto', // 'auto', 'parallel', 'sequential'
   } = options;
 
   // State management
@@ -27,23 +31,74 @@ const useKPIData = (options = {}) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [executionStats, setExecutionStats] = useState(null);
+  const [isParallelExecution, setIsParallelExecution] = useState(false);
 
-  // Fetch all KPI data
-  const fetchKPIData = useCallback(async (showLoading = true) => {
+  // Fetch all KPI data with execution mode support
+  const fetchKPIData = useCallback(async (showLoading = true, mode = executionMode) => {
     try {
       if (showLoading) setLoading(true);
       setError(null);
 
-      const kpiData = await apiService.getAllKPIs(startDate, endDate);
-      
+      let kpiData;
+      const startTime = performance.now();
+
+      // Choose execution method based on mode
+      switch (mode) {
+        case 'parallel':
+          console.log('🚀 Forcing parallel execution...');
+          kpiData = await apiService.getAllKPIsParallelOnly(startDate, endDate);
+          // Transform parallel result to match expected format
+          kpiData = {
+            safety: { data: kpiData.data.safety_kpis },
+            operations: { data: kpiData.data.operations_kpis },
+            combined: { data: kpiData.data.combined_kpis },
+            execution_stats: kpiData.execution_stats,
+            parallel_execution: true
+          };
+          break;
+
+        case 'sequential':
+          console.log('🔄 Forcing sequential execution...');
+          kpiData = await apiService.getAllKPIsSequential(startDate, endDate);
+          break;
+
+        case 'auto':
+        default:
+          console.log('🎯 Using auto execution mode...');
+          kpiData = await apiService.getAllKPIs(startDate, endDate, useParallel);
+          break;
+      }
+
+      const endTime = performance.now();
+      const clientExecutionTime = (endTime - startTime) / 1000;
+
       setData({
         safety: kpiData.safety?.data || null,
         operations: kpiData.operations?.data || null,
         combined: kpiData.combined?.data || null,
       });
-      
+
+      setExecutionStats({
+        ...kpiData.execution_stats,
+        client_execution_time_seconds: clientExecutionTime,
+        execution_mode: mode,
+        total_time_with_network: clientExecutionTime
+      });
+
+      setIsParallelExecution(kpiData.parallel_execution || false);
       setLastUpdated(new Date());
-      
+
+      // Log performance info
+      if (kpiData.execution_stats) {
+        console.log(`📊 KPI Execution Stats:`, {
+          mode: mode,
+          server_time: kpiData.execution_stats.total_execution_time_seconds,
+          client_time: clientExecutionTime,
+          parallel: kpiData.parallel_execution
+        });
+      }
+
       return kpiData;
     } catch (err) {
       console.error('Error fetching KPI data:', err);
@@ -52,7 +107,7 @@ const useKPIData = (options = {}) => {
     } finally {
       if (showLoading) setLoading(false);
     }
-  }, [startDate, endDate]);
+  }, [startDate, endDate, executionMode, useParallel]);
 
   // Fetch specific KPI type
   const fetchSafetyKPIs = useCallback(async () => {
@@ -120,6 +175,18 @@ const useKPIData = (options = {}) => {
     }
   }, [fetchKPIData]);
 
+  // Force parallel execution
+  const fetchKPIDataParallel = useCallback(async (showLoading = true) => {
+    console.log('⚡ Forcing parallel KPI execution...');
+    return await fetchKPIData(showLoading, 'parallel');
+  }, [fetchKPIData]);
+
+  // Force sequential execution
+  const fetchKPIDataSequential = useCallback(async (showLoading = true) => {
+    console.log('🔄 Forcing sequential KPI execution...');
+    return await fetchKPIData(showLoading, 'sequential');
+  }, [fetchKPIData]);
+
   // Clear error
   const clearError = useCallback(() => {
     setError(null);
@@ -178,9 +245,13 @@ const useKPIData = (options = {}) => {
     lastUpdated,
     hasData,
     isEmpty,
+    executionStats,
+    isParallelExecution,
 
     // Actions
     fetchKPIData,
+    fetchKPIDataParallel,
+    fetchKPIDataSequential,
     fetchSafetyKPIs,
     fetchOperationsKPIs,
     fetchCombinedKPIs,
@@ -194,6 +265,12 @@ const useKPIData = (options = {}) => {
     getActiveDriverCount,
     getTopDrivers,
     getRecentIncidents,
+
+    // Performance info
+    getExecutionMode: () => executionStats?.execution_mode || 'unknown',
+    getServerExecutionTime: () => executionStats?.total_execution_time_seconds || 0,
+    getClientExecutionTime: () => executionStats?.client_execution_time_seconds || 0,
+    getTotalExecutionTime: () => executionStats?.total_time_with_network || 0,
   };
 };
 

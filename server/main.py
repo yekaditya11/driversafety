@@ -7,6 +7,9 @@ import os
 import sys
 import json
 import uuid
+import asyncio
+import logging
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
 from pathlib import Path
@@ -208,6 +211,7 @@ async def root():
             "operations_kpis": "/api/operations-kpis",
             "safety_kpis": "/api/safety-kpis",
             "combined_kpis": "/api/combined-kpis",
+            "all_kpis_parallel": "/api/all-kpis-parallel",
             "ai_insights": "/api/ai-insights",
             "health": "/health",
             "chatbot": "/api/chat",
@@ -390,6 +394,109 @@ async def get_combined_kpis(
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error extracting Combined KPIs: {str(e)}")
+
+# Parallel KPI Execution Functions
+def extract_operations_kpis_sync(start_date: str, end_date: str) -> Dict:
+    """Synchronous wrapper for operations KPI extraction"""
+    try:
+        return operations_kpi_extractor.extract_all_kpis(start_date, end_date)
+    except Exception as e:
+        logging.error(f"Error in operations KPI extraction: {e}")
+        return {"error": str(e)}
+
+def extract_safety_kpis_sync(start_date: str, end_date: str) -> Dict:
+    """Synchronous wrapper for safety KPI extraction"""
+    try:
+        return safety_kpi_extractor.extract_all_kpis(start_date, end_date)
+    except Exception as e:
+        logging.error(f"Error in safety KPI extraction: {e}")
+        return {"error": str(e)}
+
+def extract_combined_kpis_sync(start_date: str, end_date: str) -> Dict:
+    """Synchronous wrapper for combined KPI extraction"""
+    try:
+        return combined_kpi_extractor.extract_all_kpis(start_date, end_date)
+    except Exception as e:
+        logging.error(f"Error in combined KPI extraction: {e}")
+        return {"error": str(e)}
+
+@app.get("/api/all-kpis-parallel")
+async def get_all_kpis_parallel(
+    start_date: Optional[str] = Query(None, description="Start date (YYYY-MM-DD), defaults to 1 year ago"),
+    end_date: Optional[str] = Query(None, description="End date (YYYY-MM-DD), defaults to today")
+):
+    """
+    Get ALL KPIs (Operations, Safety, and Combined) executed in parallel for maximum performance
+
+    This endpoint executes all three KPI extractors simultaneously using asyncio and ThreadPoolExecutor,
+    significantly reducing total execution time compared to sequential execution.
+
+    Returns:
+    - operations_kpis: All 12 operations KPIs
+    - safety_kpis: All 11 safety KPIs
+    - combined_kpis: All 8 combined KPIs
+    - execution_stats: Performance metrics including total time and individual extraction times
+    """
+    try:
+        # Set default dates if not provided
+        if not start_date:
+            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+        if not end_date:
+            end_date = datetime.now().strftime('%Y-%m-%d')
+
+        start_time = datetime.now()
+
+        # Execute all KPI extractions in parallel using ThreadPoolExecutor
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            # Submit all tasks to the thread pool
+            operations_future = loop.run_in_executor(
+                executor, extract_operations_kpis_sync, start_date, end_date
+            )
+            safety_future = loop.run_in_executor(
+                executor, extract_safety_kpis_sync, start_date, end_date
+            )
+            combined_future = loop.run_in_executor(
+                executor, extract_combined_kpis_sync, start_date, end_date
+            )
+
+            # Wait for all tasks to complete
+            operations_kpis, safety_kpis, combined_kpis = await asyncio.gather(
+                operations_future, safety_future, combined_future
+            )
+
+        end_time = datetime.now()
+        total_execution_time = (end_time - start_time).total_seconds()
+
+        # Check for errors in any extraction
+        errors = []
+        if "error" in operations_kpis:
+            errors.append(f"Operations KPIs: {operations_kpis['error']}")
+        if "error" in safety_kpis:
+            errors.append(f"Safety KPIs: {safety_kpis['error']}")
+        if "error" in combined_kpis:
+            errors.append(f"Combined KPIs: {combined_kpis['error']}")
+
+        return {
+            "success": True,
+            "data": {
+                "operations_kpis": operations_kpis,
+                "safety_kpis": safety_kpis,
+                "combined_kpis": combined_kpis
+            },
+            "execution_stats": {
+                "total_execution_time_seconds": round(total_execution_time, 2),
+                "parallel_execution": True,
+                "extractors_used": 3,
+                "date_range": {"start": start_date, "end": end_date}
+            },
+            "errors": errors if errors else None,
+            "message": f"All KPIs extracted in parallel successfully in {total_execution_time:.2f} seconds",
+            "extraction_timestamp": end_time.isoformat()
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error in parallel KPI extraction: {str(e)}")
 
 @app.get("/api/ai-insights", response_model=AIInsightsResponse)
 async def get_ai_insights(
@@ -661,6 +768,7 @@ if __name__ == "__main__":
     print(f"🔧 Operations KPIs: http://{host}:{port}/api/operations-kpis")
     print(f"🛡️ Safety KPIs: http://{host}:{port}/api/safety-kpis")
     print(f"🎯 Combined KPIs: http://{host}:{port}/api/combined-kpis")
+    print(f"⚡ ALL KPIs Parallel: http://{host}:{port}/api/all-kpis-parallel")
     print(f"🤖 KPI Chatbot: http://{host}:{port}/api/chat")
     print(f"💬 Chat Session: http://{host}:{port}/api/chat/session")
     print(f"📊 Chart Storage: http://{host}:{port}/api/charts")

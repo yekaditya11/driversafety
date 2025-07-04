@@ -5,6 +5,7 @@
  */
 
 import apiService from './apiService';
+import eventBus, { EVENTS } from '../utils/eventBus';
 
 class ChartManager {
   constructor() {
@@ -93,7 +94,25 @@ class ChartManager {
         
         if (response.success || response.chart) {
           // Reload charts from API
+          console.log('ChartManager: Chart saved to API, reloading charts...');
           await this.loadCharts();
+
+          // Force notification to listeners
+          console.log('ChartManager: Notifying listeners after chart addition');
+          this.notifyListeners();
+
+          // Additional notification after a short delay to ensure UI updates
+          setTimeout(() => {
+            console.log('ChartManager: Secondary notification for chart addition');
+            this.notifyListeners();
+          }, 200);
+
+          // Emit specific chart added event
+          eventBus.emit(EVENTS.CHART_ADDED, {
+            chart: response.chart,
+            timestamp: new Date().toISOString()
+          });
+
           this.showNotification('Chart added to dashboard successfully!', 'success');
           return response;
         }
@@ -212,12 +231,22 @@ class ChartManager {
 
   // Notify all listeners
   notifyListeners() {
+    console.log('ChartManager: Notifying listeners, chart count:', this.charts.length);
+
+    // Notify traditional listeners
     this.listeners.forEach(callback => {
       try {
         callback(this.charts);
       } catch (error) {
         console.error('Error in chart manager listener:', error);
       }
+    });
+
+    // Also emit event bus event for broader notification
+    eventBus.emit(EVENTS.CHARTS_UPDATED, {
+      charts: [...this.charts],
+      count: this.charts.length,
+      timestamp: new Date().toISOString()
     });
   }
 

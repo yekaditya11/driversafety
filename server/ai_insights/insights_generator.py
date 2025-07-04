@@ -8,6 +8,8 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 import logging
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List, Any
 from datetime import datetime
 import json
@@ -30,40 +32,142 @@ class AIInsightsGenerator:
         self.safety_extractor = SafetyKPIExtractor()
         self.combined_extractor = CombinedKPIExtractor()
         self.ai_client = AzureOpenAIClient()
-        
+
+    def _extract_operations_kpis_sync(self, start_date: str, end_date: str) -> Dict:
+        """Synchronous wrapper for operations KPI extraction"""
+        try:
+            return self.operations_extractor.extract_all_kpis(start_date, end_date)
+        except Exception as e:
+            logger.error(f"Error in operations KPI extraction for AI insights: {e}")
+            return {"error": str(e)}
+
+    def _extract_safety_kpis_sync(self, start_date: str, end_date: str) -> Dict:
+        """Synchronous wrapper for safety KPI extraction"""
+        try:
+            return self.safety_extractor.extract_all_kpis(start_date, end_date)
+        except Exception as e:
+            logger.error(f"Error in safety KPI extraction for AI insights: {e}")
+            return {"error": str(e)}
+
+    def _extract_combined_kpis_sync(self, start_date: str, end_date: str) -> Dict:
+        """Synchronous wrapper for combined KPI extraction"""
+        try:
+            return self.combined_extractor.extract_all_kpis(start_date, end_date)
+        except Exception as e:
+            logger.error(f"Error in combined KPI extraction for AI insights: {e}")
+            return {"error": str(e)}
+
     def generate_insights(self, start_date: str, end_date: str, more_insights: bool = False) -> Dict[str, Any]:
         """
-        Generate 10 AI-powered insights from combined KPI data
-        
+        Synchronous wrapper for generate_insights_async
+        """
+        try:
+            # Try to get existing event loop
+            loop = asyncio.get_event_loop()
+            if loop.is_running():
+                # If loop is already running, create a new one in a thread
+                import concurrent.futures
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    future = executor.submit(asyncio.run, self.generate_insights_async(start_date, end_date, more_insights))
+                    return future.result()
+            else:
+                # If no loop is running, use asyncio.run
+                return asyncio.run(self.generate_insights_async(start_date, end_date, more_insights))
+        except Exception as e:
+            logger.error(f"Error in synchronous insights generation wrapper: {e}")
+            # Fallback to sequential execution
+            return self._generate_insights_sequential(start_date, end_date, more_insights)
+
+    def _generate_insights_sequential(self, start_date: str, end_date: str, more_insights: bool = False) -> Dict[str, Any]:
+        """
+        Fallback method using sequential execution (original implementation)
+        """
+        try:
+            logger.info(f"Generating AI insights for period {start_date} to {end_date} (sequential fallback)")
+
+            # Extract all KPI data sequentially
+            operations_data = self.operations_extractor.extract_all_kpis(start_date, end_date)
+            safety_data = self.safety_extractor.extract_all_kpis(start_date, end_date)
+            combined_data = self.combined_extractor.extract_all_kpis(start_date, end_date)
+
+            return self._process_insights_data(operations_data, safety_data, combined_data, start_date, end_date, more_insights)
+
+        except Exception as e:
+            logger.error(f"Error generating AI insights (sequential): {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'insights': [],
+                'generation_timestamp': datetime.now().isoformat()
+            }
+
+    async def generate_insights_async(self, start_date: str, end_date: str, more_insights: bool = False) -> Dict[str, Any]:
+        """
+        Generate 10 AI-powered insights from combined KPI data using parallel execution
+
         Args:
             start_date: Start date for KPI analysis (YYYY-MM-DD)
             end_date: End date for KPI analysis (YYYY-MM-DD)
-            
+            more_insights: Whether to generate additional diverse insights
+
         Returns:
             Dictionary containing 10 AI-generated insights
         """
         try:
             logger.info(f"Generating AI insights for period {start_date} to {end_date}")
+
+            # Extract all KPI data in parallel for faster execution
+            loop = asyncio.get_event_loop()
+            with ThreadPoolExecutor(max_workers=3) as executor:
+                # Submit all tasks to the thread pool
+                operations_future = loop.run_in_executor(
+                    executor, self._extract_operations_kpis_sync, start_date, end_date
+                )
+                safety_future = loop.run_in_executor(
+                    executor, self._extract_safety_kpis_sync, start_date, end_date
+                )
+                combined_future = loop.run_in_executor(
+                    executor, self._extract_combined_kpis_sync, start_date, end_date
+                )
+
+                # Wait for all tasks to complete
+                operations_data, safety_data, combined_data = await asyncio.gather(
+                    operations_future, safety_future, combined_future
+                )
+
+            logger.info("All KPI data extracted in parallel for AI insights generation")
+
+            return self._process_insights_data(operations_data, safety_data, combined_data, start_date, end_date, more_insights)
             
-            # Extract all KPI data
-            operations_data = self.operations_extractor.extract_all_kpis(start_date, end_date)
-            safety_data = self.safety_extractor.extract_all_kpis(start_date, end_date)
-            combined_data = self.combined_extractor.extract_all_kpis(start_date, end_date)
-            
+        except Exception as e:
+            logger.error(f"Error generating AI insights (parallel): {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'insights': [],
+                'generation_timestamp': datetime.now().isoformat()
+            }
+
+    def _process_insights_data(self, operations_data: Dict, safety_data: Dict, combined_data: Dict,
+                              start_date: str, end_date: str, more_insights: bool = False) -> Dict[str, Any]:
+        """
+        Common method to process KPI data and generate insights
+        """
+        try:
             # Prepare comprehensive KPI context for AI
             kpi_context = self._prepare_kpi_context(operations_data, safety_data, combined_data)
-            
+
             # Generate insights using AI
             insights_prompt = self._create_insights_prompt(more_insights)
             ai_response = self.ai_client.chat(insights_prompt, kpi_context)
-            
+
             if not ai_response.get('success', False):
                 logger.error(f"AI insights generation failed: {ai_response.get('error', 'Unknown error')}")
                 return self._generate_fallback_insights(operations_data, safety_data, combined_data)
-            
+
             # Parse AI response into structured insights
             insights = self._parse_ai_insights(ai_response.get('response', ''))
-            
+
             return {
                 'success': True,
                 'insights': insights,
@@ -80,15 +184,9 @@ class AIInsightsGenerator:
                     'timestamp': ai_response.get('timestamp')
                 }
             }
-            
         except Exception as e:
-            logger.error(f"Error generating AI insights: {e}")
-            return {
-                'success': False,
-                'error': str(e),
-                'insights': [],
-                'generation_timestamp': datetime.now().isoformat()
-            }
+            logger.error(f"Error processing insights data: {e}")
+            return self._generate_fallback_insights(operations_data, safety_data, combined_data)
     
     def _prepare_kpi_context(self, operations_data: Dict, safety_data: Dict, combined_data: Dict) -> str:
         """

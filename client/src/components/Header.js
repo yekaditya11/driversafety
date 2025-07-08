@@ -62,8 +62,8 @@ const Header = ({ drawerWidth, onMenuClick, isMobile }) => {
             src="/SafetyConnect_logo.png"
             alt="SafetyConnect"
             style={{
-              height: '45px',
-              maxHeight: '45px',
+              height: '30px',
+              maxHeight: '30px',
               width: 'auto',
               objectFit: 'contain',
               filter: 'brightness(0) invert(1)', // Make logo white

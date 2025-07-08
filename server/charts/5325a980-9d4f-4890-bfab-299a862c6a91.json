@@ -1,10 +1,10 @@
 {
-  "id": "12cdaaea-550f-422d-839e-2b44c966bc76",
-  "title": "Driver Safety Analysis",
+  "id": "5325a980-9d4f-4890-bfab-299a862c6a91",
+  "title": "Vehicle Utilization Analysis",
   "description": null,
   "chart_config": {
     "title": {
-      "text": "Driver Safety Analysis",
+      "text": "Vehicle Utilization Analysis",
       "left": "center",
       "top": "2%",
       "textStyle": {
@@ -51,36 +51,36 @@
         ],
         "data": [
           {
-            "name": "Distribution Center",
-            "value": 13.23,
+            "name": "82% utilization  \n• TPU-4040 (Truck)",
+            "value": 3.75,
             "itemStyle": {
               "color": "#7B9BD9"
             }
           },
           {
-            "name": "Port",
-            "value": 13.14,
+            "name": "43% utilization  \n• U92 2VZ (Van)",
+            "value": 7.92,
             "itemStyle": {
               "color": "#A8D4A8"
             }
           },
           {
-            "name": "Factory",
-            "value": 12.92,
+            "name": "21% utilization  \n• 539BUX (Pickup)",
+            "value": 10.94,
             "itemStyle": {
               "color": "#FDD97A"
             }
           },
           {
-            "name": "Warehouse",
-            "value": 12.35,
+            "name": "78% utilization  \n• 704-SIV (Trailer)",
+            "value": 13.82,
             "itemStyle": {
               "color": "#F29999"
             }
           },
           {
-            "name": "Store",
-            "value": 11.94,
+            "name": "37% utilization  \n• DHW-1453 (Van)",
+            "value": 25.56,
             "itemStyle": {
               "color": "#9BD4E8"
             }
@@ -103,6 +103,6 @@
       }
     ]
   },
-  "created_at": "2025-07-02T15:01:05.448136",
-  "updated_at": "2025-07-02T15:01:05.448136"
+  "created_at": "2025-07-08T18:40:46.758816",
+  "updated_at": "2025-07-08T18:40:46.758816"
 }

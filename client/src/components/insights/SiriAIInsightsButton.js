@@ -5,7 +5,6 @@
 
 import React, { useState } from 'react';
 import {
-  IconButton,
   Tooltip,
   Box
 } from '@mui/material';
@@ -17,66 +16,16 @@ import { keyframes } from '@mui/system';
 
 import AIInsightsPanel from './AIInsightsPanel';
 
-// Enhanced universe-like breathing animation keyframes
-const universeBreathing = keyframes`
-  0%, 100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 0.9;
-    filter: hue-rotate(0deg) brightness(1);
-  }
-  25% {
-    transform: scale(1.02) rotate(90deg);
-    opacity: 1;
-    filter: hue-rotate(90deg) brightness(1.1);
-  }
-  50% {
-    transform: scale(1.05) rotate(180deg);
-    opacity: 1;
-    filter: hue-rotate(180deg) brightness(1.2);
-  }
-  75% {
-    transform: scale(1.02) rotate(270deg);
-    opacity: 1;
-    filter: hue-rotate(270deg) brightness(1.1);
-  }
-`;
+// Simplified animation keyframes
 
-const cosmicWave1 = keyframes`
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.4;
-    background: linear-gradient(45deg, rgba(25, 118, 210, 0.3) 30%, rgba(63, 81, 181, 0.3) 90%);
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.1;
-    background: linear-gradient(45deg, rgba(33, 150, 243, 0.3) 30%, rgba(25, 118, 210, 0.3) 90%);
-  }
-`;
-
-const cosmicWave2 = keyframes`
+const cosmicWave = keyframes`
   0%, 100% {
     transform: scale(1);
     opacity: 0.3;
-    background: linear-gradient(45deg, rgba(63, 81, 181, 0.2) 30%, rgba(33, 150, 243, 0.2) 90%);
   }
   50% {
-    transform: scale(1.7);
-    opacity: 0.05;
-    background: linear-gradient(45deg, rgba(25, 118, 210, 0.2) 30%, rgba(63, 81, 181, 0.2) 90%);
-  }
-`;
-
-const cosmicWave3 = keyframes`
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.2;
-    background: linear-gradient(45deg, rgba(33, 150, 243, 0.1) 30%, rgba(25, 118, 210, 0.1) 90%);
-  }
-  50% {
-    transform: scale(1.9);
-    opacity: 0.02;
-    background: linear-gradient(45deg, rgba(63, 81, 181, 0.1) 30%, rgba(33, 150, 243, 0.1) 90%);
+    transform: scale(1.3);
+    opacity: 0.1;
   }
 `;
 
@@ -159,39 +108,20 @@ const SiriAIInsightsButton = ({
             justifyContent: 'center',
           }}
         >
-          {/* Universe-like cosmic wave rings */}
+          {/* Simplified cosmic wave ring */}
           <Box
             sx={{
               position: 'absolute',
               width: 40,
               height: 40,
               borderRadius: '50%',
-              animation: `${cosmicWave1} 3s ease-in-out infinite`,
-              zIndex: 1,
-            }}
-          />
-          <Box
-            sx={{
-              position: 'absolute',
-              width: 40,
-              height: 40,
-              borderRadius: '50%',
-              animation: `${cosmicWave2} 3s ease-in-out infinite 0.5s`,
-              zIndex: 1,
-            }}
-          />
-          <Box
-            sx={{
-              position: 'absolute',
-              width: 40,
-              height: 40,
-              borderRadius: '50%',
-              animation: `${cosmicWave3} 3s ease-in-out infinite 1s`,
+              background: 'linear-gradient(45deg, rgba(25, 118, 210, 0.2) 30%, rgba(63, 81, 181, 0.2) 90%)',
+              animation: `${cosmicWave} 4s ease-in-out infinite`,
               zIndex: 1,
             }}
           />
 
-          {/* Orbiting sparkles */}
+          {/* Single orbiting sparkle */}
           <Box
             sx={{
               position: 'absolute',
@@ -207,65 +137,21 @@ const SiriAIInsightsButton = ({
                 left: '50%',
                 fontSize: 8,
                 color: '#1976d2',
-                animation: `${sparkleOrbit} 4s linear infinite`,
-                transformOrigin: '0 0',
-              }}
-            />
-            <SparkleIcon
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                fontSize: 6,
-                color: '#2196f3',
-                animation: `${sparkleOrbit} 4s linear infinite 1s`,
-                transformOrigin: '0 0',
-              }}
-            />
-            <SparkleIcon
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                fontSize: 10,
-                color: '#3f51b5',
-                animation: `${sparkleOrbit} 4s linear infinite 2s`,
+                animation: `${sparkleOrbit} 6s linear infinite`,
                 transformOrigin: '0 0',
               }}
             />
           </Box>
 
-          {/* Floating dots around the button */}
+          {/* Single floating dot */}
           <DotIcon
             sx={{
               position: 'absolute',
-              top: -15,
-              right: -10,
+              top: -12,
+              right: -8,
               fontSize: 4,
               color: '#1976d2',
-              animation: `${floatingDots} 2s ease-in-out infinite`,
-              zIndex: 1,
-            }}
-          />
-          <DotIcon
-            sx={{
-              position: 'absolute',
-              bottom: -12,
-              left: -8,
-              fontSize: 3,
-              color: '#2196f3',
-              animation: `${floatingDots} 2s ease-in-out infinite 0.7s`,
-              zIndex: 1,
-            }}
-          />
-          <DotIcon
-            sx={{
-              position: 'absolute',
-              top: -8,
-              left: -15,
-              fontSize: 5,
-              color: '#3f51b5',
-              animation: `${floatingDots} 2s ease-in-out infinite 1.4s`,
+              animation: `${floatingDots} 3s ease-in-out infinite`,
               zIndex: 1,
             }}
           />
@@ -283,15 +169,12 @@ const SiriAIInsightsButton = ({
                 ? 'linear-gradient(135deg, rgba(25, 118, 210, 0.6) 0%, rgba(33, 150, 243, 0.6) 50%, rgba(63, 81, 181, 0.6) 100%)'
                 : 'linear-gradient(135deg, #1976d2 0%, #2196f3 50%, #3f51b5 100%)',
               cursor: loading ? 'default' : 'pointer',
-              animation: loading ? 'none' : `${universeBreathing} 4s ease-in-out infinite, ${universeGlow} 3s ease-in-out infinite`,
-              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              animation: loading ? 'none' : `${universeGlow} 3s ease-in-out infinite`,
+              transition: 'all 0.2s ease-in-out',
               '&:hover': loading ? {} : {
                 background: 'linear-gradient(135deg, #1565c0 0%, #1e88e5 50%, #303f9f 100%)',
-                transform: 'scale(1.15)',
-                filter: 'brightness(1.2)',
-                '&::before': {
-                  opacity: 0.8,
-                }
+                transform: 'scale(1.05)',
+                boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)',
               },
               // Enhanced inner glow effect
               '&::after': {
@@ -304,7 +187,6 @@ const SiriAIInsightsButton = ({
                 borderRadius: '50%',
                 background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
                 pointerEvents: 'none',
-                animation: loading ? 'none' : `${universeBreathing} 4s ease-in-out infinite 0.5s`,
               },
               // Outer cosmic ring
               '&::before': {
@@ -318,7 +200,6 @@ const SiriAIInsightsButton = ({
                 background: 'linear-gradient(135deg, rgba(25, 118, 210, 0.3) 0%, rgba(33, 150, 243, 0.3) 50%, rgba(63, 81, 181, 0.3) 100%)',
                 zIndex: -1,
                 opacity: 0.6,
-                animation: loading ? 'none' : `${universeBreathing} 4s ease-in-out infinite reverse`,
               }
             }}
           />

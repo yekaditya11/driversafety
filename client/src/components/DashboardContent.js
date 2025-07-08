@@ -11,6 +11,7 @@ import {
 import {
   Refresh as RefreshIcon,
 } from '@mui/icons-material';
+import { StaggeredCards, FloatingElement } from './StaggeredAnimation';
 import KPICards from './KPICards';
 import ChartsSection from './ChartsSection';
 import AIDashboard from './AIDashboard';
@@ -46,7 +47,7 @@ const DashboardContent = ({
     startDate,
     endDate,
     autoRefresh: true,
-    refreshInterval: 300000, // 5 minutes
+    refreshInterval: 600000, // 10 minutes (reduced frequency to prevent redundant calls)
     useParallel: true, // Enable parallel execution
     executionMode: 'auto', // Auto mode with parallel preference
   });
@@ -108,31 +109,33 @@ const DashboardContent = ({
 
                 <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
                   {/* Refresh Button */}
-                  <IconButton
-                    onClick={refreshData}
-                    disabled={loading}
-                    sx={{
-                      bgcolor: 'white',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: 1.5,
-                      p: 1.5,
-                      '&:hover': {
-                        bgcolor: '#f8fafc',
-                        borderColor: '#092f57',
-                      },
-                      '&:disabled': {
-                        bgcolor: '#f1f5f9',
-                      }
-                    }}
-                  >
-                    {loading ? (
-                      <CircularProgress size={20} sx={{ color: '#092f57' }} />
-                    ) : (
-                      <RefreshIcon sx={{ fontSize: 20, color: '#092f57' }} />
-                    )}
-                  </IconButton>
-
-
+                  <FloatingElement intensity="medium">
+                    <IconButton
+                      onClick={refreshData}
+                      disabled={loading}
+                      sx={{
+                        bgcolor: 'white',
+                        border: '1px solid #e5e7eb',
+                        borderRadius: 1.5,
+                        p: 1.5,
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                        '&:hover': {
+                          bgcolor: '#f8fafc',
+                          borderColor: '#092f57',
+                          transform: 'scale(1.05)',
+                        },
+                        '&:disabled': {
+                          bgcolor: '#f1f5f9',
+                        }
+                      }}
+                    >
+                      {loading ? (
+                        <CircularProgress size={20} sx={{ color: '#092f57' }} />
+                      ) : (
+                        <RefreshIcon sx={{ fontSize: 20, color: '#092f57' }} />
+                      )}
+                    </IconButton>
+                  </FloatingElement>
 
                   {/* AI Insights Button */}
                   <SiriAIInsightsButton
@@ -144,11 +147,11 @@ const DashboardContent = ({
               </Box>
             </Box>
 
-            {/* KPI Cards */}
-            <KPICards data={dashboardData} loading={loading} />
-
-            {/* Charts Section */}
-            <ChartsSection loading={loading} data={dashboardData} />
+            {/* KPI Cards and Charts with Staggered Animation */}
+            <StaggeredCards delay={200}>
+              <KPICards data={dashboardData} loading={loading} />
+              <ChartsSection loading={loading} data={dashboardData} />
+            </StaggeredCards>
           </Box>
         );
 
@@ -230,11 +233,11 @@ const DashboardContent = ({
               </Box>
             </Box>
 
-            {/* KPI Cards */}
-            <KPICards data={dashboardData} loading={loading} />
-
-            {/* Charts Section */}
-            <ChartsSection loading={loading} data={dashboardData} />
+            {/* KPI Cards and Charts with Staggered Animation */}
+            <StaggeredCards delay={200}>
+              <KPICards data={dashboardData} loading={loading} />
+              <ChartsSection loading={loading} data={dashboardData} />
+            </StaggeredCards>
           </Box>
         );
     }

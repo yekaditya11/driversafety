@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 // Base URL for the API - adjust this based on your server configuration
-//const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-const BASE_URL = process.env.REACT_APP_API_URL || 'http://16.170.98.127:8000'
+const BASE_URL = process.env.REACT_APP_API_URL || 'http://16.170.98.127:8000';
+// const BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000'
 
 // Create axios instance with default configuration
 const apiClient = axios.create({
   baseURL: BASE_URL,
-  timeout: 30000, // 30 seconds timeout
+  timeout: 120000, // 120 seconds timeout for long-running operations
   headers: {
     'Content-Type': 'application/json',
   },
@@ -170,7 +170,10 @@ class ApiService {
       if (options.limit) params.limit = options.limit;
       if (options.more_insights) params.more_insights = options.more_insights;
 
-      const response = await apiClient.get('/api/ai-insights', { params });
+      const response = await apiClient.get('/api/ai-insights', {
+        params,
+        timeout: 180000 // 3 minutes timeout for AI insights (OpenAI API calls can be slow)
+      });
       return response.data;
     } catch (error) {
       console.error('Error fetching AI insights:', error);
@@ -179,8 +182,8 @@ class ApiService {
   }
 
   /**
-   * Get all KPIs at once using the new parallel endpoint for maximum performance
-   * Falls back to individual API calls if parallel endpoint fails
+   * Get all KPIs at once using the parallel endpoint for maximum performance
+   * No fallback to individual calls to avoid redundant processing
    * @param {string} startDate - Start date in YYYY-MM-DD format
    * @param {string} endDate - End date in YYYY-MM-DD format
    * @param {boolean} useParallel - Whether to use parallel endpoint (default: true)
@@ -189,57 +192,39 @@ class ApiService {
   async getAllKPIs(startDate = null, endDate = null, useParallel = true) {
     try {
       if (useParallel) {
-        console.log('🚀 Using parallel KPI endpoint for faster execution...');
+        console.log('🚀 Using parallel KPI endpoint for optimal performance...');
 
-        try {
-          // Try the new parallel endpoint first
-          const parallelResult = await this.getAllKPIsParallel(startDate, endDate);
+        // Use the parallel endpoint - no fallback to avoid redundant calls
+        const parallelResult = await this.getAllKPIsParallel(startDate, endDate);
 
-          // Transform the parallel result to match the expected format
-          return {
-            safety: {
-              success: parallelResult.success,
-              data: parallelResult.data.safety_kpis,
-              message: 'Safety KPIs extracted via parallel execution',
-              extraction_timestamp: parallelResult.extraction_timestamp
-            },
-            operations: {
-              success: parallelResult.success,
-              data: parallelResult.data.operations_kpis,
-              message: 'Operations KPIs extracted via parallel execution',
-              extraction_timestamp: parallelResult.extraction_timestamp
-            },
-            combined: {
-              success: parallelResult.success,
-              data: parallelResult.data.combined_kpis,
-              message: 'Combined KPIs extracted via parallel execution',
-              extraction_timestamp: parallelResult.extraction_timestamp
-            },
-            timestamp: parallelResult.extraction_timestamp,
-            execution_stats: parallelResult.execution_stats,
-            parallel_execution: true
-          };
-        } catch (parallelError) {
-          console.warn('⚠️ Parallel endpoint failed, falling back to individual API calls:', parallelError.message);
-          // Fall through to sequential execution
-        }
+        // Transform the parallel result to match the expected format
+        return {
+          safety: {
+            success: parallelResult.success,
+            data: parallelResult.data.safety_kpis,
+            message: 'Safety KPIs extracted via parallel execution',
+            extraction_timestamp: parallelResult.extraction_timestamp
+          },
+          operations: {
+            success: parallelResult.success,
+            data: parallelResult.data.operations_kpis,
+            message: 'Operations KPIs extracted via parallel execution',
+            extraction_timestamp: parallelResult.extraction_timestamp
+          },
+          combined: {
+            success: parallelResult.success,
+            data: parallelResult.data.combined_kpis,
+            message: 'Combined KPIs extracted via parallel execution',
+            extraction_timestamp: parallelResult.extraction_timestamp
+          },
+          timestamp: parallelResult.extraction_timestamp,
+          execution_stats: parallelResult.execution_stats,
+          parallel_execution: true
+        };
       }
 
-      // Fallback to sequential execution (original method)
-      console.log('🔄 Using sequential KPI execution...');
-      const [safetyKPIs, operationsKPIs, combinedKPIs] = await Promise.all([
-        this.getSafetyKPIs(startDate, endDate),
-        this.getOperationsKPIs(startDate, endDate),
-        this.getCombinedKPIs(startDate, endDate),
-      ]);
-
-      return {
-        safety: safetyKPIs,
-        operations: operationsKPIs,
-        combined: combinedKPIs,
-        timestamp: new Date().toISOString(),
-        parallel_execution: false
-      };
+      // If parallel is disabled, throw error to force explicit choice
+      throw new Error('Parallel execution is disabled. Use getAllKPIsSequential() for individual calls or enable parallel execution.');
     } catch (error) {
       console.error('Error fetching all KPIs:', error);
       throw error;
@@ -258,14 +243,28 @@ class ApiService {
   }
 
   /**
-   * Force sequential execution of all KPIs (original method)
+   * Force sequential execution of all KPIs (fallback method)
+   * This makes individual API calls - use only when parallel endpoint fails
    * @param {string} startDate - Start date in YYYY-MM-DD format
    * @param {string} endDate - End date in YYYY-MM-DD format
    * @returns {Promise<Object>} All KPI data from sequential execution
    */
   async getAllKPIsSequential(startDate = null, endDate = null) {
-    console.log('🔄 Forcing sequential KPI execution...');
-    return await this.getAllKPIs(startDate, endDate, false);
+    console.log('🔄 Using sequential KPI execution (individual API calls)...');
+
+    const [safetyKPIs, operationsKPIs, combinedKPIs] = await Promise.all([
+      this.getSafetyKPIs(startDate, endDate),
+      this.getOperationsKPIs(startDate, endDate),
+      this.getCombinedKPIs(startDate, endDate),
+    ]);
+
+    return {
+      safety: safetyKPIs,
+      operations: operationsKPIs,
+      combined: combinedKPIs,
+      timestamp: new Date().toISOString(),
+      parallel_execution: false
+    };
   }
 
   /**
@@ -279,7 +278,9 @@ class ApiService {
       const payload = { message };
       if (sessionId) payload.session_id = sessionId;
 
-      const response = await apiClient.post('/api/chat', payload);
+      const response = await apiClient.post('/api/chat', payload, {
+        timeout: 180000 // 3 minutes timeout for chat (OpenAI API calls can be slow)
+      });
       return response.data;
     } catch (error) {
       console.error('Error sending chat message:', error);

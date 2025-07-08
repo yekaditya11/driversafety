@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -22,9 +21,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  ComposedChart,
 } from 'recharts';
 
 // Helper functions to generate chart data from real KPI data
@@ -115,7 +112,6 @@ const generateRiskVsTATData = (combinedData) => {
 
 // Chart Component 1: Driver Safety Score Distribution (Pie Chart)
 const SafetyScoreDistributionChart = ({ loading, data }) => {
-  const theme = useTheme();
   const safetyData = data?.safety || {};
   const chartData = generateSafetyScoreDistribution(safetyData);
 
@@ -177,34 +173,104 @@ const SafetyScoreDistributionChart = ({ loading, data }) => {
         <Typography variant="h6" gutterBottom sx={{ fontWeight: 600, mb: 2, color: '#092f57' }}>
           Driver Safety Score Distribution
         </Typography>
-        <Box sx={{ flexGrow: 1, minHeight: '320px' }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={chartData}
-                cx="50%"
-                cy="50%"
-                outerRadius="70%"
-                innerRadius="30%"
-                paddingAngle={2}
-                dataKey="value"
-              >
-                {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip content={<CustomTooltip />} />
-              <Legend
-                verticalAlign="bottom"
-                height={36}
-                formatter={(value, entry) => (
-                  <span style={{ color: entry.color, fontSize: '12px' }}>
-                    {value}
-                  </span>
-                )}
-              />
-            </PieChart>
-          </ResponsiveContainer>
+        <Box sx={{
+          flexGrow: 1,
+          minHeight: '320px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 2
+        }}>
+          {/* Pie Chart on the left - slightly larger */}
+          <Box sx={{ flex: '0 0 60%', height: '100%' }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius="80%"
+                  innerRadius="35%"
+                  paddingAngle={2}
+                  dataKey="value"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
+              </PieChart>
+            </ResponsiveContainer>
+          </Box>
+
+          {/* Values on the right side */}
+          <Box sx={{
+            flex: '0 0 40%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            height: '75%',
+            pl: 1
+          }}>
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 0.8,
+              maxHeight: '100%',
+              overflow: 'hidden'
+            }}>
+              {chartData.map((entry, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1,
+                    p: 0.5,
+                    borderRadius: 0.5,
+                    transition: 'all 0.2s ease',
+                    cursor: 'pointer',
+                    '&:hover': {
+                      backgroundColor: 'rgba(0, 0, 0, 0.04)',
+                      transform: 'translateX(2px)'
+                    }
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 12,
+                      height: 12,
+                      backgroundColor: entry.color,
+                      borderRadius: '50%',
+                      flexShrink: 0
+                    }}
+                  />
+                  <Box sx={{ flex: 1, minWidth: 0 }}>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontWeight: 500,
+                        fontSize: '11px',
+                        lineHeight: 1.1,
+                        mb: 0.2
+                      }}
+                    >
+                      {entry.name}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{
+                        fontSize: '10px',
+                        lineHeight: 1
+                      }}
+                    >
+                      {entry.value} drivers ({entry.percentage}%)
+                    </Typography>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
         </Box>
       </CardContent>
     </Card>
@@ -290,7 +356,12 @@ const TurnaroundTimeChart = ({ loading, data }) => {
               />
               <YAxis
                 tick={{ fontSize: 12 }}
-                label={{ value: 'Hours', angle: -90, position: 'insideLeft' }}
+                label={{
+                  value: 'Time (Hours)',
+                  angle: -90,
+                  position: 'insideLeft',
+                  style: { textAnchor: 'middle' }
+                }}
               />
               <Tooltip content={<CustomTooltip />} />
               <Bar
@@ -386,7 +457,12 @@ const VehicleUtilizationChart = ({ loading, data }) => {
               />
               <YAxis
                 tick={{ fontSize: 12 }}
-                label={{ value: 'Utilization %', angle: -90, position: 'insideLeft' }}
+                label={{
+                  value: 'Utilization (%)',
+                  angle: -90,
+                  position: 'insideLeft',
+                  style: { textAnchor: 'middle' }
+                }}
               />
               <Tooltip content={<CustomTooltip />} />
               <Line
@@ -439,7 +515,7 @@ const RiskVsTATChart = ({ loading, data }) => {
     );
   }
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload;
       return (
@@ -491,7 +567,12 @@ const RiskVsTATChart = ({ loading, data }) => {
               />
               <YAxis
                 tick={{ fontSize: 12 }}
-                label={{ value: 'Driver Count', angle: -90, position: 'insideLeft' }}
+                label={{
+                  value: 'Drivers Count',
+                  angle: -90,
+                  position: 'insideLeft',
+                  style: { textAnchor: 'middle' }
+                }}
               />
               <Tooltip content={<CustomTooltip />} />
               <Area

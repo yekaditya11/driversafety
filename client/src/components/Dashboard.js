@@ -1,38 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
-  AppBar,
-  Toolbar,
-  Typography,
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  IconButton,
-  Grid,
-  Container,
   useTheme,
   useMediaQuery,
 } from '@mui/material';
 import {
-  Menu as MenuIcon,
   Dashboard as DashboardIcon,
   Analytics as AnalyticsIcon,
-  Psychology as AIIcon,
 } from '@mui/icons-material';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import DashboardContent from './DashboardContent';
 import ChatBot from './ChatBot';
 
+
+
 const drawerWidth = 240;
 
 const Dashboard = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedView, setSelectedView] = useState('dashboard');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const currentDrawerWidth = sidebarCollapsed ? 72 : drawerWidth;
 
   // State for date range filtering (shared between components)
   const [dateRange, setDateRange] = useState({
@@ -66,6 +59,15 @@ const Dashboard = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleViewChange = (view) => {
+    setSelectedView(view);
+    if (isMobile) {
+      setMobileOpen(false);
+    }
+  };
+
+
+
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: <DashboardIcon /> },
     { id: 'ai-dashboard', label: 'AI Dashboard', icon: <AnalyticsIcon /> },
@@ -87,7 +89,7 @@ const Dashboard = () => {
         onDrawerToggle={handleDrawerToggle}
         menuItems={menuItems}
         selectedView={selectedView}
-        onViewChange={setSelectedView}
+        onViewChange={handleViewChange}
         isMobile={isMobile}
       />
 
@@ -97,16 +99,17 @@ const Dashboard = () => {
         sx={{
           position: 'fixed',
           top: '70px',
-          left: { xs: 0, sm: `${drawerWidth}px` },
+          left: { xs: 0, sm: `${currentDrawerWidth}px` },
           right: 0,
           bottom: 0,
           backgroundColor: theme.palette.background.default,
           overflow: 'auto',
-          pl: { xs: 1, sm: 3 }, // Increase left padding for better spacing
-          pr: { xs: 1, sm: 3 }, // Increase right padding for consistency
-          pt: { xs: 1, sm: 2 }, // Add top padding
-          pb: { xs: 1, sm: 2 }, // Add bottom padding
-          width: { xs: '100%', sm: `calc(100% - ${drawerWidth}px)` }, // Ensure proper width calculation
+          pl: { xs: 1, sm: 3 },
+          pr: { xs: 1, sm: 3 },
+          pt: { xs: 1, sm: 2 },
+          pb: { xs: 1, sm: 2 },
+          width: { xs: '100%', sm: `calc(100% - ${currentDrawerWidth}px)` },
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
         <DashboardContent
@@ -120,6 +123,10 @@ const Dashboard = () => {
 
       {/* Chat Bot */}
       <ChatBot />
+
+
+
+
     </Box>
   );
 };

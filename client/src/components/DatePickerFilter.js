@@ -179,7 +179,7 @@ const DatePickerFilter = ({
             }}
             sx={{
               bgcolor: 'white',
-              borderRadius: 1.5,
+              borderRadius: 0.5,
               '& .MuiOutlinedInput-notchedOutline': {
                 borderColor: '#e5e7eb',
               },
@@ -206,7 +206,7 @@ const DatePickerFilter = ({
             sx={{
               bgcolor: 'white',
               border: '1px solid #e5e7eb',
-              borderRadius: 1.5,
+              borderRadius: 0.5,
               p: 1.5,
               '&:hover': {
                 bgcolor: '#f8fafc',

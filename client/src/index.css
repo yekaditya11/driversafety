@@ -12,31 +12,31 @@ code {
     monospace;
 }
 
-/* Remove rounded corners from main header and navigation - AGGRESSIVE */
+/* Remove rounded corners from headers, footers, and navigation - COMPREHENSIVE */
 .MuiAppBar-root,
 .MuiAppBar-root *,
 .MuiAppBar-positionFixed,
-.MuiAppBar-colorPrimary {
+.MuiAppBar-colorPrimary,
+.MuiToolbar-root,
+.MuiToolbar-root *,
+.MuiDrawer-root .MuiPaper-root,
+.MuiDrawer-paper,
+.MuiPaper-root.MuiAppBar-root,
+.MuiPaper-root.MuiDrawer-paper {
   border-radius: 0 !important;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-}
-
-.MuiDrawer-root .MuiPaper-root {
-  border-radius: 0 !important;
-}
-
-.MuiToolbar-root {
-  border-radius: 0 !important;
 }
 
 /* Ensure main navigation elements have square corners */
 header,
 header *,
 nav,
-nav * {
+nav *,
+footer,
+footer * {
   border-radius: 0 !important;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
@@ -44,16 +44,27 @@ nav * {
   border-bottom-right-radius: 0 !important;
 }
 
-/* Target any potential Material-UI Paper components in header */
-.MuiPaper-root.MuiAppBar-root {
+/* Force all header and footer related elements to have square corners */
+[class*="MuiAppBar"],
+[class*="MuiToolbar"],
+[class*="MuiDrawer"],
+[class*="Footer"],
+[class*="Header"] {
   border-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
-/* Force all header-related elements to have square corners */
-[class*="MuiAppBar"] {
+/* Target any grid footers or data table footers */
+[class*="GridFooter"],
+[class*="TableFooter"],
+[class*="PanelFooter"],
+[class*="FooterContainer"] {
   border-radius: 0 !important;
-}
-
-[class*="MuiToolbar"] {
-  border-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }

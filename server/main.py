@@ -9,6 +9,7 @@ import json
 import uuid
 import asyncio
 import logging
+import hashlib
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from typing import Optional, Dict, Any, List
@@ -67,6 +68,64 @@ ai_insights_generator = AIInsightsGenerator()
 
 # Initialize KPI Chatbot
 kpi_chatbot = KPIChatbot()
+
+# KPI Data Cache to prevent redundant extractions
+class KPICache:
+    def __init__(self, cache_duration_minutes: int = 5):
+        self.cache = {}
+        self.cache_duration = timedelta(minutes=cache_duration_minutes)
+
+    def _generate_cache_key(self, start_date: str, end_date: str, kpi_type: str) -> str:
+        """Generate a unique cache key for the given parameters"""
+        key_string = f"{kpi_type}_{start_date}_{end_date}"
+        return hashlib.md5(key_string.encode()).hexdigest()
+
+    def get(self, start_date: str, end_date: str, kpi_type: str) -> Optional[Dict]:
+        """Get cached KPI data if available and not expired"""
+        cache_key = self._generate_cache_key(start_date, end_date, kpi_type)
+
+        if cache_key in self.cache:
+            cached_data, timestamp = self.cache[cache_key]
+            if datetime.now() - timestamp < self.cache_duration:
+                logging.info(f"Cache hit for {kpi_type} KPIs ({start_date} to {end_date})")
+                return cached_data
+            else:
+                # Remove expired cache entry
+                del self.cache[cache_key]
+                logging.info(f"Cache expired for {kpi_type} KPIs ({start_date} to {end_date})")
+
+        return None
+
+    def set(self, start_date: str, end_date: str, kpi_type: str, data: Dict) -> None:
+        """Cache KPI data with timestamp"""
+        cache_key = self._generate_cache_key(start_date, end_date, kpi_type)
+        self.cache[cache_key] = (data, datetime.now())
+        logging.info(f"Cached {kpi_type} KPIs ({start_date} to {end_date})")
+
+    def clear(self) -> None:
+        """Clear all cached data"""
+        self.cache.clear()
+        logging.info("KPI cache cleared")
+
+    def get_cache_stats(self) -> Dict:
+        """Get cache statistics"""
+        total_entries = len(self.cache)
+        expired_entries = 0
+
+        current_time = datetime.now()
+        for cached_data, timestamp in self.cache.values():
+            if current_time - timestamp >= self.cache_duration:
+                expired_entries += 1
+
+        return {
+            "total_entries": total_entries,
+            "active_entries": total_entries - expired_entries,
+            "expired_entries": expired_entries,
+            "cache_duration_minutes": self.cache_duration.total_seconds() / 60
+        }
+
+# Initialize KPI cache with 5-minute duration
+kpi_cache = KPICache(cache_duration_minutes=5)
 
 # Chart storage directory
 CHARTS_DIR = Path("charts")
@@ -306,8 +365,15 @@ async def get_operations_kpis(
         if not end_date:
             end_date = datetime.now().strftime('%Y-%m-%d')
 
-        # Extract all operations KPIs
-        kpis = operations_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "operations")
+        if cached_data:
+            kpis = cached_data
+        else:
+            # Extract all operations KPIs
+            kpis = operations_kpi_extractor.extract_all_kpis(start_date, end_date)
+            # Cache the result
+            kpi_cache.set(start_date, end_date, "operations", kpis)
 
         return KPIResponse(
             success=True,
@@ -346,8 +412,15 @@ async def get_safety_kpis(
         if not end_date:
             end_date = datetime.now().strftime('%Y-%m-%d')
 
-        # Extract all safety KPIs
-        kpis = safety_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "safety")
+        if cached_data:
+            kpis = cached_data
+        else:
+            # Extract all safety KPIs
+            kpis = safety_kpi_extractor.extract_all_kpis(start_date, end_date)
+            # Cache the result
+            kpi_cache.set(start_date, end_date, "safety", kpis)
 
         return KPIResponse(
             success=True,
@@ -383,8 +456,15 @@ async def get_combined_kpis(
         if not end_date:
             end_date = datetime.now().strftime('%Y-%m-%d')
 
-        # Extract all combined KPIs
-        kpis = combined_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "combined")
+        if cached_data:
+            kpis = cached_data
+        else:
+            # Extract all combined KPIs
+            kpis = combined_kpi_extractor.extract_all_kpis(start_date, end_date)
+            # Cache the result
+            kpi_cache.set(start_date, end_date, "combined", kpis)
 
         return KPIResponse(
             success=True,
@@ -395,27 +475,60 @@ async def get_combined_kpis(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error extracting Combined KPIs: {str(e)}")
 
-# Parallel KPI Execution Functions
+# Parallel KPI Execution Functions with Caching
 def extract_operations_kpis_sync(start_date: str, end_date: str) -> Dict:
-    """Synchronous wrapper for operations KPI extraction"""
+    """Synchronous wrapper for operations KPI extraction with caching"""
     try:
-        return operations_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "operations")
+        if cached_data:
+            return cached_data
+
+        # Extract fresh data if not cached
+        data = operations_kpi_extractor.extract_all_kpis(start_date, end_date)
+
+        # Cache the result
+        kpi_cache.set(start_date, end_date, "operations", data)
+
+        return data
     except Exception as e:
         logging.error(f"Error in operations KPI extraction: {e}")
         return {"error": str(e)}
 
 def extract_safety_kpis_sync(start_date: str, end_date: str) -> Dict:
-    """Synchronous wrapper for safety KPI extraction"""
+    """Synchronous wrapper for safety KPI extraction with caching"""
     try:
-        return safety_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "safety")
+        if cached_data:
+            return cached_data
+
+        # Extract fresh data if not cached
+        data = safety_kpi_extractor.extract_all_kpis(start_date, end_date)
+
+        # Cache the result
+        kpi_cache.set(start_date, end_date, "safety", data)
+
+        return data
     except Exception as e:
         logging.error(f"Error in safety KPI extraction: {e}")
         return {"error": str(e)}
 
 def extract_combined_kpis_sync(start_date: str, end_date: str) -> Dict:
-    """Synchronous wrapper for combined KPI extraction"""
+    """Synchronous wrapper for combined KPI extraction with caching"""
     try:
-        return combined_kpi_extractor.extract_all_kpis(start_date, end_date)
+        # Check cache first
+        cached_data = kpi_cache.get(start_date, end_date, "combined")
+        if cached_data:
+            return cached_data
+
+        # Extract fresh data if not cached
+        data = combined_kpi_extractor.extract_all_kpis(start_date, end_date)
+
+        # Cache the result
+        kpi_cache.set(start_date, end_date, "combined", data)
+
+        return data
     except Exception as e:
         logging.error(f"Error in combined KPI extraction: {e}")
         return {"error": str(e)}
@@ -488,7 +601,8 @@ async def get_all_kpis_parallel(
                 "total_execution_time_seconds": round(total_execution_time, 2),
                 "parallel_execution": True,
                 "extractors_used": 3,
-                "date_range": {"start": start_date, "end": end_date}
+                "date_range": {"start": start_date, "end": end_date},
+                "cache_stats": kpi_cache.get_cache_stats()
             },
             "errors": errors if errors else None,
             "message": f"All KPIs extracted in parallel successfully in {total_execution_time:.2f} seconds",
@@ -756,6 +870,32 @@ async def delete_chart(chart_id: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error deleting chart: {str(e)}")
 
+# Cache Management Endpoints
+@app.get("/api/cache/stats")
+async def get_cache_stats():
+    """Get KPI cache statistics"""
+    try:
+        stats = kpi_cache.get_cache_stats()
+        return {
+            "success": True,
+            "data": stats,
+            "message": "Cache statistics retrieved successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error getting cache stats: {str(e)}")
+
+@app.post("/api/cache/clear")
+async def clear_cache():
+    """Clear all cached KPI data"""
+    try:
+        kpi_cache.clear()
+        return {
+            "success": True,
+            "message": "KPI cache cleared successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error clearing cache: {str(e)}")
+
 if __name__ == "__main__":
     # Get configuration from environment
     host = os.getenv("SERVER_HOST", "0.0.0.0")
@@ -778,5 +918,9 @@ if __name__ == "__main__":
         host=host,
         port=port,
         reload=debug,
-        log_level="info" if debug else "warning"
+        log_level="info" if debug else "warning",
+        timeout_keep_alive=300,  # 5 minutes keep-alive timeout
+        timeout_graceful_shutdown=30,  # 30 seconds graceful shutdown
+        limit_max_requests=1000,  # Maximum requests before worker restart
+        limit_concurrency=100  # Maximum concurrent connections
     )

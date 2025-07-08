@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import apiService from '../services/apiService';
 
 /**
@@ -34,9 +34,22 @@ const useKPIData = (options = {}) => {
   const [executionStats, setExecutionStats] = useState(null);
   const [isParallelExecution, setIsParallelExecution] = useState(false);
 
+  // Debounce mechanism to prevent rapid successive API calls
+  const debounceTimeoutRef = useRef(null);
+  const lastCallTimeRef = useRef(0);
+  const DEBOUNCE_DELAY = 2000; // 2 seconds minimum between calls
+
   // Fetch all KPI data with execution mode support
   const fetchKPIData = useCallback(async (showLoading = true, mode = executionMode) => {
     try {
+      // Debounce mechanism to prevent rapid successive calls
+      const currentTime = Date.now();
+      if (currentTime - lastCallTimeRef.current < DEBOUNCE_DELAY) {
+        console.log('🚫 KPI fetch call debounced - too frequent');
+        return;
+      }
+      lastCallTimeRef.current = currentTime;
+
       if (showLoading) setLoading(true);
       setError(null);
 

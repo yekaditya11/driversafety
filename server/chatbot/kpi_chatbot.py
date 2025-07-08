@@ -88,7 +88,7 @@ How can I help you today?"""
         
         summary = self.data_loader.get_kpi_summary()
         
-        return f"""Welcome to the Driver Safety KPI Chatbot! 🚛📊
+        return f"""Welcome to the Driver Safety KPI Chatbot!
 
 I have access to comprehensive logistics and safety data. Here's what's available:
 

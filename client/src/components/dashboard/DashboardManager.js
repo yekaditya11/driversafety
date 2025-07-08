@@ -61,7 +61,7 @@ const DashboardManager = () => {
       window.showNotification = showNotification;
     }
 
-    // Set up periodic refresh to catch any missed updates (reduced frequency)
+    // Set up periodic refresh to catch any missed updates (further reduced frequency)
     const refreshInterval = setInterval(() => {
       const currentCharts = chartManager.getCharts();
       setSavedCharts(prevCharts => {
@@ -72,7 +72,7 @@ const DashboardManager = () => {
         }
         return prevCharts;
       });
-    }, 10000); // Check every 10 seconds (reduced from 5)
+    }, 30000); // Check every 30 seconds (reduced from 10 to prevent redundant calls)
 
     return () => {
       chartManager.removeListener(handleChartsUpdate);

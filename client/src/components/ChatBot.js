@@ -10,7 +10,6 @@ import {
   TextField,
   Paper,
   Avatar,
-  CircularProgress,
   Alert,
   Slide,
 } from '@mui/material';
@@ -24,7 +23,6 @@ import {
   Fullscreen as ExpandIcon,
   FullscreenExit as CollapseIcon,
   Mic as MicIcon,
-  MicOff as MicOffIcon,
   VolumeUp as VolumeUpIcon,
   VolumeOff as VolumeOffIcon,
   Stop as StopIcon,
@@ -174,9 +172,7 @@ const ChatMessage = ({ message, isBot, timestamp, chartConfig, onAddToDashboard,
               p: 2,
               bgcolor: isBot ? 'grey.50' : 'primary.main',
               color: isBot ? 'text.primary' : 'white',
-              borderRadius: 3,
-              borderTopLeftRadius: isBot ? 1 : 3,
-              borderTopRightRadius: isBot ? 3 : 1,
+              borderRadius: 1,
               maxWidth: '100%',
               border: isBot ? '1px solid' : 'none',
               borderColor: isBot ? 'grey.200' : 'transparent',
@@ -749,96 +745,81 @@ const ChatBot = () => {
               <Box
                 sx={{
                   display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'flex-start',
-                  gap: 0.25,
-                  mb: 0.8,
-                  animation: 'fadeIn 0.3s ease-in',
-                  '@keyframes fadeIn': {
-                    from: { opacity: 0, transform: 'translateY(10px)' },
-                    to: { opacity: 1, transform: 'translateY(0)' },
-                  },
+                  mb: 3,
+                  justifyContent: 'flex-start',
                 }}
               >
-                {/* Avatar - matching ChatMessage style */}
-                <Avatar
-                  sx={{
-                    width: 28,
-                    height: 28,
-                    bgcolor: '#092f57',
-                    fontSize: '0.75rem',
-                    animation: 'botPulse 2s ease-in-out infinite',
-                    '@keyframes botPulse': {
-                      '0%, 100%': { transform: 'rotate(0deg) scale(1)' },
-                      '25%': { transform: 'rotate(10deg) scale(1.1)' },
-                      '50%': { transform: 'rotate(-10deg) scale(1)' },
-                      '75%': { transform: 'rotate(0deg) scale(1.1)' },
-                    },
-                  }}
-                >
-                  <ChatIcon fontSize="small" />
-                </Avatar>
-
-                {/* Message Content - matching ChatMessage style */}
                 <Box
                   sx={{
-                    maxWidth: '75%',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    maxWidth: '85%',
+                    flexDirection: 'row',
+                    gap: 1,
                   }}
                 >
-                  <Paper
-                    elevation={1}
+                  {/* Avatar */}
+                  <Avatar
                     sx={{
-                      p: 1.5,
-                      borderRadius: '18px',
-                      background: 'rgba(255, 255, 255, 0.95)',
-                      color: '#1e293b',
-                      border: '1px solid rgba(0, 0, 0, 0.08)',
-                      boxShadow: '0 2px 12px rgba(0, 0, 0, 0.08)',
-                      backdropFilter: 'blur(10px)',
-                      position: 'relative',
-                      transition: 'all 0.2s ease',
+                      bgcolor: 'primary.main',
+                      width: 36,
+                      height: 36,
+                      flexShrink: 0,
+                      mt: 0.5,
                     }}
                   >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      {/* Animated dots */}
-                      <Box sx={{ display: 'flex', gap: 0.5 }}>
-                        {[0, 1, 2].map((index) => (
-                          <Box
-                            key={index}
-                            sx={{
-                              width: 6,
-                              height: 6,
-                              borderRadius: '50%',
-                              bgcolor: '#1976d2',
-                              animation: `dotPulse 1.5s ease-in-out infinite`,
-                              animationDelay: `${index * 0.2}s`,
-                              '@keyframes dotPulse': {
-                                '0%, 100%': {
-                                  transform: 'scale(1)',
-                                  opacity: 0.5
-                                },
-                                '50%': {
-                                  transform: 'scale(1.2)',
-                                  opacity: 1
-                                },
-                              },
-                            }}
-                          />
-                        ))}
-                      </Box>
+                    <BotIcon sx={{ fontSize: 20 }} />
+                  </Avatar>
 
+                  {/* AI Analyzing Message Content */}
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'flex-start',
+                      width: '100%',
+                    }}
+                  >
+                    <Paper
+                      elevation={0}
+                      sx={{
+                        p: 2,
+                        bgcolor: 'grey.50',
+                        borderRadius: 1,
+                        maxWidth: '100%',
+                        border: '1px solid',
+                        borderColor: 'grey.200',
+                      }}
+                    >
                       <Typography
                         variant="body2"
                         sx={{
-                          color: '#64748b',
-                          fontSize: '0.9rem',
+                          whiteSpace: 'pre-wrap',
+                          lineHeight: 1.5,
+                          fontSize: '0.95rem',
+                          color: 'text.secondary',
                           fontStyle: 'italic',
                         }}
                       >
                         AI is analyzing...
+                        <Box
+                          component="span"
+                          sx={{
+                            display: 'inline-block',
+                            width: '2px',
+                            height: '1.2em',
+                            backgroundColor: 'currentColor',
+                            marginLeft: '4px',
+                            animation: 'blink 1s infinite',
+                            '@keyframes blink': {
+                              '0%, 50%': { opacity: 1 },
+                              '51%, 100%': { opacity: 0 },
+                            },
+                          }}
+                        />
                       </Typography>
-                    </Box>
-                  </Paper>
+                    </Paper>
+                  </Box>
                 </Box>
               </Box>
             )}
@@ -866,7 +847,7 @@ const ChatBot = () => {
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     backgroundColor: isListening ? '#e3f2fd' : 'grey.50',
-                    borderRadius: 2,
+                    borderRadius: 3,
                     border: '1px solid',
                     borderColor: isListening ? 'primary.main' : 'grey.300',
                     minHeight: '40px',
@@ -895,7 +876,7 @@ const ChatBot = () => {
                     color: isListening ? 'white' : 'grey.700',
                     width: 40,
                     height: 40,
-                    borderRadius: 2,
+                    borderRadius: 3,
                     '&:hover': {
                       backgroundColor: isListening ? 'error.dark' : 'grey.200',
                     },
@@ -919,7 +900,7 @@ const ChatBot = () => {
                   color: 'white',
                   width: 40,
                   height: 40,
-                  borderRadius: 2,
+                  borderRadius: 3,
                   '&:hover': {
                     backgroundColor: 'primary.dark',
                   },

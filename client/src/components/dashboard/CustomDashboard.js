@@ -180,7 +180,7 @@ const CustomDashboard = ({
     <Grid
       key={chart.id}
       item
-      xs={12}
+      xs={6}
       sm={6}
       md={6}
       lg={6}

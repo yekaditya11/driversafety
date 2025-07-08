@@ -10,7 +10,6 @@ This module extracts comprehensive combined KPIs including:
 - Driver Engagement Index (training content, checklist use, driving score)
 - Transporter Composite Score (combining safety and operational metrics)
 - Fatigue Risk by Route Length and Time of Day
-- Driver Performance Index (Ops + Safety blend) – Composite driver score factoring delivery metrics and driving behaviour
 """
 
 import sys
@@ -111,8 +110,8 @@ class CombinedKPIExtractor:
             'rr_eligible_trips': self.get_rr_eligible_trips_kpi(start_date, end_date),
             'driver_engagement_index': self.get_driver_engagement_index_kpi(start_date, end_date),
             'transporter_composite_score': self.get_transporter_composite_score_kpi(start_date, end_date),
-            'fatigue_risk_by_route_and_time': self.get_fatigue_risk_by_route_and_time_kpi(start_date, end_date),
-            'driver_performance_index': self.get_driver_performance_index_kpi(start_date, end_date)
+            'fatigue_risk_by_route_and_time': self.get_fatigue_risk_by_route_and_time_kpi(start_date, end_date)
+            # Removed driver_performance_index KPI due to data processing issues
         }
 
         # Clean data to ensure JSON serialization compatibility
@@ -743,28 +742,50 @@ class CombinedKPIExtractor:
         """
 
         try:
+            logger.info(f"Starting driver performance index KPI calculation for {start_date} to {end_date}")
             engine = self.db.get_engine()
             df = pd.read_sql_query(query, engine, params={'start_date': start_date, 'end_date': end_date})
+            logger.info(f"Query executed successfully. DataFrame shape: {df.shape}")
 
             if df.empty:
+                logger.warning("No data found for driver performance index KPI")
                 return {'avg_performance_index': 0, 'analysis': {}}
 
             # Clean numeric columns to handle NaN/inf values
-            numeric_columns = ['safety_score', 'fatigue_score', 'on_time_rate', 'avg_volume_fulfillment',
-                             'overspeeding_events', 'harsh_driving_events', 'incidents', 'driver_performance_index']
-            for col in numeric_columns:
-                if col in df.columns:
-                    df[col] = df[col].apply(safe_float)
+            try:
+                numeric_columns = ['safety_score', 'fatigue_score', 'on_time_rate', 'avg_volume_fulfillment',
+                                 'overspeeding_events', 'harsh_driving_events', 'incidents', 'driver_performance_index']
+                logger.info(f"DataFrame columns: {list(df.columns)}")
+                for col in numeric_columns:
+                    if col in df.columns:
+                        logger.info(f"Processing numeric column: {col}")
+                        df[col] = df[col].apply(safe_float)
+                    else:
+                        logger.warning(f"Column {col} not found in DataFrame")
+                logger.info("Numeric column processing completed")
+            except Exception as numeric_error:
+                logger.error(f"Error processing numeric columns: {numeric_error}")
+                raise
 
             # Performance categories
-            df['performance_category'] = df['driver_performance_index'].apply(
-                lambda x: 'Excellent' if x >= 85 else
-                         'Good' if x >= 70 else
-                         'Average' if x >= 55 else
-                         'Poor'
-            )
+            try:
+                df['performance_category'] = df['driver_performance_index'].apply(
+                    lambda x: 'Excellent' if x >= 85 else
+                             'Good' if x >= 70 else
+                             'Average' if x >= 55 else
+                             'Poor'
+                )
+                logger.info(f"Performance categories created successfully. Sample: {df['performance_category'].head().tolist()}")
+            except Exception as cat_error:
+                logger.error(f"Error creating performance categories: {cat_error}")
+                df['performance_category'] = 'Unknown'
 
-            performance_distribution = {str(k): safe_int(v) for k, v in df['performance_category'].value_counts().to_dict().items()}
+            try:
+                performance_distribution = {str(k): safe_int(v) for k, v in df['performance_category'].value_counts().to_dict().items()}
+                logger.info(f"Performance distribution calculated: {performance_distribution}")
+            except Exception as dist_error:
+                logger.error(f"Error calculating performance distribution: {dist_error}")
+                performance_distribution = {'Unknown': len(df)}
 
             # Prepare data for JSON serialization
             details_columns = ['driver_name', 'safety_score', 'fatigue_score', 'on_time_rate',
@@ -773,39 +794,76 @@ class CombinedKPIExtractor:
 
             # Filter columns that actually exist in the DataFrame
             available_columns = [col for col in details_columns if col in df.columns]
+            logger.info(f"Available columns for driver performance details: {available_columns}")
+            logger.info(f"DataFrame shape: {df.shape}, columns: {list(df.columns)}")
 
             # Safely convert DataFrame to records
             try:
-                driver_performance_details = df[available_columns].round(2).to_dict('records')
-                driver_performance_details = clean_data_for_json(driver_performance_details)
+                if available_columns and len(df) > 0:
+                    # Ensure we have valid data before converting
+                    detail_df = df[available_columns].copy()
+                    # Round only numeric columns
+                    numeric_cols = detail_df.select_dtypes(include=['number']).columns
+                    detail_df[numeric_cols] = detail_df[numeric_cols].round(2)
+                    driver_performance_details = detail_df.to_dict('records')
+                    driver_performance_details = clean_data_for_json(driver_performance_details)
+                else:
+                    driver_performance_details = []
             except Exception as detail_error:
-                logger.warning(f"Error converting driver performance details: {detail_error}")
+                logger.error(f"Error converting driver performance details: {detail_error}")
+                logger.error(f"DataFrame info: shape={df.shape}, columns={list(df.columns)}")
                 driver_performance_details = []
 
             # Safely get top performers
             try:
-                top_performers = df.head(10)[['driver_name', 'driver_performance_index', 'performance_category']].round(2).to_dict('records')
-                top_performers = clean_data_for_json(top_performers)
+                required_cols = ['driver_name', 'driver_performance_index', 'performance_category']
+                if all(col in df.columns for col in required_cols) and len(df) > 0:
+                    top_df = df.head(10)[required_cols].copy()
+                    # Round only numeric columns
+                    numeric_cols = top_df.select_dtypes(include=['number']).columns
+                    top_df[numeric_cols] = top_df[numeric_cols].round(2)
+                    top_performers = top_df.to_dict('records')
+                    top_performers = clean_data_for_json(top_performers)
+                else:
+                    top_performers = []
             except Exception as top_error:
-                logger.warning(f"Error getting top performers: {top_error}")
+                logger.error(f"Error getting top performers: {top_error}")
                 top_performers = []
 
             # Safely get bottom performers
             try:
-                bottom_performers = df.tail(10)[['driver_name', 'driver_performance_index', 'performance_category']].round(2).to_dict('records')
-                bottom_performers = clean_data_for_json(bottom_performers)
+                required_cols = ['driver_name', 'driver_performance_index', 'performance_category']
+                if all(col in df.columns for col in required_cols) and len(df) > 0:
+                    bottom_df = df.tail(10)[required_cols].copy()
+                    # Round only numeric columns
+                    numeric_cols = bottom_df.select_dtypes(include=['number']).columns
+                    bottom_df[numeric_cols] = bottom_df[numeric_cols].round(2)
+                    bottom_performers = bottom_df.to_dict('records')
+                    bottom_performers = clean_data_for_json(bottom_performers)
+                else:
+                    bottom_performers = []
             except Exception as bottom_error:
-                logger.warning(f"Error getting bottom performers: {bottom_error}")
+                logger.error(f"Error getting bottom performers: {bottom_error}")
                 bottom_performers = []
 
             # Safely get improvement needed
             try:
                 improvement_cols = ['driver_name', 'driver_performance_index', 'on_time_rate', 'safety_score', 'incidents']
                 improvement_available_cols = [col for col in improvement_cols if col in df.columns]
-                improvement_needed = df[df['driver_performance_index'] < 60][improvement_available_cols].round(2).to_dict('records')
-                improvement_needed = clean_data_for_json(improvement_needed)
+                if improvement_available_cols and len(df) > 0:
+                    improvement_df = df[df['driver_performance_index'] < 60][improvement_available_cols].copy()
+                    if len(improvement_df) > 0:
+                        # Round only numeric columns
+                        numeric_cols = improvement_df.select_dtypes(include=['number']).columns
+                        improvement_df[numeric_cols] = improvement_df[numeric_cols].round(2)
+                        improvement_needed = improvement_df.to_dict('records')
+                        improvement_needed = clean_data_for_json(improvement_needed)
+                    else:
+                        improvement_needed = []
+                else:
+                    improvement_needed = []
             except Exception as improvement_error:
-                logger.warning(f"Error getting improvement needed: {improvement_error}")
+                logger.error(f"Error getting improvement needed: {improvement_error}")
                 improvement_needed = []
 
             return {

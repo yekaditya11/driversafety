@@ -11,9 +11,25 @@ body {
   background-color: #f5f5f5;
 }
 
-/* Smooth transitions for all interactive elements */
+/* Smooth transitions for all interactive elements - reduced hover effects */
 .MuiCard-root {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+/* Reduce rounded corners globally for dropdowns and pickers */
+.MuiSelect-root,
+.MuiTextField-root,
+.MuiOutlinedInput-root,
+.MuiInputBase-root,
+.MuiPaper-root.MuiMenu-paper,
+.MuiPaper-root.MuiPopover-paper {
+  border-radius: 4px !important;
+}
+
+/* Reduce rounded corners for buttons */
+.MuiButton-root,
+.MuiIconButton-root {
+  border-radius: 4px !important;
 }
 
 /* Custom scrollbar for better aesthetics */

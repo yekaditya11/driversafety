@@ -1,0 +1,3026 @@
+{
+  "extraction_timestamp": "2025-07-08T19:35:55.291972",
+  "date_range": {
+    "start": "2024-07-08",
+    "end": "2025-07-08"
+  },
+  "safe_on_time_delivery_rate": {
+    "safe_on_time_delivery_rate": 10.880829015544041,
+    "total_trips": 193,
+    "safe_trips": 42,
+    "on_time_trips": 93,
+    "safe_on_time_trips": 21,
+    "safety_rate": 21.761658031088082,
+    "on_time_rate": 48.18652849740933
+  },
+  "driver_risk_vs_tat_heatmap": {
+    "correlation_coefficient": 0.01554750393365217,
+    "total_drivers_analyzed": 19,
+    "avg_risk_score": 78.76131578947367,
+    "avg_tat_hours": 13.156140350877191,
+    "heatmap_data": [
+      {
+        "risk_category": "Low Risk",
+        "tat_category": "Normal",
+        "driver_count": 1
+      },
+      {
+        "risk_category": "Low Risk",
+        "tat_category": "Slow",
+        "driver_count": 2
+      },
+      {
+        "risk_category": "Low Risk",
+        "tat_category": "Very Slow",
+        "driver_count": 6
+      },
+      {
+        "risk_category": "Very Low Risk",
+        "tat_category": "Normal",
+        "driver_count": 1
+      },
+      {
+        "risk_category": "Very Low Risk",
+        "tat_category": "Slow",
+        "driver_count": 5
+      },
+      {
+        "risk_category": "Very Low Risk",
+        "tat_category": "Very Slow",
+        "driver_count": 4
+      }
+    ],
+    "driver_analysis": [
+      {
+        "driver_name": "Alexander Wilson",
+        "safety_score": 77.97,
+        "avg_tat_hours": 17.77,
+        "avg_speed_kmph": 17.37,
+        "risk_events": 0,
+        "driver_risk_score": 65.69
+      },
+      {
+        "driver_name": "Sean Phillips",
+        "safety_score": 89.49,
+        "avg_tat_hours": 9.33,
+        "avg_speed_kmph": 51.36,
+        "risk_events": 0,
+        "driver_risk_score": 66.29
+      },
+      {
+        "driver_name": "Tina Holloway",
+        "safety_score": 72.63,
+        "avg_tat_hours": 14.8,
+        "avg_speed_kmph": 28.47,
+        "risk_events": 0,
+        "driver_risk_score": 69.09
+      },
+      {
+        "driver_name": "Michelle Powell",
+        "safety_score": 81.73,
+        "avg_tat_hours": 13.86,
+        "avg_speed_kmph": 23.44,
+        "risk_events": 0,
+        "driver_risk_score": 70.1
+      },
+      {
+        "driver_name": "Frederick Sexton",
+        "safety_score": 85.03,
+        "avg_tat_hours": 12.33,
+        "avg_speed_kmph": 76.64,
+        "risk_events": 0,
+        "driver_risk_score": 70.7
+      },
+      {
+        "driver_name": "Juan Jones",
+        "safety_score": 91.32,
+        "avg_tat_hours": 7.75,
+        "avg_speed_kmph": 30.11,
+        "risk_events": 0,
+        "driver_risk_score": 72.63
+      },
+      {
+        "driver_name": "Thomas Koch",
+        "safety_score": 93.43,
+        "avg_tat_hours": 18.64,
+        "avg_speed_kmph": 17.7,
+        "risk_events": 0,
+        "driver_risk_score": 73.38
+      },
+      {
+        "driver_name": "Gerald Logan",
+        "safety_score": 63.06,
+        "avg_tat_hours": 15.54,
+        "avg_speed_kmph": 17.22,
+        "risk_events": 0,
+        "driver_risk_score": 74.96
+      },
+      {
+        "driver_name": "Aaron Maldonado",
+        "safety_score": 96.73,
+        "avg_tat_hours": 11.83,
+        "avg_speed_kmph": 127.55,
+        "risk_events": 0,
+        "driver_risk_score": 77.03
+      },
+      {
+        "driver_name": "Ashlee Collins",
+        "safety_score": 97.41,
+        "avg_tat_hours": 15.01,
+        "avg_speed_kmph": 18.43,
+        "risk_events": 0,
+        "driver_risk_score": 81.63
+      },
+      {
+        "driver_name": "Ashley Figueroa",
+        "safety_score": 66.26,
+        "avg_tat_hours": 9.54,
+        "avg_speed_kmph": -34.96,
+        "risk_events": 0,
+        "driver_risk_score": 82.05
+      },
+      {
+        "driver_name": "Melissa Bryant",
+        "safety_score": 87.11,
+        "avg_tat_hours": 6.61,
+        "avg_speed_kmph": 36.7,
+        "risk_events": 0,
+        "driver_risk_score": 82.49
+      },
+      {
+        "driver_name": "Shaun Gonzales",
+        "safety_score": 86.28,
+        "avg_tat_hours": 10.62,
+        "avg_speed_kmph": 49.65,
+        "risk_events": 0,
+        "driver_risk_score": 83.34
+      },
+      {
+        "driver_name": "Gregory Jackson",
+        "safety_score": 74.28,
+        "avg_tat_hours": 10.94,
+        "avg_speed_kmph": 30.64,
+        "risk_events": 0,
+        "driver_risk_score": 84.36
+      },
+      {
+        "driver_name": "Rebecca Dixon",
+        "safety_score": 71.18,
+        "avg_tat_hours": 17.72,
+        "avg_speed_kmph": 13.36,
+        "risk_events": 0,
+        "driver_risk_score": 84.84
+      },
+      {
+        "driver_name": "Brian Montoya",
+        "safety_score": 98.67,
+        "avg_tat_hours": 9.57,
+        "avg_speed_kmph": 120.8,
+        "risk_events": 0,
+        "driver_risk_score": 85.33
+      },
+      {
+        "driver_name": "Amanda Lewis",
+        "safety_score": 98.79,
+        "avg_tat_hours": 20.63,
+        "avg_speed_kmph": 12.86,
+        "risk_events": 0,
+        "driver_risk_score": 86.4
+      },
+      {
+        "driver_name": "Ronald Green",
+        "safety_score": 86.01,
+        "avg_tat_hours": 10.18,
+        "avg_speed_kmph": 34.39,
+        "risk_events": 0,
+        "driver_risk_score": 90.54
+      },
+      {
+        "driver_name": "Kyle Collins",
+        "safety_score": 96.65,
+        "avg_tat_hours": 17.28,
+        "avg_speed_kmph": 19.98,
+        "risk_events": 0,
+        "driver_risk_score": 95.6
+      }
+    ],
+    "high_risk_fast_drivers": []
+  },
+  "top_routes_by_risk_weighted_efficiency": {
+    "top_10_routes": [
+      {
+        "route_id": "15496969-7d8d-484c-978b-74338abfa365",
+        "origin": "Carrollchester",
+        "destination": "North Meganfurt",
+        "planned_distance": 444.87,
+        "total_trips": 5,
+        "avg_actual_distance": 185.17,
+        "avg_duration_hours": 8.79,
+        "on_time_rate": 40.0,
+        "safety_events": 0,
+        "incidents": 0,
+        "avg_driver_safety_score": 88.0,
+        "efficiency_score": 1582.42,
+        "safety_score": 94.0,
+        "risk_weighted_efficiency": 1487.44
+      },
+      {
+        "route_id": "68f307a4-81df-46ea-a7af-eb1e0a63e071",
+        "origin": "Patelside",
+        "destination": "Parkerland",
+        "planned_distance": 334.25,
+        "total_trips": 5,
+        "avg_actual_distance": 341.91,
+        "avg_duration_hours": 12.85,
+        "on_time_rate": 60.0,
+        "safety_events": 0,
+        "incidents": 0,
+        "avg_driver_safety_score": 94.19,
+        "efficiency_score": 833.66,
+        "safety_score": 97.09,
+        "risk_weighted_efficiency": 809.44
+      },
+      {
+        "route_id": "78be79a5-46e0-4fc2-b8da-4015978c07d0",
+        "origin": "Jenniferton",
+        "destination": "Thomasborough",
+        "planned_distance": 396.74,
+        "total_trips": 6,
+        "avg_actual_distance": 283.53,
+        "avg_duration_hours": 17.46,
+        "on_time_rate": 16.67,
+        "safety_events": 0,
+        "incidents": 0,
+        "avg_driver_safety_score": 83.9,
+        "efficiency_score": 726.98,
+        "safety_score": 91.95,
+        "risk_weighted_efficiency": 668.44
+      },
+      {
+        "route_id": "bac91ca2-8b0d-4b47-b2a4-3e4440e39c44",
+        "origin": "North Nathanmouth",
+        "destination": "Zoehaven",
+        "planned_distance": 24.05,
+        "total_trips": 5,
+        "avg_actual_distance": 281.2,
+        "avg_duration_hours": 15.27,
+        "on_time_rate": 80.0,
+        "safety_events": 0,
+        "incidents": 0,
+        "avg_driver_safety_score": 87.07,
+        "efficiency_score": -211.54,
+        "safety_score": 93.54,
+        "risk_weighted_efficiency": -197.86
+      }
+    ],
+    "avg_risk_weighted_efficiency": 691.86340157528,
+    "best_route": {
+      "route": "Carrollchester \u2192 North Meganfurt",
+      "efficiency_score": 1487.4398507015271,
+      "total_trips": 5
+    },
+    "efficiency_distribution": {
+      "excellent": 3,
+      "good": 0,
+      "average": 0,
+      "poor": 1
+    }
+  },
+  "rr_eligible_trips": {
+    "rr_eligibility_rate": 4.15,
+    "total_trips_analyzed": 193,
+    "rr_eligible_trips": 8,
+    "top_rr_drivers": [
+      {
+        "driver_name": "Ana Munoz",
+        "rr_eligible_trips": 1,
+        "safety_score": 82.4,
+        "fatigue_score": 96.16
+      },
+      {
+        "driver_name": "Jacob Thompson",
+        "rr_eligible_trips": 1,
+        "safety_score": 82.19,
+        "fatigue_score": 98.67
+      },
+      {
+        "driver_name": "Kyle Collins",
+        "rr_eligible_trips": 1,
+        "safety_score": 96.65,
+        "fatigue_score": 90.91
+      },
+      {
+        "driver_name": "Pamela Richardson",
+        "rr_eligible_trips": 1,
+        "safety_score": 93.19,
+        "fatigue_score": 74.15
+      },
+      {
+        "driver_name": "Pamela Smith",
+        "rr_eligible_trips": 1,
+        "safety_score": 81.92,
+        "fatigue_score": 95.22
+      },
+      {
+        "driver_name": "Paul Rice",
+        "rr_eligible_trips": 1,
+        "safety_score": 98.04,
+        "fatigue_score": 83.18
+      },
+      {
+        "driver_name": "Traci Miller",
+        "rr_eligible_trips": 1,
+        "safety_score": 81.4,
+        "fatigue_score": 75.03
+      },
+      {
+        "driver_name": "Tracy Murphy",
+        "rr_eligible_trips": 1,
+        "safety_score": 97.88,
+        "fatigue_score": 92.27
+      }
+    ],
+    "top_rr_transporters": [
+      {
+        "transporter_name": "Garcia, Long and Garcia",
+        "rr_eligible_trips": 2
+      },
+      {
+        "transporter_name": "Boyer, Anderson and Short",
+        "rr_eligible_trips": 1
+      },
+      {
+        "transporter_name": "Moore, Santos and Weber",
+        "rr_eligible_trips": 1
+      },
+      {
+        "transporter_name": "Phillips Ltd",
+        "rr_eligible_trips": 1
+      },
+      {
+        "transporter_name": "Sanders, Santana and Thompson",
+        "rr_eligible_trips": 1
+      },
+      {
+        "transporter_name": "Thompson-Lee",
+        "rr_eligible_trips": 1
+      },
+      {
+        "transporter_name": "Woods and Sons",
+        "rr_eligible_trips": 1
+      }
+    ],
+    "rr_criteria_breakdown": {
+      "on_time_trips": 93,
+      "high_safety_score_trips": 106,
+      "zero_violations_trips": 193,
+      "high_volume_fulfillment_trips": 101
+    }
+  },
+  "driver_engagement_index": {
+    "avg_engagement_score": 59.12183783783782,
+    "total_drivers_analyzed": 111,
+    "engagement_distribution": {
+      "Moderately Engaged": 62,
+      "Engaged": 49
+    },
+    "avg_checklist_submission_rate": 0.0,
+    "avg_checklist_compliance_rate": 0.0,
+    "driver_engagement_details": [
+      {
+        "driver_name": "Amanda Lewis",
+        "safety_score": 98.79,
+        "engagement_index": 99.3,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 79.43,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Gerald Smith",
+        "safety_score": 93.4,
+        "engagement_index": 97.35,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 77.22,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jennifer Wilson",
+        "safety_score": 91.2,
+        "engagement_index": 99.06,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 77.08,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Michael Wheeler",
+        "safety_score": 87.86,
+        "engagement_index": 97.5,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 75.61,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Mr. Johnny Johnson",
+        "safety_score": 84.67,
+        "engagement_index": 99.34,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 75.2,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Joanna Carter",
+        "safety_score": 89.51,
+        "engagement_index": 94.35,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 75.16,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Tracy Murphy",
+        "safety_score": 97.88,
+        "engagement_index": 83.27,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 74.34,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Melissa Bryant",
+        "safety_score": 87.11,
+        "engagement_index": 93.44,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 74.16,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kevin Murray",
+        "safety_score": 92.48,
+        "engagement_index": 86.37,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 73.66,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Amy Gates",
+        "safety_score": 90.51,
+        "engagement_index": 85.36,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 72.76,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Pamela Richardson",
+        "safety_score": 93.19,
+        "engagement_index": 81.35,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 72.36,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Anthony Harris",
+        "safety_score": 78.47,
+        "engagement_index": 93.33,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 71.54,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Michele Mora",
+        "safety_score": 99.34,
+        "engagement_index": 71.76,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 71.33,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kyle Collins",
+        "safety_score": 96.65,
+        "engagement_index": 73.91,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 71.17,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Patricia Hays",
+        "safety_score": 89.36,
+        "engagement_index": 79.95,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 70.79,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Alexander Wilson",
+        "safety_score": 77.97,
+        "engagement_index": 88.69,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 70.0,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jesse Freeman",
+        "safety_score": 99.8,
+        "engagement_index": 66.17,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 69.79,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Christopher Turner",
+        "safety_score": 91.67,
+        "engagement_index": 68.92,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 68.18,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jacob Thompson",
+        "safety_score": 82.19,
+        "engagement_index": 76.89,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 67.72,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Mrs. Karen Smith",
+        "safety_score": 77.22,
+        "engagement_index": 80.67,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 67.37,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kimberly Williams",
+        "safety_score": 96.19,
+        "engagement_index": 61.33,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 67.26,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Alexa Scott",
+        "safety_score": 80.37,
+        "engagement_index": 76.14,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.95,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Paul Jordan",
+        "safety_score": 84.68,
+        "engagement_index": 71.54,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.87,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Aaron Maldonado",
+        "safety_score": 96.73,
+        "engagement_index": 59.4,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.84,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Thomas Gray",
+        "safety_score": 61.1,
+        "engagement_index": 94.57,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.7,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Hannah Mcclure",
+        "safety_score": 62.44,
+        "engagement_index": 92.95,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.62,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Marc Bird",
+        "safety_score": 70.55,
+        "engagement_index": 84.79,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.6,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Paul Rice",
+        "safety_score": 98.04,
+        "engagement_index": 56.74,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.43,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jane Long",
+        "safety_score": 93.53,
+        "engagement_index": 60.92,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.34,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Colleen Garcia",
+        "safety_score": 64.5,
+        "engagement_index": 89.71,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 66.26,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kristi Davis",
+        "safety_score": 67.2,
+        "engagement_index": 85.45,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 65.8,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Sandra Jones",
+        "safety_score": 76.7,
+        "engagement_index": 75.8,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 65.75,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Ashlee Collins",
+        "safety_score": 97.41,
+        "engagement_index": 52.94,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 65.1,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Christine Mayer",
+        "safety_score": 77.24,
+        "engagement_index": 72.64,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 64.96,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Andrea Martinez",
+        "safety_score": 62.3,
+        "engagement_index": 85.69,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 64.4,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Frederick Sexton",
+        "safety_score": 85.03,
+        "engagement_index": 62.92,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 64.39,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Samantha Thomas",
+        "safety_score": 77.35,
+        "engagement_index": 69.73,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 64.12,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Stefanie Russell",
+        "safety_score": 97.31,
+        "engagement_index": 49.77,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 64.12,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "James Williams",
+        "safety_score": 67.69,
+        "engagement_index": 78.56,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 63.88,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Juan Jones",
+        "safety_score": 91.32,
+        "engagement_index": 53.97,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 63.59,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jacob Le",
+        "safety_score": 63.15,
+        "engagement_index": 80.29,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 63.03,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Billy Petersen",
+        "safety_score": 77.17,
+        "engagement_index": 66.08,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 62.97,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Anthony Meyer",
+        "safety_score": 90.26,
+        "engagement_index": 51.95,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 62.66,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Lance Austin",
+        "safety_score": 96.66,
+        "engagement_index": 45.13,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 62.54,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Cody Padilla",
+        "safety_score": 80.83,
+        "engagement_index": 59.95,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 62.23,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kurt Contreras",
+        "safety_score": 88.14,
+        "engagement_index": 52.05,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 62.06,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Audrey Underwood",
+        "safety_score": 85.26,
+        "engagement_index": 52.36,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 61.29,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Brian Schroeder",
+        "safety_score": 81.9,
+        "engagement_index": 54.59,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 60.95,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Frank Torres",
+        "safety_score": 77.27,
+        "engagement_index": 58.5,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 60.73,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Rachel Baker",
+        "safety_score": 74.73,
+        "engagement_index": 57.84,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 59.77,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Ashley Figueroa",
+        "safety_score": 66.26,
+        "engagement_index": 64.37,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 59.19,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Paul Campbell",
+        "safety_score": 65.65,
+        "engagement_index": 64.79,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 59.13,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Mr. David Skinner",
+        "safety_score": 75.41,
+        "engagement_index": 54.01,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.83,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Tanner Greene",
+        "safety_score": 61.36,
+        "engagement_index": 67.64,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.7,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Gregory Jackson",
+        "safety_score": 74.28,
+        "engagement_index": 54.31,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.58,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Victoria Taylor",
+        "safety_score": 99.25,
+        "engagement_index": 27.68,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.08,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Jessica Sandoval",
+        "safety_score": 97.63,
+        "engagement_index": 29.23,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.06,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Brett Taylor",
+        "safety_score": 73.5,
+        "engagement_index": 53.35,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.06,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Mr. Daniel Matthews",
+        "safety_score": 97.11,
+        "engagement_index": 29.65,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 58.03,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Jaime Taylor",
+        "safety_score": 89.93,
+        "engagement_index": 34.38,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 57.29,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Pamela Smith",
+        "safety_score": 81.92,
+        "engagement_index": 42.36,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 57.28,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Cody Doyle",
+        "safety_score": 97.61,
+        "engagement_index": 26.22,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 57.15,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Stacey Greene",
+        "safety_score": 72.6,
+        "engagement_index": 50.64,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 56.97,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Jennifer Caldwell",
+        "safety_score": 92.64,
+        "engagement_index": 28.54,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 56.35,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Melissa Walters",
+        "safety_score": 66.72,
+        "engagement_index": 54.29,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 56.3,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Michael Floyd",
+        "safety_score": 90.17,
+        "engagement_index": 29.26,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 55.83,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Natalie Snyder",
+        "safety_score": 78.78,
+        "engagement_index": 39.11,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 55.37,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Donald Mejia MD",
+        "safety_score": 70.41,
+        "engagement_index": 45.19,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.68,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Miguel Brewer",
+        "safety_score": 73.88,
+        "engagement_index": 41.63,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.65,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Tina Holloway",
+        "safety_score": 72.63,
+        "engagement_index": 42.81,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.63,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "John Wolfe",
+        "safety_score": 78.55,
+        "engagement_index": 36.17,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.42,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Rebecca Jenkins",
+        "safety_score": 70.83,
+        "engagement_index": 43.84,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.4,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Douglas Hughes",
+        "safety_score": 97.01,
+        "engagement_index": 17.29,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.29,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Danielle Krause",
+        "safety_score": 64.35,
+        "engagement_index": 49.07,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 54.03,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Thomas Koch",
+        "safety_score": 93.43,
+        "engagement_index": 19.79,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 53.97,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "David Hawkins",
+        "safety_score": 62.52,
+        "engagement_index": 49.66,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 53.65,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Brian Montoya",
+        "safety_score": 98.67,
+        "engagement_index": 13.12,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 53.54,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Martha Martin",
+        "safety_score": 65.43,
+        "engagement_index": 44.67,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 53.03,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Brandi Sullivan",
+        "safety_score": 94.82,
+        "engagement_index": 13.79,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 52.58,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Rebecca Dixon",
+        "safety_score": 71.18,
+        "engagement_index": 36.98,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 52.45,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Brenda Garza",
+        "safety_score": 64.1,
+        "engagement_index": 43.6,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 52.31,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Jonathan Miles",
+        "safety_score": 92.33,
+        "engagement_index": 14.05,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 51.91,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "David Mills",
+        "safety_score": 62.24,
+        "engagement_index": 42.91,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 51.54,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Elizabeth Williams",
+        "safety_score": 71.28,
+        "engagement_index": 32.55,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 51.15,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Melissa Hudson",
+        "safety_score": 61.15,
+        "engagement_index": 41.29,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.73,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Sean Phillips",
+        "safety_score": 89.49,
+        "engagement_index": 12.87,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.71,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "John Barr",
+        "safety_score": 65.13,
+        "engagement_index": 36.84,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.59,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Dr. Casey Rush MD",
+        "safety_score": 76.21,
+        "engagement_index": 25.14,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.4,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Ana Munoz",
+        "safety_score": 82.4,
+        "engagement_index": 18.37,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.23,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Kathy Davenport",
+        "safety_score": 92.57,
+        "engagement_index": 7.43,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 50.0,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Joshua Shepherd",
+        "safety_score": 77.66,
+        "engagement_index": 22.3,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 49.99,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Ronald Green",
+        "safety_score": 86.01,
+        "engagement_index": 12.66,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 49.6,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Mrs. Jessica Raymond",
+        "safety_score": 89.98,
+        "engagement_index": 8.31,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 49.49,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Eric Horton",
+        "safety_score": 84.51,
+        "engagement_index": 13.23,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 49.32,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "James Hayes",
+        "safety_score": 66.62,
+        "engagement_index": 29.15,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 48.73,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Daniel Chavez",
+        "safety_score": 92.38,
+        "engagement_index": 3.3,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 48.7,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "James Harris",
+        "safety_score": 73.15,
+        "engagement_index": 21.84,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 48.5,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Matthew Johnson",
+        "safety_score": 88.12,
+        "engagement_index": 6.66,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 48.43,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Traci Miller",
+        "safety_score": 81.4,
+        "engagement_index": 12.96,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 48.31,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Jessica Collins",
+        "safety_score": 73.56,
+        "engagement_index": 19.11,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 47.8,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Michelle Powell",
+        "safety_score": 81.73,
+        "engagement_index": 10.2,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 47.58,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Allison Hernandez",
+        "safety_score": 76.34,
+        "engagement_index": 14.94,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 47.38,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Sarah Solomon",
+        "safety_score": 65.33,
+        "engagement_index": 25.02,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 47.1,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Randall Patel",
+        "safety_score": 66.13,
+        "engagement_index": 24.04,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 47.05,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Shaun Gonzales",
+        "safety_score": 86.28,
+        "engagement_index": 0.38,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 46.0,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Juan Rodriguez",
+        "safety_score": 65.8,
+        "engagement_index": 16.9,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 44.81,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "David Phillips",
+        "safety_score": 78.63,
+        "engagement_index": 3.86,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 44.75,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Lucas Hansen",
+        "safety_score": 71.65,
+        "engagement_index": 9.56,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 44.36,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Pamela Stout",
+        "safety_score": 60.55,
+        "engagement_index": 19.36,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 43.97,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Gene Jarvis",
+        "safety_score": 73.99,
+        "engagement_index": 3.43,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 43.23,
+        "engagement_category": "Moderately Engaged"
+      },
+      {
+        "driver_name": "Gerald Logan",
+        "safety_score": 63.06,
+        "engagement_index": 11.07,
+        "checklist_submission_rate": null,
+        "checklist_compliance_rate": null,
+        "composite_engagement_score": 42.24,
+        "engagement_category": "Moderately Engaged"
+      }
+    ],
+    "top_engaged_drivers": [
+      {
+        "driver_name": "Amanda Lewis",
+        "composite_engagement_score": 79.42699999999999,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Gerald Smith",
+        "composite_engagement_score": 77.225,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Jennifer Wilson",
+        "composite_engagement_score": 77.078,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Michael Wheeler",
+        "composite_engagement_score": 75.608,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Mr. Johnny Johnson",
+        "composite_engagement_score": 75.203,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Joanna Carter",
+        "composite_engagement_score": 75.158,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Tracy Murphy",
+        "composite_engagement_score": 74.345,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Melissa Bryant",
+        "composite_engagement_score": 74.16499999999999,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Kevin Murray",
+        "composite_engagement_score": 73.655,
+        "engagement_category": "Engaged"
+      },
+      {
+        "driver_name": "Amy Gates",
+        "composite_engagement_score": 72.761,
+        "engagement_category": "Engaged"
+      }
+    ],
+    "low_engagement_drivers": [
+      {
+        "driver_name": "Joshua Shepherd",
+        "composite_engagement_score": 49.988,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Ronald Green",
+        "composite_engagement_score": 49.601,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Mrs. Jessica Raymond",
+        "composite_engagement_score": 49.486999999999995,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Eric Horton",
+        "composite_engagement_score": 49.322,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "James Hayes",
+        "composite_engagement_score": 48.731,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Daniel Chavez",
+        "composite_engagement_score": 48.70399999999999,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "James Harris",
+        "composite_engagement_score": 48.497,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Matthew Johnson",
+        "composite_engagement_score": 48.434,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Traci Miller",
+        "composite_engagement_score": 48.308,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Jessica Collins",
+        "composite_engagement_score": 47.801,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Michelle Powell",
+        "composite_engagement_score": 47.579,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Allison Hernandez",
+        "composite_engagement_score": 47.384,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Sarah Solomon",
+        "composite_engagement_score": 47.105000000000004,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Randall Patel",
+        "composite_engagement_score": 47.051,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Shaun Gonzales",
+        "composite_engagement_score": 45.998000000000005,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Juan Rodriguez",
+        "composite_engagement_score": 44.81,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "David Phillips",
+        "composite_engagement_score": 44.747,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Lucas Hansen",
+        "composite_engagement_score": 44.363,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Pamela Stout",
+        "composite_engagement_score": 43.973,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Gene Jarvis",
+        "composite_engagement_score": 43.226,
+        "checklist_submission_rate": null
+      },
+      {
+        "driver_name": "Gerald Logan",
+        "composite_engagement_score": 42.239000000000004,
+        "checklist_submission_rate": null
+      }
+    ]
+  },
+  "transporter_composite_score": {
+    "avg_composite_score": 91.23215199380488,
+    "total_transporters_analyzed": 71,
+    "performance_distribution": {
+      "Excellent": 43,
+      "Good": 22,
+      "Average": 6
+    },
+    "transporter_scores": [
+      {
+        "transporter_name": "Roberts-Ellis",
+        "existing_composite_score": 58.67,
+        "calculated_composite_score": 193.56,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 719.26,
+        "avg_driver_safety_score": 73.56,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Moore Ltd",
+        "existing_composite_score": 50.88,
+        "calculated_composite_score": 154.99,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 537.72,
+        "avg_driver_safety_score": 62.24,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Crawford, Stewart and Palmer",
+        "existing_composite_score": 58.56,
+        "calculated_composite_score": 135.37,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 340.05,
+        "avg_driver_safety_score": 78.45,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Smith-Powell",
+        "existing_composite_score": 86.67,
+        "calculated_composite_score": 119.78,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 271.2,
+        "avg_driver_safety_score": 69.35,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Jackson-Guerra",
+        "existing_composite_score": 89.15,
+        "calculated_composite_score": 115.24,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 310.21,
+        "avg_driver_safety_score": 90.98,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Frey, Long and Campbell",
+        "existing_composite_score": 60.02,
+        "calculated_composite_score": 112.26,
+        "on_time_rate": 83.33,
+        "volume_fulfillment_rate": 194.75,
+        "avg_driver_safety_score": 87.39,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Vincent and Sons",
+        "existing_composite_score": 88.69,
+        "calculated_composite_score": 111.05,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 162.84,
+        "avg_driver_safety_score": 92.4,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Cox LLC",
+        "existing_composite_score": 98.4,
+        "calculated_composite_score": 107.84,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 295.09,
+        "avg_driver_safety_score": 69.1,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Lucas, Little and Robinson",
+        "existing_composite_score": 95.31,
+        "calculated_composite_score": 105.23,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 201.69,
+        "avg_driver_safety_score": 86.98,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Cantrell, Hayes and Tucker",
+        "existing_composite_score": 61.37,
+        "calculated_composite_score": 105.04,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 143.05,
+        "avg_driver_safety_score": 82.16,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Elliott, Zamora and Edwards",
+        "existing_composite_score": 80.25,
+        "calculated_composite_score": 103.64,
+        "on_time_rate": 60.0,
+        "volume_fulfillment_rate": 191.15,
+        "avg_driver_safety_score": 77.07,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Garrett, Bowers and Doyle",
+        "existing_composite_score": 89.04,
+        "calculated_composite_score": 103.39,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 262.47,
+        "avg_driver_safety_score": 79.46,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Yu-Martin",
+        "existing_composite_score": 66.94,
+        "calculated_composite_score": 103.25,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 223.91,
+        "avg_driver_safety_score": 75.66,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Maxwell PLC",
+        "existing_composite_score": 78.09,
+        "calculated_composite_score": 102.12,
+        "on_time_rate": 80.0,
+        "volume_fulfillment_rate": 152.02,
+        "avg_driver_safety_score": 83.57,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Hayden, Phillips and Kennedy",
+        "existing_composite_score": 97.29,
+        "calculated_composite_score": 102.1,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 129.03,
+        "avg_driver_safety_score": 81.5,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Fuller Ltd",
+        "existing_composite_score": 59.3,
+        "calculated_composite_score": 100.74,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 138.75,
+        "avg_driver_safety_score": 64.96,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Gilbert, Schroeder and Myers",
+        "existing_composite_score": 76.7,
+        "calculated_composite_score": 99.69,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 197.9,
+        "avg_driver_safety_score": 83.89,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Banks, Hebert and Malone",
+        "existing_composite_score": 83.07,
+        "calculated_composite_score": 99.35,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 126.38,
+        "avg_driver_safety_score": 70.34,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Richardson-Cox",
+        "existing_composite_score": 58.19,
+        "calculated_composite_score": 99.2,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 244.86,
+        "avg_driver_safety_score": 76.12,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Rogers LLC",
+        "existing_composite_score": 56.65,
+        "calculated_composite_score": 98.36,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 114.14,
+        "avg_driver_safety_score": 77.66,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Mitchell, Perez and Daniel",
+        "existing_composite_score": 88.74,
+        "calculated_composite_score": 97.94,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 147.57,
+        "avg_driver_safety_score": 83.78,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Oneill LLC",
+        "existing_composite_score": 89.47,
+        "calculated_composite_score": 97.83,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 186.61,
+        "avg_driver_safety_score": 85.86,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Crawford Inc",
+        "existing_composite_score": 86.13,
+        "calculated_composite_score": 96.68,
+        "on_time_rate": 20.0,
+        "volume_fulfillment_rate": 196.81,
+        "avg_driver_safety_score": 86.61,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Garcia, Long and Garcia",
+        "existing_composite_score": 76.2,
+        "calculated_composite_score": 96.58,
+        "on_time_rate": 40.0,
+        "volume_fulfillment_rate": 167.54,
+        "avg_driver_safety_score": 90.36,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Espinoza and Sons",
+        "existing_composite_score": 72.11,
+        "calculated_composite_score": 96.5,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 224.78,
+        "avg_driver_safety_score": 82.71,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Woodward Inc",
+        "existing_composite_score": 64.74,
+        "calculated_composite_score": 96.24,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 232.21,
+        "avg_driver_safety_score": 73.99,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Roberts-Saunders",
+        "existing_composite_score": 75.5,
+        "calculated_composite_score": 95.63,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 146.23,
+        "avg_driver_safety_score": 73.56,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Gonzales, Riggs and Moore",
+        "existing_composite_score": 78.3,
+        "calculated_composite_score": 95.25,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 170.1,
+        "avg_driver_safety_score": 68.66,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Hodges-Ramirez",
+        "existing_composite_score": 76.45,
+        "calculated_composite_score": 95.09,
+        "on_time_rate": 40.0,
+        "volume_fulfillment_rate": 175.0,
+        "avg_driver_safety_score": 75.43,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Becker-Richard",
+        "existing_composite_score": 62.62,
+        "calculated_composite_score": 94.8,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 99.94,
+        "avg_driver_safety_score": 74.08,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Moore, Santos and Weber",
+        "existing_composite_score": 72.47,
+        "calculated_composite_score": 93.98,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 133.3,
+        "avg_driver_safety_score": 78.24,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "West-Gutierrez",
+        "existing_composite_score": 96.82,
+        "calculated_composite_score": 93.86,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 154.1,
+        "avg_driver_safety_score": 77.71,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Boyer, Anderson and Short",
+        "existing_composite_score": 98.28,
+        "calculated_composite_score": 93.64,
+        "on_time_rate": 80.0,
+        "volume_fulfillment_rate": 106.97,
+        "avg_driver_safety_score": 86.24,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Thompson-Bray",
+        "existing_composite_score": 83.22,
+        "calculated_composite_score": 91.9,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 74.48,
+        "avg_driver_safety_score": 85.03,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Buckley Ltd",
+        "existing_composite_score": 63.54,
+        "calculated_composite_score": 90.16,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 66.11,
+        "avg_driver_safety_score": 84.68,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Brown-Chambers",
+        "existing_composite_score": 98.62,
+        "calculated_composite_score": 90.0,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 137.85,
+        "avg_driver_safety_score": 95.46,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Cook Group",
+        "existing_composite_score": 68.86,
+        "calculated_composite_score": 89.36,
+        "on_time_rate": 80.0,
+        "volume_fulfillment_rate": 96.24,
+        "avg_driver_safety_score": 75.55,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Thompson-Lee",
+        "existing_composite_score": 89.63,
+        "calculated_composite_score": 88.96,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 96.93,
+        "avg_driver_safety_score": 89.56,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Whitaker-Jackson",
+        "existing_composite_score": 87.28,
+        "calculated_composite_score": 88.69,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 62.01,
+        "avg_driver_safety_score": 81.46,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Tran, Wade and Nelson",
+        "existing_composite_score": 72.4,
+        "calculated_composite_score": 88.63,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 138.27,
+        "avg_driver_safety_score": 88.22,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Peters-Woods",
+        "existing_composite_score": 57.18,
+        "calculated_composite_score": 87.69,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 140.44,
+        "avg_driver_safety_score": 81.33,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Gray, Charles and Barnes",
+        "existing_composite_score": 59.67,
+        "calculated_composite_score": 86.87,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 123.54,
+        "avg_driver_safety_score": 73.32,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Powell-Hobbs",
+        "existing_composite_score": 66.57,
+        "calculated_composite_score": 85.04,
+        "on_time_rate": 25.0,
+        "volume_fulfillment_rate": 139.21,
+        "avg_driver_safety_score": 79.72,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Cervantes, Bauer and Peterson",
+        "existing_composite_score": 95.15,
+        "calculated_composite_score": 83.74,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 26.21,
+        "avg_driver_safety_score": 92.48,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Woods and Sons",
+        "existing_composite_score": 69.65,
+        "calculated_composite_score": 82.47,
+        "on_time_rate": 75.0,
+        "volume_fulfillment_rate": 64.51,
+        "avg_driver_safety_score": 79.08,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Sanders, Santana and Thompson",
+        "existing_composite_score": 87.54,
+        "calculated_composite_score": 81.5,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 73.78,
+        "avg_driver_safety_score": 96.22,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Armstrong Inc",
+        "existing_composite_score": 95.05,
+        "calculated_composite_score": 81.32,
+        "on_time_rate": 20.0,
+        "volume_fulfillment_rate": 119.36,
+        "avg_driver_safety_score": 87.23,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Perkins-Martinez",
+        "existing_composite_score": 55.43,
+        "calculated_composite_score": 81.21,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 81.87,
+        "avg_driver_safety_score": 86.7,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Medina, Brown and Marshall",
+        "existing_composite_score": 98.72,
+        "calculated_composite_score": 80.33,
+        "on_time_rate": 66.67,
+        "volume_fulfillment_rate": 65.24,
+        "avg_driver_safety_score": 78.06,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Miles-Brown",
+        "existing_composite_score": 78.42,
+        "calculated_composite_score": 79.67,
+        "on_time_rate": 100.0,
+        "volume_fulfillment_rate": 24.09,
+        "avg_driver_safety_score": 74.28,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Whitaker-Rodriguez",
+        "existing_composite_score": 65.08,
+        "calculated_composite_score": 79.43,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 75.38,
+        "avg_driver_safety_score": 84.28,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Maldonado, Kelly and Johnson",
+        "existing_composite_score": 73.62,
+        "calculated_composite_score": 79.1,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 80.79,
+        "avg_driver_safety_score": 77.19,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Phillips Ltd",
+        "existing_composite_score": 55.56,
+        "calculated_composite_score": 78.53,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 96.35,
+        "avg_driver_safety_score": 79.64,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Patel, Noble and Delacruz",
+        "existing_composite_score": 64.05,
+        "calculated_composite_score": 78.26,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 139.05,
+        "avg_driver_safety_score": 77.26,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Chan-Farmer",
+        "existing_composite_score": 81.2,
+        "calculated_composite_score": 78.09,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 128.35,
+        "avg_driver_safety_score": 87.11,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Carter, Williams and Sanchez",
+        "existing_composite_score": 70.74,
+        "calculated_composite_score": 77.14,
+        "on_time_rate": 25.0,
+        "volume_fulfillment_rate": 89.77,
+        "avg_driver_safety_score": 89.7,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Martinez Ltd",
+        "existing_composite_score": 77.8,
+        "calculated_composite_score": 76.63,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 79.35,
+        "avg_driver_safety_score": 87.13,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Avery, Erickson and Howard",
+        "existing_composite_score": 79.51,
+        "calculated_composite_score": 76.33,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 47.13,
+        "avg_driver_safety_score": 97.03,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Davis, Roberts and Contreras",
+        "existing_composite_score": 61.5,
+        "calculated_composite_score": 75.66,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 63.47,
+        "avg_driver_safety_score": 98.19,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Ross-Ramirez",
+        "existing_composite_score": 79.68,
+        "calculated_composite_score": 73.19,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 51.12,
+        "avg_driver_safety_score": 77.32,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Mann, Morris and Walton",
+        "existing_composite_score": 70.01,
+        "calculated_composite_score": 72.41,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 62.98,
+        "avg_driver_safety_score": 82.38,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Brooks, Cantrell and Wilson",
+        "existing_composite_score": 86.92,
+        "calculated_composite_score": 71.87,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 110.05,
+        "avg_driver_safety_score": 74.28,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Caldwell-Foster",
+        "existing_composite_score": 59.45,
+        "calculated_composite_score": 71.53,
+        "on_time_rate": 50.0,
+        "volume_fulfillment_rate": 42.63,
+        "avg_driver_safety_score": 77.5,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Stewart Group",
+        "existing_composite_score": 59.54,
+        "calculated_composite_score": 70.93,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 97.74,
+        "avg_driver_safety_score": 81.9,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Cruz, Petersen and Reyes",
+        "existing_composite_score": 80.94,
+        "calculated_composite_score": 70.73,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 81.55,
+        "avg_driver_safety_score": 97.11,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Good"
+      },
+      {
+        "transporter_name": "Pacheco, Morgan and Leonard",
+        "existing_composite_score": 50.79,
+        "calculated_composite_score": 69.27,
+        "on_time_rate": 33.33,
+        "volume_fulfillment_rate": 54.44,
+        "avg_driver_safety_score": 75.25,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Ballard Ltd",
+        "existing_composite_score": 64.19,
+        "calculated_composite_score": 68.98,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 102.28,
+        "avg_driver_safety_score": 67.62,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Torres-Shelton",
+        "existing_composite_score": 63.73,
+        "calculated_composite_score": 61.88,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 56.9,
+        "avg_driver_safety_score": 77.5,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Roberts-Williams",
+        "existing_composite_score": 58.51,
+        "calculated_composite_score": 59.04,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 29.95,
+        "avg_driver_safety_score": 90.26,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Love, Lin and Davis",
+        "existing_composite_score": 69.86,
+        "calculated_composite_score": 57.58,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 16.23,
+        "avg_driver_safety_score": 96.65,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Mills, Webb and Martinez",
+        "existing_composite_score": 80.37,
+        "calculated_composite_score": 57.16,
+        "on_time_rate": 0.0,
+        "volume_fulfillment_rate": 48.48,
+        "avg_driver_safety_score": 62.3,
+        "safety_violations": 0,
+        "incidents": 0,
+        "performance_category": "Average"
+      }
+    ],
+    "top_performers": [
+      {
+        "transporter_name": "Roberts-Ellis",
+        "calculated_composite_score": 193.5632790984618,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Moore Ltd",
+        "calculated_composite_score": 154.99101117894236,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Crawford, Stewart and Palmer",
+        "calculated_composite_score": 135.36636990026275,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Smith-Powell",
+        "calculated_composite_score": 119.77704074781708,
+        "performance_category": "Excellent"
+      },
+      {
+        "transporter_name": "Jackson-Guerra",
+        "calculated_composite_score": 115.23802181391895,
+        "performance_category": "Excellent"
+      }
+    ],
+    "bottom_performers": [
+      {
+        "transporter_name": "Ballard Ltd",
+        "calculated_composite_score": 68.98081824866239,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Torres-Shelton",
+        "calculated_composite_score": 61.87864794925579,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Roberts-Williams",
+        "calculated_composite_score": 59.04233974087008,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Love, Lin and Davis",
+        "calculated_composite_score": 57.576452954616975,
+        "performance_category": "Average"
+      },
+      {
+        "transporter_name": "Mills, Webb and Martinez",
+        "calculated_composite_score": 57.15593551427689,
+        "performance_category": "Average"
+      }
+    ],
+    "score_improvement_needed": [
+      {
+        "transporter_name": "Roberts-Williams",
+        "calculated_composite_score": 59.04233974087008,
+        "on_time_rate": 0.0,
+        "safety_violations": 0
+      },
+      {
+        "transporter_name": "Love, Lin and Davis",
+        "calculated_composite_score": 57.576452954616975,
+        "on_time_rate": 0.0,
+        "safety_violations": 0
+      },
+      {
+        "transporter_name": "Mills, Webb and Martinez",
+        "calculated_composite_score": 57.15593551427689,
+        "on_time_rate": 0.0,
+        "safety_violations": 0
+      }
+    ]
+  },
+  "fatigue_risk_by_route_and_time": {
+    "overall_fatigue_risk_score": 49.93256994818653,
+    "total_trips_analyzed": 193,
+    "high_fatigue_risk_trips": 70,
+    "fatigue_risk_heatmap": [
+      {
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 42.37,
+        "trip_count": 22,
+        "high_fatigue_trips": 9
+      },
+      {
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 49.04,
+        "trip_count": 22,
+        "high_fatigue_trips": 7
+      },
+      {
+        "time_period": "Afternoon",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 60.17,
+        "trip_count": 8,
+        "high_fatigue_trips": 1
+      },
+      {
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 49.57,
+        "trip_count": 25,
+        "high_fatigue_trips": 9
+      },
+      {
+        "time_period": "Evening",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 53.58,
+        "trip_count": 15,
+        "high_fatigue_trips": 4
+      },
+      {
+        "time_period": "Evening",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 46.45,
+        "trip_count": 6,
+        "high_fatigue_trips": 2
+      },
+      {
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 52.78,
+        "trip_count": 22,
+        "high_fatigue_trips": 6
+      },
+      {
+        "time_period": "Morning",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 52.25,
+        "trip_count": 14,
+        "high_fatigue_trips": 6
+      },
+      {
+        "time_period": "Morning",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 58.94,
+        "trip_count": 8,
+        "high_fatigue_trips": 3
+      },
+      {
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 46.88,
+        "trip_count": 29,
+        "high_fatigue_trips": 14
+      },
+      {
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 47.68,
+        "trip_count": 12,
+        "high_fatigue_trips": 5
+      },
+      {
+        "time_period": "Night",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 52.74,
+        "trip_count": 10,
+        "high_fatigue_trips": 4
+      }
+    ],
+    "high_risk_combinations": [
+      {
+        "origin": "Patelside",
+        "destination": "Parkerland",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 17.08
+      },
+      {
+        "origin": "Johnport",
+        "destination": "North Stephaniebury",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 19.76
+      },
+      {
+        "origin": "Jenniferton",
+        "destination": "Thomasborough",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 19.87
+      },
+      {
+        "origin": "Gilbertstad",
+        "destination": "Port Kristinashire",
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 20.08
+      },
+      {
+        "origin": "Michelleville",
+        "destination": "North Caitlinchester",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 20.37
+      },
+      {
+        "origin": "Ericaport",
+        "destination": "West Juan",
+        "time_period": "Evening",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 21.98
+      },
+      {
+        "origin": "Alyssamouth",
+        "destination": "North Evelynfurt",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 22.03
+      },
+      {
+        "origin": "Karlport",
+        "destination": "North Richardshire",
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 23.08
+      },
+      {
+        "origin": "Lisastad",
+        "destination": "East Jennifer",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 23.08
+      },
+      {
+        "origin": "Port Vincentmouth",
+        "destination": "Spencerchester",
+        "time_period": "Night",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 23.08
+      },
+      {
+        "origin": "South Isaac",
+        "destination": "Morrisberg",
+        "time_period": "Night",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 23.37
+      },
+      {
+        "origin": "Lauraton",
+        "destination": "Blakeside",
+        "time_period": "Morning",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 23.76
+      },
+      {
+        "origin": "Barnestown",
+        "destination": "Normanborough",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 23.83
+      },
+      {
+        "origin": "North Paulburgh",
+        "destination": "East Austin",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 23.83
+      },
+      {
+        "origin": "Michelleville",
+        "destination": "North Caitlinchester",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 24.74
+      },
+      {
+        "origin": "Lake Patrickchester",
+        "destination": "West Kristinamouth",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 26.34
+      },
+      {
+        "origin": "West Timothyville",
+        "destination": "South Jameshaven",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 26.42
+      },
+      {
+        "origin": "Herreraview",
+        "destination": "Jamesstad",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 26.43
+      },
+      {
+        "origin": "Lake Matthewbury",
+        "destination": "West Amy",
+        "time_period": "Evening",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 26.86
+      },
+      {
+        "origin": "Andreaburgh",
+        "destination": "Dunntown",
+        "time_period": "Evening",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 27.74
+      },
+      {
+        "origin": "Alexbury",
+        "destination": "Karenberg",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 29.34
+      },
+      {
+        "origin": "Garciaport",
+        "destination": "Lake Diana",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 29.42
+      },
+      {
+        "origin": "New Mauricetown",
+        "destination": "Brewerchester",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 29.74
+      },
+      {
+        "origin": "Josephborough",
+        "destination": "Jacobfort",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 29.94
+      },
+      {
+        "origin": "South Walterville",
+        "destination": "Russellshire",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 30.42
+      },
+      {
+        "origin": "West Deannaside",
+        "destination": "New Scottmouth",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 30.43
+      },
+      {
+        "origin": "Russellburgh",
+        "destination": "Frederickhaven",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 30.75
+      },
+      {
+        "origin": "Matthewport",
+        "destination": "Calebton",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 30.94
+      },
+      {
+        "origin": "North Thomasville",
+        "destination": "Shannonville",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 30.94
+      },
+      {
+        "origin": "Lake Patrickchester",
+        "destination": "West Kristinamouth",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 31.48
+      },
+      {
+        "origin": "Patelside",
+        "destination": "Parkerland",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 32.66
+      },
+      {
+        "origin": "West Timothyville",
+        "destination": "South Jameshaven",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 32.71
+      },
+      {
+        "origin": "North Nathanmouth",
+        "destination": "Zoehaven",
+        "time_period": "Evening",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 32.73
+      },
+      {
+        "origin": "New Pamela",
+        "destination": "South Josephside",
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 32.73
+      },
+      {
+        "origin": "New Courtneymouth",
+        "destination": "Stevenborough",
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 33.29
+      },
+      {
+        "origin": "Alexanderside",
+        "destination": "Wangberg",
+        "time_period": "Morning",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 33.34
+      },
+      {
+        "origin": "Herreraview",
+        "destination": "Jamesstad",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 33.37
+      },
+      {
+        "origin": "Gilbertshire",
+        "destination": "North Tamara",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 33.37
+      },
+      {
+        "origin": "Howardmouth",
+        "destination": "Port Shirleyberg",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 33.64
+      },
+      {
+        "origin": "Jenniferton",
+        "destination": "Thomasborough",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 33.71
+      },
+      {
+        "origin": "New Aaronmouth",
+        "destination": "Heidiberg",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 34.31
+      },
+      {
+        "origin": "East Diane",
+        "destination": "Morganview",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 34.31
+      },
+      {
+        "origin": "Port Samantha",
+        "destination": "Blevinsview",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 34.33
+      },
+      {
+        "origin": "Lutzland",
+        "destination": "Johnshire",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 34.33
+      },
+      {
+        "origin": "West Stevenburgh",
+        "destination": "New Nathan",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 34.33
+      },
+      {
+        "origin": "Gilbertshire",
+        "destination": "North Tamara",
+        "time_period": "Evening",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 35.48
+      },
+      {
+        "origin": "Jessicamouth",
+        "destination": "Fryemouth",
+        "time_period": "Afternoon",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 35.58
+      },
+      {
+        "origin": "West Stephanie",
+        "destination": "West Laura",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 35.92
+      },
+      {
+        "origin": "West Timothyville",
+        "destination": "South Jameshaven",
+        "time_period": "Morning",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 36.14
+      },
+      {
+        "origin": "West Nicholas",
+        "destination": "North Carolynfort",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 36.36
+      },
+      {
+        "origin": "Gregoryfort",
+        "destination": "North Marissaborough",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 36.36
+      },
+      {
+        "origin": "North Nathanmouth",
+        "destination": "Zoehaven",
+        "time_period": "Night",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 36.37
+      },
+      {
+        "origin": "Karlport",
+        "destination": "North Richardshire",
+        "time_period": "Morning",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 36.37
+      },
+      {
+        "origin": "Garciaport",
+        "destination": "Lake Diana",
+        "time_period": "Evening",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 36.71
+      },
+      {
+        "origin": "Lake Jacqueline",
+        "destination": "Patrickstad",
+        "time_period": "Morning",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 37.33
+      },
+      {
+        "origin": "Lake Matthewbury",
+        "destination": "West Amy",
+        "time_period": "Evening",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 37.44
+      },
+      {
+        "origin": "Karabury",
+        "destination": "Cherryport",
+        "time_period": "Night",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 37.44
+      },
+      {
+        "origin": "Patelside",
+        "destination": "Parkerland",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 37.79
+      },
+      {
+        "origin": "East Maxwellborough",
+        "destination": "Russellborough",
+        "time_period": "Morning",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 38.48
+      },
+      {
+        "origin": "North Paulburgh",
+        "destination": "East Austin",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 38.54
+      },
+      {
+        "origin": "Michelleville",
+        "destination": "North Caitlinchester",
+        "time_period": "Afternoon",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 38.54
+      },
+      {
+        "origin": "Lake Darrell",
+        "destination": "Garciatown",
+        "time_period": "Night",
+        "route_length_category": "Long",
+        "fatigue_risk_score": 38.98
+      },
+      {
+        "origin": "Lauraton",
+        "destination": "Blakeside",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 39.14
+      },
+      {
+        "origin": "Jameschester",
+        "destination": "Williamtown",
+        "time_period": "Afternoon",
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 39.56
+      },
+      {
+        "origin": "Jessicamouth",
+        "destination": "Fryemouth",
+        "time_period": "Night",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 39.74
+      },
+      {
+        "origin": "Henryhaven",
+        "destination": "South Debraville",
+        "time_period": "Morning",
+        "route_length_category": "Short",
+        "fatigue_risk_score": 39.74
+      }
+    ],
+    "time_period_analysis": [
+      {
+        "time_period": "Afternoon",
+        "fatigue_risk_score": 47.93,
+        "trip_count": 52,
+        "high_fatigue_trips": 17,
+        "avg_fatigue_score": 52.9
+      },
+      {
+        "time_period": "Evening",
+        "fatigue_risk_score": 50.47,
+        "trip_count": 46,
+        "high_fatigue_trips": 15,
+        "avg_fatigue_score": 53.5
+      },
+      {
+        "time_period": "Morning",
+        "fatigue_risk_score": 53.73,
+        "trip_count": 44,
+        "high_fatigue_trips": 15,
+        "avg_fatigue_score": 58.72
+      },
+      {
+        "time_period": "Night",
+        "fatigue_risk_score": 48.21,
+        "trip_count": 51,
+        "high_fatigue_trips": 23,
+        "avg_fatigue_score": 49.86
+      }
+    ],
+    "route_length_analysis": [
+      {
+        "route_length_category": "Long",
+        "fatigue_risk_score": 47.88,
+        "trip_count": 98,
+        "high_fatigue_trips": 38,
+        "avg_fatigue_score": 52.34
+      },
+      {
+        "route_length_category": "Medium",
+        "fatigue_risk_score": 50.58,
+        "trip_count": 63,
+        "high_fatigue_trips": 22,
+        "avg_fatigue_score": 52.55
+      },
+      {
+        "route_length_category": "Short",
+        "fatigue_risk_score": 54.97,
+        "trip_count": 32,
+        "high_fatigue_trips": 10,
+        "avg_fatigue_score": 59.32
+      }
+    ],
+    "riskiest_time_period": "Afternoon",
+    "riskiest_route_category": "Long"
+  }
+}

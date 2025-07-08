@@ -801,22 +801,21 @@ const ChatBot = () => {
                           fontStyle: 'italic',
                         }}
                       >
-                        AI is analyzing...
+                        AI is analyzing
                         <Box
                           component="span"
                           sx={{
                             display: 'inline-block',
-                            width: '2px',
-                            height: '1.2em',
-                            backgroundColor: 'currentColor',
-                            marginLeft: '4px',
-                            animation: 'blink 1s infinite',
-                            '@keyframes blink': {
-                              '0%, 50%': { opacity: 1 },
-                              '51%, 100%': { opacity: 0 },
+                            marginLeft: '2px',
+                            animation: 'pulse 1.5s ease-in-out infinite',
+                            '@keyframes pulse': {
+                              '0%, 100%': { opacity: 1 },
+                              '50%': { opacity: 0.3 },
                             },
                           }}
-                        />
+                        >
+                          ...
+                        </Box>
                       </Typography>
                     </Paper>
                   </Box>
